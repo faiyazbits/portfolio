@@ -11,11 +11,12 @@ import TransitionEffect from "@/components/TransitionEffect";
 
 
 export default function Home() {
-  
+
+  // Todo: include "and insightful articles" after publishing the articles and showing it in navbar
   return (
     <>
       <Head>
-        <title>Awesome Portfolio Built with Nextjs</title>
+        <title>Faiyaz portfolio</title>
         <meta
           name="description"
           content="Explore CodeBucks's Next.js developer portfolio and 
@@ -41,12 +42,11 @@ export default function Home() {
             </div>
             <div className="flex w-1/2 flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
-                text="Turning vision into reality with code and design."
-                className="!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
+                text="Transforming Vision into Digital Masterpieces with Code and Creativity!"
+                className="!text-left !text-5xl xl:!text-4xl lg:!text-center lg:!text-5xl md:!text-4xl sm:!text-2xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
-              As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects and articles, showcasing my expertise in React.js and web development.
-              </p>
+                With over a decade of expertise as a seasoned full-stack developer, I'm committed to bringing concepts to life through groundbreaking web applications. Dive into my recent ventures, highlighting my mastery of the ever-evolving realm of web development              </p>
               <div className="mt-2 flex items-center self-start lg:self-center">
                 <Link
                   href="mailto:m.faiyaz123@gmail.com"
