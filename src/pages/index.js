@@ -1,6 +1,5 @@
 import AnimatedText from "@/components/AnimatedText";
 import { HireMe } from "@/components/HireMe";
-import { LinkArrow } from "@/components/Icons";
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
@@ -16,7 +15,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Faiyaz portfolio</title>
+        <title>Faiyazbits</title>
         <meta
           name="description"
           content="Explore CodeBucks's Next.js developer portfolio and 
@@ -34,7 +33,7 @@ export default function Home() {
             <div className="w-1/2 lg:hidden md:inline-block md:w-full">
               <Image
                 src={profilePic}
-                alt="CodeBucks"
+                alt="Faiyazbits"
                 className="h-auto w-full"
                 sizes="100vw"
                 priority
@@ -65,7 +64,7 @@ export default function Home() {
           <Image
             className="relative h-auto w-full"
             src={lightBulb}
-            alt="Codebucks"
+            alt="Faiyazbits"
           />
         </div>
       </article>
