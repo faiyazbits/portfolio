@@ -48,7 +48,7 @@ export default function Home() {
                 className="!text-left !text-5xl xl:!text-4xl lg:!text-center lg:!text-5xl md:!text-4xl sm:!text-2xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
-                With over a decade of expertise as a seasoned full-stack developer, I'm committed to bringing concepts to life through groundbreaking web applications. Dive into my recent ventures, highlighting my mastery of the ever-evolving realm of web development              </p>
+                With over a decade of expertise as a seasoned full-stack developer, I&apos;m committed to bringing concepts to life through groundbreaking web applications. Dive into my recent ventures, highlighting my mastery of the ever-evolving realm of web development              </p>
               <div className="mt-2 flex items-center self-start lg:self-center">
                 <Link
                   href="mailto:m.faiyaz123@gmail.com"
