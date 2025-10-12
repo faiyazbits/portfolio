@@ -1,7 +1,7 @@
 import AnimatedText from "@/components/AnimatedText";
 import { GithubIcon } from "@/components/Icons";
 import Layout from "@/components/Layout";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,161 +12,444 @@ import proj4 from "../../public/images/projects/portfolio-cover-image.jpg";
 import proj5 from "../../public/images/projects/agency-website-cover-image.jpg";
 import proj6 from "../../public/images/projects/devdreaming.jpg";
 import TransitionEffect from "@/components/TransitionEffect";
+import { useState } from "react";
 
 const FramerImage = motion(Image);
 
-const FeaturedProject = ({ type, title, summary, img, link, github }) => {
+// ProjectModal Component
+const ProjectModal = ({ isOpen, onClose, project }) => {
+  if (!project) return null;
 
   return (
-    <article
-      className="relative flex w-full items-center  justify-between rounded-3xl rounded-br-2xl border
-border-solid border-dark bg-light p-12 shadow-2xl  dark:border-light dark:bg-dark  lg:flex-col 
-lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4 
-    "
-    >
-      <div
-        className="absolute  top-0 -right-3 -z-10 h-[103%] w-[101%] rounded-[2.5rem] rounded-br-3xl bg-dark
-         dark:bg-light  xs:-right-2 xs:h-[102%] xs:w-[100%]
-        xs:rounded-[1.5rem] "
-      />
-
-      <Link
-        href={link}
-        target={"_blank"}
-        className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
-      >
-        <FramerImage
-          src={img}
-          className="h-auto w-full"
-          alt={title}
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.2 }}
-          sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
-          priority
-        />
-      </Link>
-      <div className="flex w-1/2 flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
-        <span className="text-xl font-medium text-primary dark:text-primaryDark xs:text-base">
-          {type}
-        </span>
-        <Link
-          href={link}
-          target={"_blank"}
-          className="underline-offset-2 hover:underline"
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-dark/50 dark:bg-light/50 backdrop-blur-sm"
+          onClick={onClose}
         >
-          <h2 className="my-2 w-full text-left text-4xl font-bold lg:text-3xl xs:text-2xl">
-            {title}
-          </h2>
-        </Link>
-        <p className=" my-2 rounded-md font-medium text-dark dark:text-light sm:text-sm">
-          {summary}
-        </p>
-        <div className="mt-2 flex items-center">
-          <Link
-            href={github}
-            target={"_blank"}
-            className="w-10"
-            aria-label="Crypto Screener Application github link"
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 100 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-light dark:bg-dark border border-solid border-dark dark:border-light rounded-3xl shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
           >
-            <GithubIcon />
-          </Link>
-          <Link
-            href={link}
-            target={"_blank"}
-            className="ml-4 rounded-lg
-             bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark 
-             sm:px-4 sm:text-base
-            "
-            aria-label="Crypto Screener Application"
-          >
-            Visit Project
-          </Link>
-        </div>
-      </div>
-    </article>
+            {/* Dark offset background */}
+            <div className="absolute top-0 -right-3 -z-10 h-[101%] w-[101%] rounded-3xl bg-dark dark:bg-light xs:-right-2" />
+
+            {/* Close button */}
+            <button
+              onClick={onClose}
+              className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-dark dark:bg-light text-light dark:text-dark hover:scale-110 transition-transform duration-200"
+              aria-label="Close modal"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            {/* Modal content */}
+            <div className="p-8 sm:p-6 xs:p-4">
+              {/* Project image */}
+              <div className="w-full max-w-2xl mx-auto overflow-hidden rounded-lg mb-6">
+                <Image
+                  src={project.img}
+                  alt={project.title}
+                  className="w-full h-auto max-h-64 object-cover"
+                  sizes="(max-width: 768px) 100vw, 600px"
+                />
+              </div>
+
+              {/* Project type */}
+              <span className="text-xl font-medium text-primary dark:text-primaryDark xs:text-base">
+                {project.type}
+              </span>
+
+              {/* Project title */}
+              <h2 className="my-2 text-4xl font-bold text-dark dark:text-light lg:text-3xl xs:text-2xl">
+                {project.title}
+              </h2>
+
+              {/* Metadata: Time Period and Country */}
+              <div className="flex items-center gap-4 text-sm text-dark/75 dark:text-light/75 mb-4 xs:flex-col xs:items-start xs:gap-1">
+                <span className="flex items-center gap-1">
+                  <span className="text-base">{countryFlags[project.country]}</span>
+                  <span>{project.country}</span>
+                </span>
+                <span className="xs:hidden">•</span>
+                <span>{project.timePeriod}</span>
+              </div>
+
+              {/* Summary */}
+              <p className="my-4 text-dark dark:text-light sm:text-sm">
+                {project.summary || project.title}
+              </p>
+
+              {/* Tech Stack */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                {project.techStack.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1 text-sm font-medium rounded-full border border-dark dark:border-light text-dark dark:text-light bg-light dark:bg-dark xs:text-xs xs:px-2"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {/* Contributions section */}
+              {project.contributions && project.contributions.length > 0 && (
+                <div className="mt-6 p-6 rounded-2xl border border-dark dark:border-light bg-light dark:bg-dark">
+                  <h3 className="text-2xl font-bold text-dark dark:text-light mb-4 xs:text-xl">
+                    My Contributions
+                  </h3>
+                  <ul className="space-y-3">
+                    {project.contributions.map((contribution, index) => (
+                      <li
+                        key={index}
+                        className="flex items-start gap-3 text-dark dark:text-light"
+                      >
+                        <span className="flex-shrink-0 w-2 h-2 rounded-full bg-primary dark:bg-primaryDark mt-2" />
+                        <span className="text-base sm:text-sm">{contribution}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Links */}
+              <div className="mt-6 flex items-center flex-wrap gap-4">
+                <Link
+                  href={project.github}
+                  target="_blank"
+                  className="w-10"
+                  aria-label={`${project.title} github link`}
+                >
+                  <GithubIcon />
+                </Link>
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  className="rounded-lg bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark sm:px-4 sm:text-base hover:scale-105 transition-transform duration-200"
+                  aria-label={project.title}
+                >
+                  Visit Project
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 
-const Project = ({ title, type, img, link, github }) => {
+const countryFlags = {
+  US: "🇺🇸",
+  UK: "🇬🇧",
+  CA: "🇨🇦",
+  AU: "🇦🇺",
+  DE: "🇩🇪",
+  FR: "🇫🇷",
+  IN: "🇮🇳",
+  JP: "🇯🇵",
+};
+
+const projectsData = [
+  {
+    type: "Featured Project",
+    title: "Crypto Screener Application",
+    summary: "A feature-rich Crypto Screener App 📱 using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency 💰. You can easily convert the price in your local currency 🌍.",
+    img: proj1,
+    link: "https://devdreaming.com/videos/build-crypto-screener-app-with-react-tailwind-css",
+    github: "https://github.com/codebucks27/CryptoBucks-Final-Code",
+    techStack: ["React", "Tailwind CSS", "Context API", "React Router", "Recharts"],
+    timePeriod: "Jan 2023 - Mar 2023",
+    country: "US",
+    hasViewMore: true,
+    contributions: [
+      "Implemented real-time cryptocurrency data fetching from CoinGecko API",
+      "Built interactive price charts using Recharts library with custom tooltips",
+      "Developed currency conversion feature supporting 50+ global currencies",
+      "Created responsive search and filter functionality for 100+ cryptocurrencies",
+      "Optimized performance using Context API for efficient state management"
+    ]
+  },
+  {
+    type: "Website Template",
+    title: "NFT Collection Website",
+    summary: "",
+    img: proj2,
+    link: "https://devdreaming.com/videos/create-nft-collection-website-reactjs",
+    github: "https://github.com/codebucks27/The-Weirdos-NFT-Website-Starter-Code",
+    techStack: ["React", "Styled Components", "Framer Motion"],
+    timePeriod: "Oct 2022 - Dec 2022",
+    country: "UK",
+    hasViewMore: false,
+  },
+  {
+    type: "Website",
+    title: "Fashion Studio Website",
+    summary: "A stunning fashion studio website ✨ built with React, Locomotive Scroll, and GSAP for smooth scrolling animations 🎬 and interactive experiences 🎨.",
+    img: proj3,
+    link: "https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap",
+    github: "https://github.com/codebucks27/wibe-studio",
+    techStack: ["React", "GSAP", "Locomotive Scroll", "Styled Components"],
+    timePeriod: "Jul 2022 - Sep 2022",
+    country: "FR",
+    hasViewMore: true,
+    contributions: [
+      "Integrated Locomotive Scroll for buttery-smooth parallax scrolling effects",
+      "Crafted complex GSAP animations triggered by scroll position",
+      "Designed and implemented custom cursor interactions for enhanced UX",
+      "Built fully responsive layout with mobile-first approach",
+      "Created custom styled components with theme support"
+    ]
+  },
+  {
+    type: "Portfolio Website",
+    title: "React Portfolio Website",
+    summary: "A professional portfolio website 💼 using React JS, Framer-motion, and Styled-components. It has smooth page transitions ⚡, cool background effects 🌟, unique design and it is mobile responsive 📱.",
+    img: proj4,
+    link: "https://devdreaming.com/videos/build-stunning-portfolio-website-react-js-framer-motion",
+    github: "https://github.com/codebucks27/react-portfolio-final",
+    techStack: ["React", "Framer Motion", "Styled Components"],
+    timePeriod: "Apr 2022 - Jun 2022",
+    country: "CA",
+    hasViewMore: true,
+    contributions: [
+      "Developed smooth page transitions using Framer Motion with custom variants",
+      "Implemented animated particle background with dynamic color schemes",
+      "Created reusable styled components with consistent theming",
+      "Built responsive navigation with mobile hamburger menu",
+      "Optimized animations for 60fps performance on all devices"
+    ]
+  },
+  {
+    type: "Website Template",
+    title: "Agency Website Template",
+    summary: "",
+    img: proj5,
+    link: "https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap",
+    github: "https://github.com/codebucks27/wibe-studio",
+    techStack: ["React", "Tailwind CSS", "Next.js"],
+    timePeriod: "Feb 2023 - Mar 2023",
+    country: "AU",
+    hasViewMore: false,
+  },
+  {
+    type: "Blog Website",
+    title: "DevDreaming",
+    summary: "A modern tech blog 📝 built with Next.js and MDX for seamless content management 🚀. Features dark mode, SEO optimization, and blazing-fast performance ⚡.",
+    img: proj6,
+    link: "https://devdreaming.com",
+    github: "https://github.com/codebucks27",
+    techStack: ["Next.js", "React", "Tailwind CSS", "MDX"],
+    timePeriod: "Jan 2022 - Mar 2022",
+    country: "IN",
+    hasViewMore: true,
+    contributions: [
+      "Built MDX-powered blog with support for interactive code snippets",
+      "Implemented SEO optimization with Next.js metadata and sitemap generation",
+      "Created dark/light theme toggle with persistent user preferences",
+      "Developed custom Tailwind components for consistent design system",
+      "Optimized images and assets for core web vitals performance"
+    ]
+  },
+];
+
+const FeaturedProject = ({ type, title, summary, img, link, github, techStack, timePeriod, country, hasViewMore, contributions }) => {
+  // Use title as summary if summary is empty
+  const displaySummary = summary || title;
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const projectData = {
+    type,
+    title,
+    summary: displaySummary,
+    img,
+    link,
+    github,
+    techStack,
+    timePeriod,
+    country,
+    contributions
+  };
 
   return (
-    <article
-      className="relative flex w-full flex-col items-center justify-center rounded-2xl  rounded-br-2xl 
-      border  border-solid  border-dark bg-light p-6  shadow-2xl dark:border-light dark:bg-dark 
-      xs:p-4
-      "
-    >
-      <div
-        className="absolute  top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem] rounded-br-3xl bg-dark
-         dark:bg-light  md:-right-2 md:w-[101%] xs:h-[102%]
-        xs:rounded-[1.5rem]  "
+    <>
+      <ProjectModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        project={projectData}
       />
-
-      <Link
-        href={link}
-        target={"_blank"}
-        className="w-full cursor-pointer overflow-hidden rounded-lg"
+      <article
+        className="relative flex w-full items-center  justify-between rounded-3xl rounded-br-2xl border
+border-solid border-dark bg-light p-12 shadow-2xl  dark:border-light dark:bg-dark  lg:flex-col
+lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
+    "
       >
-        <FramerImage
-          src={img}
-          alt={title}
-          className="h-auto w-full"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.2 }}
-          sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+        <div
+          className="absolute  top-0 -right-3 -z-10 h-[103%] w-[101%] rounded-[2.5rem] rounded-br-3xl bg-dark
+         dark:bg-light  xs:-right-2 xs:h-[102%] xs:w-[100%]
+        xs:rounded-[1.5rem] "
         />
-      </Link>
-      <div className="mt-4 flex w-full flex-col items-start justify-between">
-        <span className="text-xl font-medium text-primary dark:text-primaryDark lg:text-lg md:text-base">
-          {type}
-        </span>
 
         <Link
           href={link}
           target={"_blank"}
-          className="underline-offset-2 hover:underline"
+          className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
         >
-          <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl ">
-            {title}
-          </h2>
+          <FramerImage
+            src={img}
+            className="h-auto w-full"
+            alt={title}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.2 }}
+            sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+            priority
+          />
         </Link>
-        <div className="flex w-full items-center  justify-between">
+        <div className="flex w-1/2 flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
+          <span className="text-xl font-medium text-primary dark:text-primaryDark xs:text-base">
+            {type}
+          </span>
           <Link
             href={link}
             target={"_blank"}
-            className="rounded text-lg
-            font-medium underline md:text-base
+            className="underline-offset-2 hover:underline"
+          >
+            <h2 className="my-2 w-full text-left text-4xl font-bold lg:text-3xl xs:text-2xl">
+              {title}
+            </h2>
+          </Link>
+
+          {/* Metadata: Time Period and Country */}
+          <div className="flex items-center gap-4 text-sm text-dark/75 dark:text-light/75 mb-2 xs:flex-col xs:items-start xs:gap-1">
+            <span className="flex items-center gap-1">
+              <span className="text-base">{countryFlags[country]}</span>
+              <span>{country}</span>
+            </span>
+            <span className="xs:hidden">•</span>
+            <span>{timePeriod}</span>
+          </div>
+
+          <p className=" my-2 rounded-md font-medium text-dark dark:text-light sm:text-sm">
+            {displaySummary}
+          </p>
+
+          {/* Tech Stack */}
+          <div className="flex flex-wrap gap-2 mt-2 mb-4">
+            {techStack.map((tech, index) => (
+              <span
+                key={index}
+                className="px-3 py-1 text-sm font-medium rounded-full border border-dark dark:border-light
+              text-dark dark:text-light bg-light dark:bg-dark xs:text-xs xs:px-2"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+
+          <div className="mt-2 flex items-center flex-wrap gap-4">
+            <Link
+              href={github}
+              target={"_blank"}
+              className="w-10"
+              aria-label={`${title} github link`}
+            >
+              <GithubIcon />
+            </Link>
+            <Link
+              href={link}
+              target={"_blank"}
+              className="rounded-lg
+             bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark
+             sm:px-4 sm:text-base
             "
-            aria-label={title}
-          >
-            Visit
-          </Link>
-          <Link
-            href={github}
-            target={"_blank"}
-            className="w-8 md:w-6"
-            aria-label={title}
-          >
-            <GithubIcon />
-          </Link>
+              aria-label={title}
+            >
+              Visit Project
+            </Link>
+            {hasViewMore && (
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="rounded-lg border border-dark dark:border-light
+               p-2 px-6 text-lg font-semibold text-dark dark:text-light
+               sm:px-4 sm:text-base hover:bg-dark hover:text-light dark:hover:bg-light dark:hover:text-dark
+               transition-colors duration-200
+              "
+                aria-label={`View my contribution to ${title}`}
+              >
+                View My Contribution
+              </button>
+            )}
+          </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </>
+  );
+};
+
+// Tech Filter Component
+const TechFilter = ({ allTechs, selectedTech, onSelectTech }) => {
+  return (
+    <div className="mb-16 flex flex-wrap justify-center gap-3 md:gap-2">
+      <button
+        onClick={() => onSelectTech("All")}
+        className={`px-6 py-2 rounded-lg border border-dark dark:border-light font-medium transition-colors duration-200
+          xs:px-4 xs:py-1.5 xs:text-sm
+          ${selectedTech === "All"
+            ? "bg-dark text-light dark:bg-light dark:text-dark"
+            : "bg-light text-dark dark:bg-dark dark:text-light hover:bg-dark/10 dark:hover:bg-light/10"
+          }`}
+      >
+        All
+      </button>
+      {allTechs.map((tech) => (
+        <button
+          key={tech}
+          onClick={() => onSelectTech(tech)}
+          className={`px-6 py-2 rounded-lg border border-dark dark:border-light font-medium transition-colors duration-200
+            xs:px-4 xs:py-1.5 xs:text-sm
+            ${selectedTech === tech
+              ? "bg-dark text-light dark:bg-light dark:text-dark"
+              : "bg-light text-dark dark:bg-dark dark:text-light hover:bg-dark/10 dark:hover:bg-light/10"
+            }`}
+        >
+          {tech}
+        </button>
+      ))}
+    </div>
   );
 };
 
 export default function Projects() {
+  const [selectedTech, setSelectedTech] = useState("All");
+
+
+  const allTechs = [...new Set(projectsData.flatMap((project) => project.techStack))];
+
+
+  const filteredProjects =
+    selectedTech === "All"
+      ? projectsData
+      : projectsData.filter((project) => project.techStack.includes(selectedTech));
+
   return (
     <>
       <Head>
-        <title>Modern Portfolio Built with Nextjs | Projects Page</title>
+        <title>Faiyazbits | Projects Page</title>
         <meta
           name="description"
-          content="Discover the latest webapp projects created by CodeBucks, a Next.js developer with 
+          content="Discover the latest webapp projects created by CodeBucks, a Next.js developer with
         expertise in React.js and full-stack development. Browse software engineering articles and tutorials for tips on creating your own portfolio."
         />
       </Head>
@@ -180,63 +463,33 @@ export default function Projects() {
             text="Imagination Trumps Knowledge!"
             className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
+
+
+          <TechFilter
+            allTechs={allTechs}
+            selectedTech={selectedTech}
+            onSelectTech={setSelectedTech}
+          />
+
+
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
-            <div className="col-span-12">
-              <FeaturedProject
-                type="Featured Project"
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency."
-                img={proj1}
-                link="https://devdreaming.com/videos/build-crypto-screener-app-with-react-tailwind-css"
-                github="https://github.com/codebucks27/CryptoBucks-Final-Code"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="Website Template"
-                title="NFT collection Website"
-                img={proj2}
-                link="https://devdreaming.com/videos/create-nft-collection-website-reactjs"
-                github="https://github.com/codebucks27/The-Weirdos-NFT-Website-Starter-Code"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="Website"
-                title="Fashion Studio Website"
-                img={proj3}
-                link="https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap"
-                github="https://github.com/codebucks27/wibe-studio"
-              />
-            </div>
-            <div className="col-span-12">
-              <FeaturedProject
-                type="Portfolio Website"
-                title="React Portfolio Website"
-                summary="A professional portfolio website using React JS, Framer-motion, and Styled-components. It has smooth page transitions, cool background effects, unique design and it is mobile responsive."
-                img={proj4}
-                link="https://devdreaming.com/videos/build-stunning-portfolio-website-react-js-framer-motion"
-                github="https://github.com/codebucks27/react-portfolio-final"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="Website Template"
-                img={proj5}
-                title="Agency Website Template"
-                link="https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap"
-                github="https://github.com/codebucks27/wibe-studio"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                type="Blog Website"
-                img={proj6}
-                title="DevDreaming"
-                link="https://devdreaming.com"
-                github="https://github.com/codebucks27"
-              />
-            </div>
+            {filteredProjects.map((project, index) => (
+              <div key={index} className="col-span-12">
+                <FeaturedProject
+                  type={project.type}
+                  title={project.title}
+                  summary={project.summary}
+                  img={project.img}
+                  link={project.link}
+                  github={project.github}
+                  techStack={project.techStack}
+                  timePeriod={project.timePeriod}
+                  country={project.country}
+                  hasViewMore={project.hasViewMore}
+                  contributions={project.contributions}
+                />
+              </div>
+            ))}
           </div>
         </Layout>
       </main>
