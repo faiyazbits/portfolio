@@ -5,16 +5,27 @@ import { motion, AnimatePresence } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import TransitionEffect from "@/components/TransitionEffect";
+import { useState } from "react";
+import projectsData from "@/data/projects.json";
 import proj1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
 import proj2 from "../../public/images/projects/nft-collection-website-cover-image.jpg";
 import proj3 from "../../public/images/projects/fashion-studio-website.jpg";
 import proj4 from "../../public/images/projects/portfolio-cover-image.jpg";
 import proj5 from "../../public/images/projects/agency-website-cover-image.jpg";
 import proj6 from "../../public/images/projects/devdreaming.jpg";
-import TransitionEffect from "@/components/TransitionEffect";
-import { useState } from "react";
 
 const FramerImage = motion(Image);
+
+// Image map to convert JSON keys to imported images
+const imageMap = {
+  proj1,
+  proj2,
+  proj3,
+  proj4,
+  proj5,
+  proj6,
+};
 
 // ProjectModal Component
 const ProjectModal = ({ isOpen, onClose, project }) => {
@@ -58,7 +69,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
               {/* Project image */}
               <div className="w-full max-w-2xl mx-auto overflow-hidden rounded-lg mb-6">
                 <Image
-                  src={project.img}
+                  src={imageMap[project.img]}
                   alt={project.title}
                   className="w-full h-auto max-h-64 object-cover"
                   sizes="(max-width: 768px) 100vw, 600px"
@@ -160,109 +171,6 @@ const countryFlags = {
   JP: "🇯🇵",
 };
 
-const projectsData = [
-  {
-    type: "Featured Project",
-    title: "Crypto Screener Application",
-    summary: "A feature-rich Crypto Screener App 📱 using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency 💰. You can easily convert the price in your local currency 🌍.",
-    img: proj1,
-    link: "https://devdreaming.com/videos/build-crypto-screener-app-with-react-tailwind-css",
-    github: "https://github.com/codebucks27/CryptoBucks-Final-Code",
-    techStack: ["React", "Tailwind CSS", "Context API", "React Router", "Recharts"],
-    timePeriod: "Jan 2023 - Mar 2023",
-    country: "US",
-    hasViewMore: true,
-    contributions: [
-      "Implemented real-time cryptocurrency data fetching from CoinGecko API",
-      "Built interactive price charts using Recharts library with custom tooltips",
-      "Developed currency conversion feature supporting 50+ global currencies",
-      "Created responsive search and filter functionality for 100+ cryptocurrencies",
-      "Optimized performance using Context API for efficient state management"
-    ]
-  },
-  {
-    type: "Website Template",
-    title: "NFT Collection Website",
-    summary: "",
-    img: proj2,
-    link: "https://devdreaming.com/videos/create-nft-collection-website-reactjs",
-    github: "https://github.com/codebucks27/The-Weirdos-NFT-Website-Starter-Code",
-    techStack: ["React", "Styled Components", "Framer Motion"],
-    timePeriod: "Oct 2022 - Dec 2022",
-    country: "UK",
-    hasViewMore: false,
-  },
-  {
-    type: "Website",
-    title: "Fashion Studio Website",
-    summary: "A stunning fashion studio website ✨ built with React, Locomotive Scroll, and GSAP for smooth scrolling animations 🎬 and interactive experiences 🎨.",
-    img: proj3,
-    link: "https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap",
-    github: "https://github.com/codebucks27/wibe-studio",
-    techStack: ["React", "GSAP", "Locomotive Scroll", "Styled Components"],
-    timePeriod: "Jul 2022 - Sep 2022",
-    country: "FR",
-    hasViewMore: true,
-    contributions: [
-      "Integrated Locomotive Scroll for buttery-smooth parallax scrolling effects",
-      "Crafted complex GSAP animations triggered by scroll position",
-      "Designed and implemented custom cursor interactions for enhanced UX",
-      "Built fully responsive layout with mobile-first approach",
-      "Created custom styled components with theme support"
-    ]
-  },
-  {
-    type: "Portfolio Website",
-    title: "React Portfolio Website",
-    summary: "A professional portfolio website 💼 using React JS, Framer-motion, and Styled-components. It has smooth page transitions ⚡, cool background effects 🌟, unique design and it is mobile responsive 📱.",
-    img: proj4,
-    link: "https://devdreaming.com/videos/build-stunning-portfolio-website-react-js-framer-motion",
-    github: "https://github.com/codebucks27/react-portfolio-final",
-    techStack: ["React", "Framer Motion", "Styled Components"],
-    timePeriod: "Apr 2022 - Jun 2022",
-    country: "CA",
-    hasViewMore: true,
-    contributions: [
-      "Developed smooth page transitions using Framer Motion with custom variants",
-      "Implemented animated particle background with dynamic color schemes",
-      "Created reusable styled components with consistent theming",
-      "Built responsive navigation with mobile hamburger menu",
-      "Optimized animations for 60fps performance on all devices"
-    ]
-  },
-  {
-    type: "Website Template",
-    title: "Agency Website Template",
-    summary: "",
-    img: proj5,
-    link: "https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap",
-    github: "https://github.com/codebucks27/wibe-studio",
-    techStack: ["React", "Tailwind CSS", "Next.js"],
-    timePeriod: "Feb 2023 - Mar 2023",
-    country: "AU",
-    hasViewMore: false,
-  },
-  {
-    type: "Blog Website",
-    title: "DevDreaming",
-    summary: "A modern tech blog 📝 built with Next.js and MDX for seamless content management 🚀. Features dark mode, SEO optimization, and blazing-fast performance ⚡.",
-    img: proj6,
-    link: "https://devdreaming.com",
-    github: "https://github.com/codebucks27",
-    techStack: ["Next.js", "React", "Tailwind CSS", "MDX"],
-    timePeriod: "Jan 2022 - Mar 2022",
-    country: "IN",
-    hasViewMore: true,
-    contributions: [
-      "Built MDX-powered blog with support for interactive code snippets",
-      "Implemented SEO optimization with Next.js metadata and sitemap generation",
-      "Created dark/light theme toggle with persistent user preferences",
-      "Developed custom Tailwind components for consistent design system",
-      "Optimized images and assets for core web vitals performance"
-    ]
-  },
-];
-
 const FeaturedProject = ({ type, title, summary, img, link, github, techStack, timePeriod, country, hasViewMore, contributions }) => {
   // Use title as summary if summary is empty
   const displaySummary = summary || title;
@@ -306,7 +214,7 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
           className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
         >
           <FramerImage
-            src={img}
+            src={imageMap[img]}
             className="h-auto w-full"
             alt={title}
             whileHover={{ scale: 1.05 }}
