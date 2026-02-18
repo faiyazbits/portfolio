@@ -18,6 +18,8 @@ import adeptIQ from "../../public/images/projects/dds-wireless.png";
 import recharts from "../../public/images/projects/recharts.png";
 import nexum from "../../public/images/projects/nexum.png";
 import travelTools from "../../public/images/projects/travel-tools.png";
+import averq from "../../public/images/projects/averq.jpeg";
+
 
 const FramerImage = motion(Image);
 
@@ -32,7 +34,8 @@ const imageMap = {
   adeptIQ,
   recharts,
   nexum,
-  travelTools
+  travelTools,
+  averq
 };
 
 // ProjectModal Component

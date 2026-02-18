@@ -172,8 +172,28 @@
       "Engineered a ChartFrame embed and export system that packages interactive SVG visualisations into portable, platform-aware embeds for direct sharing to social platforms with configurable metadata"
     ]
   },
-   {                                                                                                                                         
-    "type": "Featured Project",                                                                                                             
+  {
+    "type": "Featured Project",
+    "title": "Averq – Unified Transparency Apps",
+    "summary": "An enterprise-grade compliance, risk, and audit management platform that unifies all lines of defence within an organisation into a single, transparent ecosystem. Averq enables teams to deploy anything from lightweight manual workflows to sophisticated automated data analysis pipelines — replacing fragmented departmental tooling with a structured, collaborative workspace. The platform features real-time multi-user assessment editing via WebSockets, a SurveyJS-backed form engine with custom async expression evaluation, and full Progressive Web App support — including offline-first operation and seamless action syncing upon reconnection.",
+    "img": "averq",
+    "link": "https://www.averq.com/",
+    "github": null,
+    "techStack": ["React", "Node.js", "Elasticsearch", "SurveyJS"],
+    "timePeriod": "Apr 2024 - Present",
+    "country": "US",
+    "hasViewMore": true,
+    "contributions": [
+      "Developed custom asynchronous expression evaluators for SurveyJS with a caching layer, enabling complex conditional logic in compliance forms to resolve efficiently without redundant recalculation",
+      "Migrated over 50 data grid components from a legacy library to modern React using Syncfusion, improving rendering performance, accessibility, and long-term maintainability across the platform",
+      "Built deep document bookmark functionality for PDF, Word, and spreadsheet files — supporting save, retrieval, and direct in-document navigation to support audit trail workflows",
+      "Implemented real-time conflict detection for concurrent assessment editing via WebSocket, surfacing live notifications when multiple users attempt to edit the same record simultaneously",
+      "Delivered full Progressive Web App (PWA) capabilities including service worker-backed response caching, persistent state across sessions, complete offline support, and automatic action syncing upon reconnection"
+    ]
+  },
+
+   {
+    "type": "Featured Project",
     "title": "Interactive Travel Planner",                                                                                                  
     "summary": "A highly interactive travel planning interface built for one of Europe's leading transportation and mobility solution providers. Features a custom-extended Leaflet map engine for real-time journey planning, route discovery, and geospatial stop management - with a seamless sidebar-driven UI for searching, filtering, and sharing journeys across web and mobile.",                                
     "img": "travelTools",                                                                                                           
