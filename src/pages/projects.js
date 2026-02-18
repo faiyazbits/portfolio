@@ -9,12 +9,15 @@ import TransitionEffect from "@/components/TransitionEffect";
 import { useState } from "react";
 import projectsData from "@/data/projects.json";
 import sineWaveSim from "../../public/images/projects/sine-wave-sim.png";
+import weldTrace from "../../public/images/projects/weld-trace.png";
+
 
 const FramerImage = motion(Image);
 
 // Image map to convert JSON keys to imported images
 const imageMap = {
-  sineWaveSim
+  sineWaveSim,
+  weldTrace
 };
 
 // ProjectModal Component
@@ -125,14 +128,14 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
 
               {/* Links */}
               <div className="mt-6 flex items-center flex-wrap gap-4">
-                <Link
+                {project.github && <Link
                   href={project.github}
                   target="_blank"
                   className="w-10"
                   aria-label={`${project.title} github link`}
                 >
                   <GithubIcon />
-                </Link>
+                </Link>}
                 <Link
                   href={project.link}
                   target="_blank"
@@ -257,14 +260,14 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
           </div>
 
           <div className="mt-2 flex items-center flex-wrap gap-4">
-            <Link
+            {github && <Link
               href={github}
               target={"_blank"}
               className="w-10"
               aria-label={`${title} github link`}
             >
               <GithubIcon />
-            </Link>
+            </Link>}
             <Link
               href={link}
               target={"_blank"}

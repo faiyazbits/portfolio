@@ -17,5 +17,23 @@
       "Visualized core trigonometric concepts — rotating radius vector, swept angle arc, and y-coordinate projection — with color-coded elements",
       "Migrated the codebase to TypeScript and Vite for type safety and a modern dev experience"
     ]
+  },
+  {                                                                                                                                         
+    "type": "Featured Project",                                                                                                             
+    "title": "WeldTrace – Smart Welding Manager",                                                                                           
+    "summary": "A cloud-based fabrication job management platform for weld-mapping, weld tracking, and full lifecycle traceability. Engineers, inspectors, contractors, and welders collaborate in a shared ecosystem to manage WPS/PQR documents, welder qualifications, and project jobs — replacing fragile spreadsheet workflows with a code-compliant, auditable system.",                                         
+    "img": "weldTrace",                                                                                                                     
+    "link": "https://www.weldtrace.com/",                                                                                                   
+    "github": null,
+    "techStack": ["AngularJS", "jQuery", "MongoDB", "Node.js"],
+    "timePeriod": "Jul 2014 - May 2016",
+    "country": "AU",
+    "hasViewMore": true,
+    "contributions": [
+      "Built a Weld Annotation Editor enabling engineers to mark up P&ID drawings with precise weld symbols and positional metadata",
+      "Designed and implemented the core data model for weld joints, WPS/PQR documents, welder qualifications, and job traceability",
+      "Developed a Weld Input Editor — a hybrid data-grid and spreadsheet component for fast, structured entry of weld records at scale",
+      "Contributed to multi-role access architecture allowing contractors, project managers, engineers, inspectors, and welders to collaborate within a single project lifecycle"
+    ]
   }
 ]
