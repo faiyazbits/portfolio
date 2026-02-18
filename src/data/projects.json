@@ -1,102 +1,21 @@
 [
   {
-    "type": "Featured Project",
-    "title": "Crypto Screener Application",
-    "summary": "A feature-rich Crypto Screener App 📱 using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency 💰. You can easily convert the price in your local currency 🌍.",
-    "img": "proj1",
-    "link": "https://devdreaming.com/videos/build-crypto-screener-app-with-react-tailwind-css",
-    "github": "https://github.com/codebucks27/CryptoBucks-Final-Code",
-    "techStack": ["React", "Tailwind CSS", "Context API", "React Router", "Recharts"],
-    "timePeriod": "Jan 2023 - Mar 2023",
-    "country": "US",
-    "hasViewMore": true,
-    "contributions": [
-      "Implemented real-time cryptocurrency data fetching from CoinGecko API",
-      "Built interactive price charts using Recharts library with custom tooltips",
-      "Developed currency conversion feature supporting 50+ global currencies",
-      "Created responsive search and filter functionality for 100+ cryptocurrencies",
-      "Optimized performance using Context API for efficient state management"
-    ]
-  },
-  {
-    "type": "Website Template",
-    "title": "NFT Collection Website",
-    "summary": "",
-    "img": "proj2",
-    "link": "https://devdreaming.com/videos/create-nft-collection-website-reactjs",
-    "github": "https://github.com/codebucks27/The-Weirdos-NFT-Website-Starter-Code",
-    "techStack": ["React", "Styled Components", "Framer Motion"],
-    "timePeriod": "Oct 2022 - Dec 2022",
-    "country": "UK",
-    "hasViewMore": false
-  },
-  {
-    "type": "Website",
-    "title": "Fashion Studio Website",
-    "summary": "A stunning fashion studio website ✨ built with React, Locomotive Scroll, and GSAP for smooth scrolling animations 🎬 and interactive experiences 🎨.",
-    "img": "proj3",
-    "link": "https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap",
-    "github": "https://github.com/codebucks27/wibe-studio",
-    "techStack": ["React", "GSAP", "Locomotive Scroll", "Styled Components"],
-    "timePeriod": "Jul 2022 - Sep 2022",
-    "country": "FR",
-    "hasViewMore": true,
-    "contributions": [
-      "Integrated Locomotive Scroll for buttery-smooth parallax scrolling effects",
-      "Crafted complex GSAP animations triggered by scroll position",
-      "Designed and implemented custom cursor interactions for enhanced UX",
-      "Built fully responsive layout with mobile-first approach",
-      "Created custom styled components with theme support"
-    ]
-  },
-  {
-    "type": "Portfolio Website",
-    "title": "React Portfolio Website",
-    "summary": "A professional portfolio website 💼 using React JS, Framer-motion, and Styled-components. It has smooth page transitions ⚡, cool background effects 🌟, unique design and it is mobile responsive 📱.",
-    "img": "proj4",
-    "link": "https://devdreaming.com/videos/build-stunning-portfolio-website-react-js-framer-motion",
-    "github": "https://github.com/codebucks27/react-portfolio-final",
-    "techStack": ["React", "Framer Motion", "Styled Components"],
-    "timePeriod": "Apr 2022 - Jun 2022",
-    "country": "CA",
-    "hasViewMore": true,
-    "contributions": [
-      "Developed smooth page transitions using Framer Motion with custom variants",
-      "Implemented animated particle background with dynamic color schemes",
-      "Created reusable styled components with consistent theming",
-      "Built responsive navigation with mobile hamburger menu",
-      "Optimized animations for 60fps performance on all devices"
-    ]
-  },
-  {
-    "type": "Website Template",
-    "title": "Agency Website Template",
-    "summary": "",
-    "img": "proj5",
-    "link": "https://devdreaming.com/videos/build-stunning-fashion-studio-website-with-reactJS-locomotive-scroll-gsap",
-    "github": "https://github.com/codebucks27/wibe-studio",
-    "techStack": ["React", "Tailwind CSS", "Next.js"],
-    "timePeriod": "Feb 2023 - Mar 2023",
-    "country": "AU",
-    "hasViewMore": false
-  },
-  {
-    "type": "Blog Website",
-    "title": "DevDreaming",
-    "summary": "A modern tech blog 📝 built with Next.js and MDX for seamless content management 🚀. Features dark mode, SEO optimization, and blazing-fast performance ⚡.",
-    "img": "proj6",
-    "link": "https://devdreaming.com",
-    "github": "https://github.com/codebucks27",
-    "techStack": ["Next.js", "React", "Tailwind CSS", "MDX"],
-    "timePeriod": "Jan 2022 - Mar 2022",
+    "type": "Personal Project",
+    "title": "Sine Wave Simulation",
+    "summary": "An interactive visualization that demonstrates how sine waves are generated from circular motion 🌀. Originally built with HTML5 Canvas and vanilla JavaScript, later ported to D3.js for richer SVG-based rendering. This was my very first project — the one that sparked my love for coding and creative problem-solving. It holds a special place in my heart as a reminder of where it all began 💛.",
+    "img": "sineWaveSim",
+    "link": "https://faiyazbits.github.io/sine-wave-simulation/",
+    "github": "https://github.com/faiyazbits/sine-wave-simulation",
+    "techStack": ["D3.js", "TypeScript", "Vite", "HTML5 Canvas", "JavaScript"],
+    "timePeriod": "Apr 2014 (Canvas) · Ported to D3 ~2023",
     "country": "IN",
     "hasViewMore": true,
     "contributions": [
-      "Built MDX-powered blog with support for interactive code snippets",
-      "Implemented SEO optimization with Next.js metadata and sitemap generation",
-      "Created dark/light theme toggle with persistent user preferences",
-      "Developed custom Tailwind components for consistent design system",
-      "Optimized images and assets for core web vitals performance"
+      "Built the initial prototype using HTML5 Canvas and raw JavaScript to animate circular motion and sine wave generation",
+      "Ported the entire visualization to D3.js v7 with SVG rendering for smoother animations and cleaner code architecture",
+      "Implemented real-time animated mapping between a rotating point on a circle and the resulting sine wave curve",
+      "Visualized core trigonometric concepts — rotating radius vector, swept angle arc, and y-coordinate projection — with color-coded elements",
+      "Migrated the codebase to TypeScript and Vite for type safety and a modern dev experience"
     ]
   }
 ]

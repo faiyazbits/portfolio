@@ -8,23 +8,13 @@ import Link from "next/link";
 import TransitionEffect from "@/components/TransitionEffect";
 import { useState } from "react";
 import projectsData from "@/data/projects.json";
-import proj1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
-import proj2 from "../../public/images/projects/nft-collection-website-cover-image.jpg";
-import proj3 from "../../public/images/projects/fashion-studio-website.jpg";
-import proj4 from "../../public/images/projects/portfolio-cover-image.jpg";
-import proj5 from "../../public/images/projects/agency-website-cover-image.jpg";
-import proj6 from "../../public/images/projects/devdreaming.jpg";
+import sineWaveSim from "../../public/images/projects/sine-wave-sim.png";
 
 const FramerImage = motion(Image);
 
 // Image map to convert JSON keys to imported images
 const imageMap = {
-  proj1,
-  proj2,
-  proj3,
-  proj4,
-  proj5,
-  proj6,
+  sineWaveSim
 };
 
 // ProjectModal Component
