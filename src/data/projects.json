@@ -35,5 +35,25 @@
       "Developed a Weld Input Editor — a hybrid data-grid and spreadsheet component for fast, structured entry of weld records at scale",
       "Contributed to multi-role access architecture allowing contractors, project managers, engineers, inspectors, and welders to collaborate within a single project lifecycle"
     ]
+  },
+  {
+    "type": "Featured Project",
+    "title": "WeldQ – Welder Qualification Platform",
+    "summary": "A full-stack certification platform developed for WTIA (Welding Technology Institute of Australia) to digitise the end-to-end welder qualification lifecycle. WeldQ replaces paper-based processes with a standards-compliant system covering online exam delivery, automated result processing, drag-and-drop certificate design, and long-term credential management — enabling WTIA to certify welders at scale with confidence and compliance.",
+    "img": "weldq",
+    "link": "https://wtia.weldq.com/",
+    "github": null,
+    "techStack": ["MongoDB", "Express.js", "AngularJS", "Node.js"],
+    "timePeriod": "Jul 2017 - Dec 2018",
+    "country": "AU",
+    "hasViewMore": true,
+    "isClosedSource": true,
+    "contributions": [
+      "Engineered a custom test engine from scratch, supporting timed online exams with question banks, randomisation, and auto-grading for welder qualification assessments",
+      "Built an Exam Schedule Editor allowing administrators to plan, configure, and manage certification exam sessions across multiple locations and candidate cohorts",
+      "Developed a drag-and-drop Certificate Designer enabling staff to compose branded, standards-compliant qualification certificates populated with live welder data",
+      "Implemented a Result Dashboard delivering real-time insights into exam outcomes, pass/fail rates, and per-candidate performance metrics",
+      "Designed a document verification and management module to store, validate, and track welder credentials and supporting evidence for regulatory compliance"
+    ]
   }
 ]

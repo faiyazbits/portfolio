@@ -10,6 +10,8 @@ import { useState } from "react";
 import projectsData from "@/data/projects.json";
 import sineWaveSim from "../../public/images/projects/sine-wave-sim.png";
 import weldTrace from "../../public/images/projects/weld-trace.png";
+import weldq from "../../public/images/projects/weldq.png";
+
 
 
 const FramerImage = motion(Image);
@@ -17,7 +19,8 @@ const FramerImage = motion(Image);
 // Image map to convert JSON keys to imported images
 const imageMap = {
   sineWaveSim,
-  weldTrace
+  weldTrace,
+  weldq
 };
 
 // ProjectModal Component
