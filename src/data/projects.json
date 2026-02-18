@@ -114,5 +114,25 @@
       "Architected the application from scratch using React and Redux, establishing the component library, state topology, and data flow patterns that the entire platform is built upon",
       "Synchronised real-time call events from the Twilio SDK with UI state to deliver accurate, live status indicators across the dialer, agent list, and activity feed simultaneously"
     ]
+  },
+
+  {
+    "type": "Featured Project",
+    "title": "AdeptIQ – Paratransit Dispatch Engine",
+    "summary": "A cloud-based paratransit and demand-responsive transit management platform built for public transit agencies — powering the full dispatch lifecycle from real-time driver tracking to ADA-compliant trip booking. At its core is a high-performance dispatch engine that coordinates drivers, vehicles, and passengers across live maps and interactive data grids, delivering 95%+ on-time performance through optimised routing and real-time operational intelligence. The platform serves dispatchers, drivers, and passengers through a unified, configurable ecosystem backed by a JSON:API-compliant booking service.",
+    "img": "adeptIQ",
+    "link": "https://ddswireless.com/adept-iq/",
+    "github": null,
+    "techStack": ["Ember.js", "Node.js", "PostgreSQL", "WebSockets", "Leaflet", "Sequelize"],
+    "timePeriod": "Jan 2025 - Present",
+    "country": "CA",
+    "hasViewMore": true,
+    "contributions": [
+      "Achieved a 120% improvement in data grid rendering performance by replacing the legacy grid with a virtualized React data grid embedded within the Ember.js application — eliminating lag on large dispatcher datasets",
+      "Implemented real-time driver status updates in Ember.js using WebSockets, enabling dispatchers to monitor vehicle positions and availability with zero manual refresh across active trips",
+      "Integrated Leaflet map rendering into the Ember.js dispatch interface, providing dispatchers with a live geographic view of active vehicles, trip routes, and dynamic route overlays",
+      "Designed and implemented the full data model for the booking service, translating complex paratransit scheduling rules into a normalised PostgreSQL schema via Sequelize ORM",
+      "Built a suite of REST APIs strictly conforming to the JSON:API specification for the booking service, enabling clean, predictable integration with frontend clients and third-party transit systems"
+    ]
   }
 ]
