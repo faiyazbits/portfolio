@@ -134,5 +134,23 @@
       "Designed and implemented the full data model for the booking service, translating complex paratransit scheduling rules into a normalised PostgreSQL schema via Sequelize ORM",
       "Built a suite of REST APIs strictly conforming to the JSON:API specification for the booking service, enabling clean, predictable integration with frontend clients and third-party transit systems"
     ]
+  },
+
+  {
+    "type": "Featured Project",
+    "title": "BigZeta – Declarative Data Visualisation Platform",
+    "summary": "A powerful data visualisation platform inspired by Plotly, built with React and Redux to give analysts and data professionals a composable, no-code path from raw data to publication-ready charts. BigZeta lets users declaratively define filter pipelines on uploaded datasets and render fully interactive, SVG-based visualisations — all through an intuitive interface. First-class support for embedding and exporting ChartFrames means insights don't stay locked in a dashboard; they travel wherever the conversation is happening.",
+    "img": "recharts",
+    "link": "/",
+    "github": null,
+    "techStack": ["React", "Redux", "SVG"],
+    "timePeriod": "Jan 2026 - Present",
+    "country": "US",
+    "hasViewMore": true,
+    "contributions": [
+      "Developed a library of reusable React component wrappers around SVG primitives, enabling declarative, data-driven chart composition with clean separation between rendering logic and application state",
+      "Built a drag-and-drop Filter Designer allowing users to visually compose and chain complex filter conditions on uploaded datasets — replacing manual query authoring with an intuitive, node-based workflow",
+      "Engineered a ChartFrame embed and export system that packages interactive SVG visualisations into portable, platform-aware embeds for direct sharing to social platforms with configurable metadata"
+    ]
   }
 ]

@@ -15,7 +15,7 @@ import inBrowserDialer from "../../public/images/projects/in-browser-dialer.jpeg
 import eform from "../../public/images/projects/eform.png";
 import tradeworks from "../../public/images/projects/tradeworks.webp";
 import adeptIQ from "../../public/images/projects/dds-wireless.png";
-
+import recharts from "../../public/images/projects/recharts.png";
 
 const FramerImage = motion(Image);
 
@@ -27,7 +27,8 @@ const imageMap = {
   inBrowserDialer,
   eform,
   tradeworks,
-  adeptIQ
+  adeptIQ,
+  recharts
 };
 
 // ProjectModal Component
