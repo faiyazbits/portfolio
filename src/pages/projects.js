@@ -16,6 +16,8 @@ import eform from "../../public/images/projects/eform.png";
 import tradeworks from "../../public/images/projects/tradeworks.webp";
 import adeptIQ from "../../public/images/projects/dds-wireless.png";
 import recharts from "../../public/images/projects/recharts.png";
+import nexum from "../../public/images/projects/nexum.png";
+import travelTools from "../../public/images/projects/travel-tools.png";
 
 const FramerImage = motion(Image);
 
@@ -28,7 +30,9 @@ const imageMap = {
   eform,
   tradeworks,
   adeptIQ,
-  recharts
+  recharts,
+  nexum,
+  travelTools
 };
 
 // ProjectModal Component
@@ -173,6 +177,7 @@ const countryFlags = {
   FR: "🇫🇷",
   IN: "🇮🇳",
   JP: "🇯🇵",
+  DK: "🇩🇰",
 };
 
 const FeaturedProject = ({ type, title, summary, img, link, github, techStack, timePeriod, country, hasViewMore, contributions }) => {

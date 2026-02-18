@@ -118,6 +118,25 @@
 
   {
     "type": "Featured Project",
+    "title": "Nexum – Account Based Ticketing Platform",
+    "summary": "An enterprise-grade Account Based Ticketing (ABT) platform that modernises public transit by shifting the source of travel eligibility from physical smart cards to secure online accounts — enabling seamless, contactless access across multiple transport networks. Built on a distributed microservices architecture with Kotlin and Spring Boot, Nexum handles real-time GTFS data lookups, event-driven messaging via Kafka, and high-throughput concurrent APIs to serve millions of transit interactions with the reliability and speed that urban mobility demands.",
+    "img": "nexum",
+    "link": "https://www.kubapay.com/en/",
+    "github": null,
+    "techStack": ["Kotlin", "Spring Boot", "MySQL", "Angular", "Cypress", "Kafka"],
+    "timePeriod": "Jan 2022 - Apr 2024",
+    "country": "DK",
+    "hasViewMore": true,
+    "contributions": [
+      "Engineered reactive, concurrent API endpoints using Kotlin coroutines across multiple microservices, eliminating thread-blocking bottlenecks and significantly improving throughput under high transit load",
+      "Co-developed a high-performance GTFS (General Transit Feed Specification) cache layer, dramatically accelerating real-time queries across route, trip, stop, and schedule parameters to serve live transit lookups at scale",
+      "Built a Java-based in-memory loader for cached GTFS data files, enabling sub-millisecond lookup operations for high-frequency transit queries without repeated disk I/O overhead",
+      "Implemented configurable exponential backoff strategies for Kafka consumer failure detection, with automated Slack alerting via Datadog integration for real-time visibility into event-stream health"
+    ]
+  },
+
+  {
+    "type": "Featured Project",
     "title": "AdeptIQ – Paratransit Dispatch Engine",
     "summary": "A cloud-based paratransit and demand-responsive transit management platform built for public transit agencies — powering the full dispatch lifecycle from real-time driver tracking to ADA-compliant trip booking. At its core is a high-performance dispatch engine that coordinates drivers, vehicles, and passengers across live maps and interactive data grids, delivering 95%+ on-time performance through optimised routing and real-time operational intelligence. The platform serves dispatchers, drivers, and passengers through a unified, configurable ecosystem backed by a JSON:API-compliant booking service.",
     "img": "adeptIQ",
@@ -151,6 +170,23 @@
       "Developed a library of reusable React component wrappers around SVG primitives, enabling declarative, data-driven chart composition with clean separation between rendering logic and application state",
       "Built a drag-and-drop Filter Designer allowing users to visually compose and chain complex filter conditions on uploaded datasets — replacing manual query authoring with an intuitive, node-based workflow",
       "Engineered a ChartFrame embed and export system that packages interactive SVG visualisations into portable, platform-aware embeds for direct sharing to social platforms with configurable metadata"
+    ]
+  },
+   {                                                                                                                                         
+    "type": "Featured Project",                                                                                                             
+    "title": "Interactive Travel Planner",                                                                                                  
+    "summary": "A highly interactive travel planning interface built for one of Europe's leading transportation and mobility solution providers. Features a custom-extended Leaflet map engine for real-time journey planning, route discovery, and geospatial stop management - with a seamless sidebar-driven UI for searching, filtering, and sharing journeys across web and mobile.",                                
+    "img": "travelTools",                                                                                                           
+    "link": "/",
+    "github": null,
+    "techStack": ["Angular", "TypeScript", "Leaflet", "RxJS", "Cypress", "SCSS"],
+    "timePeriod": "2022 - 2023",
+    "country": "DK",
+    "hasViewMore": true,
+    "contributions": [
+      "Authored a comprehensive Cypress E2E test suite covering critical map interactions, journey search flows, and route planning scenarios across web and mobile viewports",
+      "Engineered a diff-check strategy for map node operations — intelligently reconciling create, update, and delete mutations to minimise DOM thrashing and deliver smooth, performant map rendering",
+      "Built RxJS-powered data streams for geospatial queries, enabling efficient request deduplication and client-side caching to reduce redundant API calls"
     ]
   }
 ]
