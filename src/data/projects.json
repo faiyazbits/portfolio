@@ -58,6 +58,46 @@
   },
    {
     "type": "Featured Project",
+    "title": "Eform – Government E-Application Platform",
+    "summary": "A sophisticated e-governance platform built to eliminate paperwork from high-stakes citizen-facing registration workflows. Eform automates the full lifecycle of government processes — from marriage registration and driving licence applications to birth registration — replacing fragile manual procedures with a structured, rules-driven digital system. At its core is a visual drag-and-drop service designer for data modelling and a dynamic form studio that empowers administrators to compose, map, and publish complex regulatory forms without writing a line of code.",
+    "img": "eform",
+    "link": "/",
+    "github": null,
+    "techStack": ["AngularJS", "jQuery UI"],
+    "timePeriod": "Apr 2022 - Dec 2023",
+    "country": "CA",
+    "hasViewMore": true,
+    "contributions": [
+      "Built custom AngularJS directives powered by the jQuery Drag and Drop API to enable visual data model diagramming inside the service designer — allowing administrators to define entity relationships through drag-and-drop interactions rather than manual configuration",
+      "Developed a highly interactive form mapping studio for visually binding data model entities to form fields, with real-time layout preview and support for complex nested field relationships",
+      "Engineered a dynamic form generation engine that renders conditional, multi-step government registration forms at runtime from configuration schemas — supporting diverse regulatory structures across multiple service types",
+      "Implemented a service designer for modelling government registration workflows as reusable, composable process blueprints, enabling rapid onboarding of new registration services with minimal engineering overhead",
+      "Delivered end-to-end process automation for multiple high-volume government registration domains including marriage registration, driving licence applications, and birth registration"
+    ]
+  },
+
+  {
+    "type": "Featured Project",
+    "title": "Tradeworks – Algorithmic Trading Automation Platform",
+    "summary": "A cloud-based, real-time trade automation platform built for retail forex traders looking to get started with algorithmic trading — without writing a single line of code. Tradeworks lets traders compose, backtest, and deploy custom strategies as live automated bots that run 24/7, integrated directly with MetaTrader. The platform blends a rich charting experience powered by ChartIQ with visual multi-indicator tooling, giving traders both the analytical depth of a professional terminal and the simplicity of a no-code strategy builder.",
+    "img": "tradeworks",
+    "link": "https://tradeworks.io/",
+    "github": null,
+    "techStack": ["Angular 4", "RxJS", "ChartIQ", "Canvas API"],
+    "timePeriod": "Apr 2019 - Jan 2020",
+    "country": "DK",
+    "hasViewMore": true,
+    "contributions": [
+      "Integrated the ChartIQ professional forex charting library into the Angular platform, configuring real-time data feeds, custom chart types, and toolbar extensions for live market visualisation",
+      "Built custom Angular components for multi-selection of technical indicators, enabling traders to layer and configure complex indicator combinations from a single, intuitive interface",
+      "Implemented trade entry and exit point visualisation using the Canvas API, rendering precise overlays on live charts to give traders a transparent, real-time view of their bot's decision logic",
+      "Developed reactive data pipelines with RxJS to stream and synchronise live market data, bot status, and trade signals across the platform with minimal latency",
+      "Contributed to the visual strategy builder interface, allowing non-technical retail traders to compose algorithmic trading strategies through a drag-and-configure workflow without writing code"
+    ]
+  },
+
+  {
+    "type": "Featured Project",
     "title": "Choice Health Brokers – Internal CRM Platform",
     "summary": "A purpose-built internal CRM and communications platform developed from the ground up for a brokerage firm. The platform centralises client and agent management in a single, streamlined workspace — complete with a fully functional in-browser softphone and outbound dialer powered by the Twilio API. Agents can place and receive calls without ever leaving the dashboard, turning a fragmented workflow into a unified, real-time experience built on React and Redux.",
     "img": "inBrowserDialer",

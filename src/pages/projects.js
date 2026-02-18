@@ -12,7 +12,8 @@ import sineWaveSim from "../../public/images/projects/sine-wave-sim.png";
 import weldTrace from "../../public/images/projects/weld-trace.png";
 import weldq from "../../public/images/projects/weldq.png";
 import inBrowserDialer from "../../public/images/projects/in-browser-dialer.jpeg";
-
+import eform from "../../public/images/projects/eform.png";
+import tradeworks from "../../public/images/projects/tradeworks.webp";
 
 const FramerImage = motion(Image);
 
@@ -21,7 +22,9 @@ const imageMap = {
   sineWaveSim,
   weldTrace,
   weldq,
-  inBrowserDialer
+  inBrowserDialer,
+  eform,
+  tradeworks
 };
 
 // ProjectModal Component
