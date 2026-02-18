@@ -208,5 +208,25 @@
       "Engineered a diff-check strategy for map node operations — intelligently reconciling create, update, and delete mutations to minimise DOM thrashing and deliver smooth, performant map rendering",
       "Built RxJS-powered data streams for geospatial queries, enabling efficient request deduplication and client-side caching to reduce redundant API calls"
     ]
+  },
+
+  {
+    "type": "Personal Project",
+    "title": "This Portfolio — You're Looking At It 👀",
+    "summary": "A self-aware, slightly smug portfolio website that exists solely to tell you how good its own creator is — while being good enough to prove it 😏. Built with Next.js 13, React 18, Tailwind CSS, and Framer Motion, it features dark/light theming 🌗, buttery-smooth page transitions ✨, and enough animated statistics to make any recruiter mildly overwhelmed 📊. Meta fact: this very project card was written by the portfolio to describe itself 🪞. It has no imposter syndrome.",
+    "img": "portfolio",
+    "link": "/",
+    "github": null,
+    "techStack": ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
+    "timePeriod": "2025 - Present",
+    "country": "CA",
+    "hasViewMore": true,
+    "contributions": [
+      "Architected a flash-free dark/light mode system 🌗 — localStorage persistence wired via an inline script in _document.js, because nobody asked to see a blinding white flash at midnight 🌙",
+      "Implemented fluid page transitions and scroll-triggered animations using Framer Motion's AnimatePresence ✨, giving the site a cinematic quality that is frankly disproportionate to its existence as a portfolio",
+      "Built a responsive navigation system with a hamburger menu 🍔 and animated mobile overlay — because mobile users deserve smooth animations too, even if it's just your mum checking the site 📱",
+      "Configured a custom Tailwind design system 🎨 with bespoke colour tokens, circular gradient backgrounds, and responsive breakpoints covering everything from ultrawide monitors to the narrowest of phones",
+      "Designed and rendered this very project card 🪞 — an act of recursion that would make a computer science professor either nod approvingly or quietly weep"
+    ]
   }
 ]

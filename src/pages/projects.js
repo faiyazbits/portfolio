@@ -19,6 +19,7 @@ import recharts from "../../public/images/projects/recharts.png";
 import nexum from "../../public/images/projects/nexum.png";
 import travelTools from "../../public/images/projects/travel-tools.png";
 import averq from "../../public/images/projects/averq.jpeg";
+import portfolio from "../../public/images/projects/portfolio.png";
 
 
 const FramerImage = motion(Image);
@@ -35,7 +36,8 @@ const imageMap = {
   recharts,
   nexum,
   travelTools,
-  averq
+  averq,
+  portfolio
 };
 
 // ProjectModal Component
