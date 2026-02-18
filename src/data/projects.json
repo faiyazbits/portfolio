@@ -36,6 +36,7 @@
       "Contributed to multi-role access architecture allowing contractors, project managers, engineers, inspectors, and welders to collaborate within a single project lifecycle"
     ]
   },
+ 
   {
     "type": "Featured Project",
     "title": "WeldQ – Welder Qualification Platform",
@@ -47,13 +48,31 @@
     "timePeriod": "Jul 2017 - Dec 2018",
     "country": "AU",
     "hasViewMore": true,
-    "isClosedSource": true,
     "contributions": [
       "Engineered a custom test engine from scratch, supporting timed online exams with question banks, randomisation, and auto-grading for welder qualification assessments",
       "Built an Exam Schedule Editor allowing administrators to plan, configure, and manage certification exam sessions across multiple locations and candidate cohorts",
       "Developed a drag-and-drop Certificate Designer enabling staff to compose branded, standards-compliant qualification certificates populated with live welder data",
       "Implemented a Result Dashboard delivering real-time insights into exam outcomes, pass/fail rates, and per-candidate performance metrics",
       "Designed a document verification and management module to store, validate, and track welder credentials and supporting evidence for regulatory compliance"
+    ]
+  },
+   {
+    "type": "Featured Project",
+    "title": "Choice Health Brokers – Internal CRM Platform",
+    "summary": "A purpose-built internal CRM and communications platform developed from the ground up for a brokerage firm. The platform centralises client and agent management in a single, streamlined workspace — complete with a fully functional in-browser softphone and outbound dialer powered by the Twilio API. Agents can place and receive calls without ever leaving the dashboard, turning a fragmented workflow into a unified, real-time experience built on React and Redux.",
+    "img": "inBrowserDialer",
+    "link": "/",
+    "github": null,
+    "techStack": ["React", "Redux", "Twilio"],
+    "timePeriod": "Jan 2020 - Mar 2021",
+    "country": "US",
+    "hasViewMore": true,
+    "contributions": [
+      "Designed and built a fully interactive editable data grid for managing broker and agent records, supporting inline cell editing, column sorting, and real-time validation without leaving the table view",
+      "Integrated the Twilio Programmable Voice API to implement an in-browser dialer, enabling agents to place outbound calls directly from the CRM with call state management driven by Redux",
+      "Built a softphone interface for handling inbound call routing in the browser — ring detection, call accept/reject, and live call controls — eliminating the need for external hardware or third-party desk phones",
+      "Architected the application from scratch using React and Redux, establishing the component library, state topology, and data flow patterns that the entire platform is built upon",
+      "Synchronised real-time call events from the Twilio SDK with UI state to deliver accurate, live status indicators across the dialer, agent list, and activity feed simultaneously"
     ]
   }
 ]
