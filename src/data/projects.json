@@ -18,12 +18,12 @@
       "Migrated the codebase to TypeScript and Vite for type safety and a modern dev experience"
     ]
   },
-  {                                                                                                                                         
-    "type": "Featured Project",                                                                                                             
-    "title": "WeldTrace – Smart Welding Manager",                                                                                           
-    "summary": "A cloud-based fabrication job management platform for weld-mapping, weld tracking, and full lifecycle traceability. Engineers, inspectors, contractors, and welders collaborate in a shared ecosystem to manage WPS/PQR documents, welder qualifications, and project jobs — replacing fragile spreadsheet workflows with a code-compliant, auditable system.",                                         
-    "img": "weldTrace",                                                                                                                     
-    "link": "https://www.weldtrace.com/",                                                                                                   
+  {
+    "type": "Featured Project",
+    "title": "WeldTrace – Smart Welding Manager",
+    "summary": "A cloud-based fabrication job management platform for weld-mapping, weld tracking, and full lifecycle traceability. Engineers, inspectors, contractors, and welders collaborate in a shared ecosystem to manage WPS/PQR documents, welder qualifications, and project jobs — replacing fragile spreadsheet workflows with a code-compliant, auditable system.",
+    "img": "weldTrace",
+    "link": "https://www.weldtrace.com/",
     "github": null,
     "techStack": ["AngularJS", "jQuery", "MongoDB", "Node.js"],
     "timePeriod": "Jul 2014 - May 2016",
@@ -36,7 +36,7 @@
       "Contributed to multi-role access architecture allowing contractors, project managers, engineers, inspectors, and welders to collaborate within a single project lifecycle"
     ]
   },
- 
+
   {
     "type": "Featured Project",
     "title": "WeldQ – Welder Qualification Platform",
@@ -56,7 +56,7 @@
       "Designed a document verification and management module to store, validate, and track welder credentials and supporting evidence for regulatory compliance"
     ]
   },
-   {
+  {
     "type": "Featured Project",
     "title": "Eform – Government E-Application Platform",
     "summary": "A sophisticated e-governance platform built to eliminate paperwork from high-stakes citizen-facing registration workflows. Eform automates the full lifecycle of government processes — from marriage registration and driving licence applications to birth registration — replacing fragile manual procedures with a structured, rules-driven digital system. At its core is a visual drag-and-drop service designer for data modelling and a dynamic form studio that empowers administrators to compose, map, and publish complex regulatory forms without writing a line of code.",
@@ -123,7 +123,14 @@
     "img": "nexum",
     "link": "https://www.kubapay.com/en/",
     "github": null,
-    "techStack": ["Kotlin", "Spring Boot", "MySQL", "Angular", "Cypress", "Kafka"],
+    "techStack": [
+      "Kotlin",
+      "Spring Boot",
+      "MySQL",
+      "Angular",
+      "Cypress",
+      "Kafka"
+    ],
     "timePeriod": "Jan 2022 - Apr 2024",
     "country": "DK",
     "hasViewMore": true,
@@ -142,7 +149,14 @@
     "img": "adeptIQ",
     "link": "https://ddswireless.com/adept-iq/",
     "github": null,
-    "techStack": ["Ember.js", "Node.js", "PostgreSQL", "WebSockets", "Leaflet", "Sequelize"],
+    "techStack": [
+      "Ember.js",
+      "Node.js",
+      "PostgreSQL",
+      "WebSockets",
+      "Leaflet",
+      "Sequelize"
+    ],
     "timePeriod": "Jan 2025 - Present",
     "country": "CA",
     "hasViewMore": true,
@@ -192,14 +206,21 @@
     ]
   },
 
-   {
+  {
     "type": "Featured Project",
-    "title": "Interactive Travel Planner",                                                                                                  
-    "summary": "A highly interactive travel planning interface built for one of Europe's leading transportation and mobility solution providers. Features a custom-extended Leaflet map engine for real-time journey planning, route discovery, and geospatial stop management - with a seamless sidebar-driven UI for searching, filtering, and sharing journeys across web and mobile.",                                
-    "img": "travelTools",                                                                                                           
+    "title": "Interactive Travel Planner",
+    "summary": "A highly interactive travel planning interface built for one of Europe's leading transportation and mobility solution providers. Features a custom-extended Leaflet map engine for real-time journey planning, route discovery, and geospatial stop management - with a seamless sidebar-driven UI for searching, filtering, and sharing journeys across web and mobile.",
+    "img": "travelTools",
     "link": "/",
     "github": null,
-    "techStack": ["Angular", "TypeScript", "Leaflet", "RxJS", "Cypress", "SCSS"],
+    "techStack": [
+      "Angular",
+      "TypeScript",
+      "Leaflet",
+      "RxJS",
+      "Cypress",
+      "SCSS"
+    ],
     "timePeriod": "2022 - 2023",
     "country": "DK",
     "hasViewMore": true,
@@ -227,6 +248,38 @@
       "Built a responsive navigation system with a hamburger menu 🍔 and animated mobile overlay — because mobile users deserve smooth animations too, even if it's just your mum checking the site 📱",
       "Configured a custom Tailwind design system 🎨 with bespoke colour tokens, circular gradient backgrounds, and responsive breakpoints covering everything from ultrawide monitors to the narrowest of phones",
       "Designed and rendered this very project card 🪞 — an act of recursion that would make a computer science professor either nod approvingly or quietly weep"
+    ]
+  },
+
+  {
+    "type": "Featured Project",
+    "title": "DocuTalk — AI Document Intelligence Chatbot",
+    "summary": "A production-ready RAG-powered support chatbot that transforms static PDFs into a living, queryable knowledge base. Built with LangChain.js, Chroma vector search, and the Vercel AI SDK, it streams context-aware answers token-by-token using DeepSeek LLM — at 14× lower cost than GPT-4 — while maintaining session history, tool-calling capabilities, and seamless document ingestion pipelines.",
+    "img": "docutalk",
+    "link": "/",
+    "github": "https://github.com/faiyazbits/docutalk",
+    "techStack": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "LangChain.js",
+      "Vercel AI SDK",
+      "ChromaDB",
+      "OpenAI Embeddings",
+      "DeepSeek LLM",
+      "Express.js"
+    ],
+    "timePeriod": "Jan 2025 - Feb 2025",
+    "country": "IN",
+    "hasViewMore": true,
+    "contributions": [
+      "Built a full RAG pipeline with LangChain that turns uploaded PDFs into a searchable knowledge base — so the AI answers from your documents, not from hallucination",
+      "Wired the Vercel AI SDK to a custom streaming backend so responses appear token-by-token, giving users the feel of a live conversation rather than a loading spinner",
+      "Extended the AI beyond passive Q&A by building a tool-calling layer that lets it actively inspect the knowledge base — surfacing available documents on demand and generating on-the-fly topic summaries in the user's preferred format",
+      "Kept conversations coherent across long sessions by managing history intelligently, trimming old context automatically to control costs without losing the thread of the dialogue",
+      "Shipped a document upload flow that keeps users informed at every step — from file received to fully indexed — using real-time progress events streamed back to the UI",
+      "Cut inference costs by ~14× versus GPT-4 by benchmarking and integrating DeepSeek, while keeping the model layer swappable so any LangChain-compatible LLM can be dropped in"
     ]
   }
 ]
