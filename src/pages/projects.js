@@ -157,14 +157,16 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
                 >
                   <GithubIcon />
                 </Link>}
-                <Link
-                  href={project.link}
-                  target="_blank"
-                  className="rounded-lg bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark sm:px-4 sm:text-base hover:scale-105 transition-transform duration-200"
-                  aria-label={project.title}
-                >
-                  Visit Project
-                </Link>
+                {project.link && (
+                  <Link
+                    href={project.link}
+                    target="_blank"
+                    className="rounded-lg bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark sm:px-4 sm:text-base hover:scale-105 transition-transform duration-200"
+                    aria-label={project.title}
+                  >
+                    Visit Project
+                  </Link>
+                )}
               </div>
             </div>
           </motion.div>
@@ -186,7 +188,7 @@ const countryFlags = {
   DK: "🇩🇰",
 };
 
-const FeaturedProject = ({ type, title, summary, img, link, github, techStack, timePeriod, country, hasViewMore, contributions }) => {
+const FeaturedProject = ({ type, title, summary, img, link, github, techStack, timePeriod, country, contributions }) => {
   // Use title as summary if summary is empty
   const displaySummary = summary || title;
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -223,36 +225,58 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
         xs:rounded-[1.5rem] "
         />
 
-        <Link
-          href={link}
-          target={"_blank"}
-          className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
-        >
-          <FramerImage
-            src={imageMap[img]}
-            className="h-auto w-full"
-            alt={title}
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-            sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
-            priority
-          />
-        </Link>
+        {link ? (
+          <Link
+            href={link}
+            target={"_blank"}
+            className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
+          >
+            <FramerImage
+              src={imageMap[img]}
+              className="h-auto w-full"
+              alt={title}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+              sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw"
+              priority
+            />
+          </Link>
+        ) : (
+          <div className="w-1/2 overflow-hidden rounded-lg lg:w-full">
+            <FramerImage
+              src={imageMap[img]}
+              className="h-auto w-full"
+              alt={title}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+              sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw"
+              priority
+            />
+          </div>
+        )}
         <div className="flex w-1/2 flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
           <span className="text-xl font-medium text-primary dark:text-primaryDark xs:text-base">
             {type}
           </span>
-          <Link
-            href={link}
-            target={"_blank"}
-            className="underline-offset-2 hover:underline"
-          >
+          <div className="flex items-center gap-2">
             <h2 className="my-2 w-full text-left text-4xl font-bold lg:text-3xl xs:text-2xl">
               {title}
             </h2>
-          </Link>
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="flex-shrink-0 p-1.5 rounded-full hover:bg-dark/10 dark:hover:bg-light/10 transition-colors duration-200 text-dark dark:text-light"
+              aria-label={`View details for ${title}`}
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </button>
+          </div>
 
           {/* Metadata: Time Period and Country */}
           <div className="flex items-center gap-4 text-sm text-dark/75 dark:text-light/75 mb-2 xs:flex-col xs:items-start xs:gap-1">
@@ -290,66 +314,89 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
             >
               <GithubIcon />
             </Link>}
-            <Link
-              href={link}
-              target={"_blank"}
-              className="rounded-lg
-             bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark
-             sm:px-4 sm:text-base
-            "
-              aria-label={title}
-            >
-              Visit Project
-            </Link>
-            {hasViewMore && (
-              <button
-                onClick={() => setIsModalOpen(true)}
-                className="rounded-lg border border-dark dark:border-light
-               p-2 px-6 text-lg font-semibold text-dark dark:text-light
-               sm:px-4 sm:text-base hover:bg-dark hover:text-light dark:hover:bg-light dark:hover:text-dark
-               transition-colors duration-200
-              "
-                aria-label={`View my contribution to ${title}`}
+            {link && (
+              <Link
+                href={link}
+                target={"_blank"}
+                className="rounded-lg bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark sm:px-4 sm:text-base"
+                aria-label={title}
               >
-                View My Contribution
-              </button>
+                Visit Project
+              </Link>
             )}
           </div>
+          {contributions && contributions.length > 0 && (
+            <div className="mt-6 w-full">
+              <h3 className="text-lg font-bold text-dark dark:text-light mb-3">
+                How I Helped
+              </h3>
+              <ul className="space-y-3">
+                {contributions.map((contribution, index) => (
+                  <li key={index} className="flex items-start gap-2 text-dark dark:text-light">
+                    <span className="flex-shrink-0 w-2 h-2 rounded-full bg-primary dark:bg-primaryDark mt-[0.45rem]" />
+                    <span className="text-base sm:text-sm">{contribution}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </article>
     </>
   );
 };
 
+const TECH_CATEGORIES = {
+  "Frontend":      ["React", "AngularJS", "Angular 4", "Angular", "Ember.js", "Next.js"],
+  "Languages":     ["JavaScript", "TypeScript", "Kotlin"],
+  "Styling":       ["Tailwind CSS", "SCSS", "jQuery", "jQuery UI"],
+  "Backend":       ["Node.js", "Express.js", "Spring Boot"],
+  "Databases":     ["MongoDB", "MySQL", "PostgreSQL", "Elasticsearch", "ChromaDB", "Sequelize"],
+  "State & Async": ["Redux", "RxJS", "Kafka", "WebSockets"],
+  "Visualization": ["D3.js", "ChartIQ", "Leaflet", "Canvas API", "HTML5 Canvas", "SVG"],
+  "AI / LLM":      ["LangChain.js", "Vercel AI SDK", "OpenAI Embeddings", "DeepSeek LLM"],
+  "Tools":         ["Vite", "Cypress", "Framer Motion", "Twilio", "SurveyJS"],
+};
+
 // Tech Filter Component
 const TechFilter = ({ allTechs, selectedTech, onSelectTech }) => {
+  const pill = (active) =>
+    `px-4 py-1.5 rounded-full text-sm font-medium border transition-all duration-200
+     ${active
+       ? "bg-primary dark:bg-primaryDark text-light dark:text-dark border-primary dark:border-primaryDark"
+       : "border-dark/20 dark:border-light/20 text-dark/60 dark:text-light/60 bg-transparent hover:border-dark/60 dark:hover:border-light/60 hover:text-dark dark:hover:text-light"
+     }`;
+
   return (
-    <div className="mb-16 flex flex-wrap justify-center gap-3 md:gap-2">
-      <button
-        onClick={() => onSelectTech("All")}
-        className={`px-6 py-2 rounded-lg border border-dark dark:border-light font-medium transition-colors duration-200
-          xs:px-4 xs:py-1.5 xs:text-sm
-          ${selectedTech === "All"
-            ? "bg-dark text-light dark:bg-light dark:text-dark"
-            : "bg-light text-dark dark:bg-dark dark:text-light hover:bg-dark/10 dark:hover:bg-light/10"
-          }`}
-      >
-        All
-      </button>
-      {allTechs.map((tech) => (
-        <button
-          key={tech}
-          onClick={() => onSelectTech(tech)}
-          className={`px-6 py-2 rounded-lg border border-dark dark:border-light font-medium transition-colors duration-200
-            xs:px-4 xs:py-1.5 xs:text-sm
-            ${selectedTech === tech
-              ? "bg-dark text-light dark:bg-light dark:text-dark"
-              : "bg-light text-dark dark:bg-dark dark:text-light hover:bg-dark/10 dark:hover:bg-light/10"
-            }`}
-        >
-          {tech}
+    <div className="mb-16 w-full">
+      {/* All Projects reset */}
+      <div className="pb-5 mb-5 border-b border-dark/10 dark:border-light/10">
+        <button onClick={() => onSelectTech("All")} className={pill(selectedTech === "All")}>
+          All Projects
         </button>
-      ))}
+      </div>
+
+      {/* Category rows */}
+      <div className="flex flex-col gap-4">
+        {Object.entries(TECH_CATEGORIES).map(([category, techs]) => {
+          const present = techs.filter((t) => allTechs.includes(t));
+          if (present.length === 0) return null;
+          return (
+            <div key={category} className="flex items-start gap-4 sm:flex-col sm:gap-1.5">
+              <span className="min-w-[8rem] pt-1.5 text-xs font-bold uppercase tracking-widest text-dark/35 dark:text-light/35 sm:pt-0">
+                {category}
+              </span>
+              <div className="flex flex-wrap gap-2">
+                {present.map((tech) => (
+                  <button key={tech} onClick={() => onSelectTech(tech)} className={pill(selectedTech === tech)}>
+                    {tech}
+                  </button>
+                ))}
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
@@ -361,10 +408,10 @@ export default function Projects() {
   const allTechs = [...new Set(projectsData.flatMap((project) => project.techStack))];
 
 
-  const filteredProjects =
-    selectedTech === "All"
-      ? projectsData
-      : projectsData.filter((project) => project.techStack.includes(selectedTech));
+  const filteredProjects = (selectedTech === "All"
+    ? projectsData
+    : projectsData.filter((project) => project.techStack.includes(selectedTech))
+  ).sort((a, b) => a.order - b.order);
 
   return (
     <>
@@ -408,7 +455,6 @@ export default function Projects() {
                   techStack={project.techStack}
                   timePeriod={project.timePeriod}
                   country={project.country}
-                  hasViewMore={project.hasViewMore}
                   contributions={project.contributions}
                 />
               </div>

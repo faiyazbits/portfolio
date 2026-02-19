@@ -9,14 +9,14 @@
     "techStack": ["D3.js", "TypeScript", "Vite", "HTML5 Canvas", "JavaScript"],
     "timePeriod": "Apr 2014 (Canvas) · Ported to D3 ~2023",
     "country": "IN",
-    "hasViewMore": true,
     "contributions": [
       "Built the initial prototype using HTML5 Canvas and raw JavaScript to animate circular motion and sine wave generation",
       "Ported the entire visualization to D3.js v7 with SVG rendering for smoother animations and cleaner code architecture",
       "Implemented real-time animated mapping between a rotating point on a circle and the resulting sine wave curve",
       "Visualized core trigonometric concepts — rotating radius vector, swept angle arc, and y-coordinate projection — with color-coded elements",
       "Migrated the codebase to TypeScript and Vite for type safety and a modern dev experience"
-    ]
+    ],
+    "order": 13
   },
   {
     "type": "Featured Project",
@@ -28,15 +28,14 @@
     "techStack": ["AngularJS", "jQuery", "MongoDB", "Node.js"],
     "timePeriod": "Jul 2014 - May 2016",
     "country": "AU",
-    "hasViewMore": true,
     "contributions": [
       "Built a Weld Annotation Editor enabling engineers to mark up P&ID drawings with precise weld symbols and positional metadata",
       "Designed and implemented the core data model for weld joints, WPS/PQR documents, welder qualifications, and job traceability",
       "Developed a Weld Input Editor — a hybrid data-grid and spreadsheet component for fast, structured entry of weld records at scale",
       "Contributed to multi-role access architecture allowing contractors, project managers, engineers, inspectors, and welders to collaborate within a single project lifecycle"
-    ]
+    ],
+    "order": 12
   },
-
   {
     "type": "Featured Project",
     "title": "WeldQ – Welder Qualification Platform",
@@ -47,35 +46,70 @@
     "techStack": ["MongoDB", "Express.js", "AngularJS", "Node.js"],
     "timePeriod": "Jul 2017 - Dec 2018",
     "country": "AU",
-    "hasViewMore": true,
     "contributions": [
       "Engineered a custom test engine from scratch, supporting timed online exams with question banks, randomisation, and auto-grading for welder qualification assessments",
       "Built an Exam Schedule Editor allowing administrators to plan, configure, and manage certification exam sessions across multiple locations and candidate cohorts",
       "Developed a drag-and-drop Certificate Designer enabling staff to compose branded, standards-compliant qualification certificates populated with live welder data",
       "Implemented a Result Dashboard delivering real-time insights into exam outcomes, pass/fail rates, and per-candidate performance metrics",
       "Designed a document verification and management module to store, validate, and track welder credentials and supporting evidence for regulatory compliance"
-    ]
+    ],
+    "order": 11
+  },
+  {
+    "type": "Featured Project",
+    "title": "BigZeta – Declarative Data Visualisation Platform",
+    "summary": "A powerful data visualisation platform inspired by Plotly, built with React and Redux to give analysts and data professionals a composable, no-code path from raw data to publication-ready charts. BigZeta lets users declaratively define filter pipelines on uploaded datasets and render fully interactive, SVG-based visualisations — all through an intuitive interface. First-class support for embedding and exporting ChartFrames means insights don't stay locked in a dashboard; they travel wherever the conversation is happening.",
+    "img": "recharts",
+    "link": null,
+    "github": null,
+    "techStack": ["React", "Redux", "SVG"],
+    "timePeriod": "Jan 2026 - Present",
+    "country": "US",
+    "contributions": [
+      "Developed a library of reusable React component wrappers around SVG primitives, enabling declarative, data-driven chart composition with clean separation between rendering logic and application state",
+      "Built a drag-and-drop Filter Designer allowing users to visually compose and chain complex filter conditions on uploaded datasets — replacing manual query authoring with an intuitive, node-based workflow",
+      "Engineered a ChartFrame embed and export system that packages interactive SVG visualisations into portable, platform-aware embeds for direct sharing to social platforms with configurable metadata"
+    ],
+    "order": 10
+  },
+  {
+    "type": "Featured Project",
+    "title": "Choice Health Brokers – Internal CRM Platform",
+    "summary": "A purpose-built internal CRM and communications platform developed from the ground up for a brokerage firm. The platform centralises client and agent management in a single, streamlined workspace — complete with a fully functional in-browser softphone and outbound dialer powered by the Twilio API. Agents can place and receive calls without ever leaving the dashboard, turning a fragmented workflow into a unified, real-time experience built on React and Redux.",
+    "img": "inBrowserDialer",
+    "link": null,
+    "github": null,
+    "techStack": ["React", "Redux", "Twilio"],
+    "timePeriod": "Jan 2020 - Mar 2021",
+    "country": "US",
+    "contributions": [
+      "Designed and built a fully interactive editable data grid for managing broker and agent records, supporting inline cell editing, column sorting, and real-time validation without leaving the table view",
+      "Integrated the Twilio Programmable Voice API to implement an in-browser dialer, enabling agents to place outbound calls directly from the CRM with call state management driven by Redux",
+      "Built a softphone interface for handling inbound call routing in the browser — ring detection, call accept/reject, and live call controls — eliminating the need for external hardware or third-party desk phones",
+      "Architected the application from scratch using React and Redux, establishing the component library, state topology, and data flow patterns that the entire platform is built upon",
+      "Synchronised real-time call events from the Twilio SDK with UI state to deliver accurate, live status indicators across the dialer, agent list, and activity feed simultaneously"
+    ],
+    "order": 9
   },
   {
     "type": "Featured Project",
     "title": "Eform – Government E-Application Platform",
     "summary": "A sophisticated e-governance platform built to eliminate paperwork from high-stakes citizen-facing registration workflows. Eform automates the full lifecycle of government processes — from marriage registration and driving licence applications to birth registration — replacing fragile manual procedures with a structured, rules-driven digital system. At its core is a visual drag-and-drop service designer for data modelling and a dynamic form studio that empowers administrators to compose, map, and publish complex regulatory forms without writing a line of code.",
     "img": "eform",
-    "link": "/",
+    "link": null,
     "github": null,
     "techStack": ["AngularJS", "jQuery UI"],
     "timePeriod": "Apr 2022 - Dec 2023",
     "country": "CA",
-    "hasViewMore": true,
     "contributions": [
       "Built custom AngularJS directives powered by the jQuery Drag and Drop API to enable visual data model diagramming inside the service designer — allowing administrators to define entity relationships through drag-and-drop interactions rather than manual configuration",
       "Developed a highly interactive form mapping studio for visually binding data model entities to form fields, with real-time layout preview and support for complex nested field relationships",
       "Engineered a dynamic form generation engine that renders conditional, multi-step government registration forms at runtime from configuration schemas — supporting diverse regulatory structures across multiple service types",
       "Implemented a service designer for modelling government registration workflows as reusable, composable process blueprints, enabling rapid onboarding of new registration services with minimal engineering overhead",
       "Delivered end-to-end process automation for multiple high-volume government registration domains including marriage registration, driving licence applications, and birth registration"
-    ]
+    ],
+    "order": 8
   },
-
   {
     "type": "Featured Project",
     "title": "Tradeworks – Algorithmic Trading Automation Platform",
@@ -86,62 +120,15 @@
     "techStack": ["Angular 4", "RxJS", "ChartIQ", "Canvas API"],
     "timePeriod": "Apr 2019 - Jan 2020",
     "country": "DK",
-    "hasViewMore": true,
     "contributions": [
       "Integrated the ChartIQ professional forex charting library into the Angular platform, configuring real-time data feeds, custom chart types, and toolbar extensions for live market visualisation",
       "Built custom Angular components for multi-selection of technical indicators, enabling traders to layer and configure complex indicator combinations from a single, intuitive interface",
       "Implemented trade entry and exit point visualisation using the Canvas API, rendering precise overlays on live charts to give traders a transparent, real-time view of their bot's decision logic",
       "Developed reactive data pipelines with RxJS to stream and synchronise live market data, bot status, and trade signals across the platform with minimal latency",
       "Contributed to the visual strategy builder interface, allowing non-technical retail traders to compose algorithmic trading strategies through a drag-and-configure workflow without writing code"
-    ]
-  },
-
-  {
-    "type": "Featured Project",
-    "title": "Choice Health Brokers – Internal CRM Platform",
-    "summary": "A purpose-built internal CRM and communications platform developed from the ground up for a brokerage firm. The platform centralises client and agent management in a single, streamlined workspace — complete with a fully functional in-browser softphone and outbound dialer powered by the Twilio API. Agents can place and receive calls without ever leaving the dashboard, turning a fragmented workflow into a unified, real-time experience built on React and Redux.",
-    "img": "inBrowserDialer",
-    "link": "/",
-    "github": null,
-    "techStack": ["React", "Redux", "Twilio"],
-    "timePeriod": "Jan 2020 - Mar 2021",
-    "country": "US",
-    "hasViewMore": true,
-    "contributions": [
-      "Designed and built a fully interactive editable data grid for managing broker and agent records, supporting inline cell editing, column sorting, and real-time validation without leaving the table view",
-      "Integrated the Twilio Programmable Voice API to implement an in-browser dialer, enabling agents to place outbound calls directly from the CRM with call state management driven by Redux",
-      "Built a softphone interface for handling inbound call routing in the browser — ring detection, call accept/reject, and live call controls — eliminating the need for external hardware or third-party desk phones",
-      "Architected the application from scratch using React and Redux, establishing the component library, state topology, and data flow patterns that the entire platform is built upon",
-      "Synchronised real-time call events from the Twilio SDK with UI state to deliver accurate, live status indicators across the dialer, agent list, and activity feed simultaneously"
-    ]
-  },
-
-  {
-    "type": "Featured Project",
-    "title": "Nexum – Account Based Ticketing Platform",
-    "summary": "An enterprise-grade Account Based Ticketing (ABT) platform that modernises public transit by shifting the source of travel eligibility from physical smart cards to secure online accounts — enabling seamless, contactless access across multiple transport networks. Built on a distributed microservices architecture with Kotlin and Spring Boot, Nexum handles real-time GTFS data lookups, event-driven messaging via Kafka, and high-throughput concurrent APIs to serve millions of transit interactions with the reliability and speed that urban mobility demands.",
-    "img": "nexum",
-    "link": "https://www.kubapay.com/en/",
-    "github": null,
-    "techStack": [
-      "Kotlin",
-      "Spring Boot",
-      "MySQL",
-      "Angular",
-      "Cypress",
-      "Kafka"
     ],
-    "timePeriod": "Jan 2022 - Apr 2024",
-    "country": "DK",
-    "hasViewMore": true,
-    "contributions": [
-      "Engineered reactive, concurrent API endpoints using Kotlin coroutines across multiple microservices, eliminating thread-blocking bottlenecks and significantly improving throughput under high transit load",
-      "Co-developed a high-performance GTFS (General Transit Feed Specification) cache layer, dramatically accelerating real-time queries across route, trip, stop, and schedule parameters to serve live transit lookups at scale",
-      "Built a Java-based in-memory loader for cached GTFS data files, enabling sub-millisecond lookup operations for high-frequency transit queries without repeated disk I/O overhead",
-      "Implemented configurable exponential backoff strategies for Kafka consumer failure detection, with automated Slack alerting via Datadog integration for real-time visibility into event-stream health"
-    ]
+    "order": 7
   },
-
   {
     "type": "Featured Project",
     "title": "AdeptIQ – Paratransit Dispatch Engine",
@@ -159,59 +146,21 @@
     ],
     "timePeriod": "Jan 2025 - Present",
     "country": "CA",
-    "hasViewMore": true,
     "contributions": [
       "Achieved a 120% improvement in data grid rendering performance by replacing the legacy grid with a virtualized React data grid embedded within the Ember.js application — eliminating lag on large dispatcher datasets",
       "Implemented real-time driver status updates in Ember.js using WebSockets, enabling dispatchers to monitor vehicle positions and availability with zero manual refresh across active trips",
       "Integrated Leaflet map rendering into the Ember.js dispatch interface, providing dispatchers with a live geographic view of active vehicles, trip routes, and dynamic route overlays",
       "Designed and implemented the full data model for the booking service, translating complex paratransit scheduling rules into a normalised PostgreSQL schema via Sequelize ORM",
       "Built a suite of REST APIs strictly conforming to the JSON:API specification for the booking service, enabling clean, predictable integration with frontend clients and third-party transit systems"
-    ]
+    ],
+    "order": 6
   },
-
-  {
-    "type": "Featured Project",
-    "title": "BigZeta – Declarative Data Visualisation Platform",
-    "summary": "A powerful data visualisation platform inspired by Plotly, built with React and Redux to give analysts and data professionals a composable, no-code path from raw data to publication-ready charts. BigZeta lets users declaratively define filter pipelines on uploaded datasets and render fully interactive, SVG-based visualisations — all through an intuitive interface. First-class support for embedding and exporting ChartFrames means insights don't stay locked in a dashboard; they travel wherever the conversation is happening.",
-    "img": "recharts",
-    "link": "/",
-    "github": null,
-    "techStack": ["React", "Redux", "SVG"],
-    "timePeriod": "Jan 2026 - Present",
-    "country": "US",
-    "hasViewMore": true,
-    "contributions": [
-      "Developed a library of reusable React component wrappers around SVG primitives, enabling declarative, data-driven chart composition with clean separation between rendering logic and application state",
-      "Built a drag-and-drop Filter Designer allowing users to visually compose and chain complex filter conditions on uploaded datasets — replacing manual query authoring with an intuitive, node-based workflow",
-      "Engineered a ChartFrame embed and export system that packages interactive SVG visualisations into portable, platform-aware embeds for direct sharing to social platforms with configurable metadata"
-    ]
-  },
-  {
-    "type": "Featured Project",
-    "title": "Averq – Unified Transparency Apps",
-    "summary": "An enterprise-grade compliance, risk, and audit management platform that unifies all lines of defence within an organisation into a single, transparent ecosystem. Averq enables teams to deploy anything from lightweight manual workflows to sophisticated automated data analysis pipelines — replacing fragmented departmental tooling with a structured, collaborative workspace. The platform features real-time multi-user assessment editing via WebSockets, a SurveyJS-backed form engine with custom async expression evaluation, and full Progressive Web App support — including offline-first operation and seamless action syncing upon reconnection.",
-    "img": "averq",
-    "link": "https://www.averq.com/",
-    "github": null,
-    "techStack": ["React", "Node.js", "Elasticsearch", "SurveyJS"],
-    "timePeriod": "Apr 2024 - Present",
-    "country": "US",
-    "hasViewMore": true,
-    "contributions": [
-      "Developed custom asynchronous expression evaluators for SurveyJS with a caching layer, enabling complex conditional logic in compliance forms to resolve efficiently without redundant recalculation",
-      "Migrated over 50 data grid components from a legacy library to modern React using Syncfusion, improving rendering performance, accessibility, and long-term maintainability across the platform",
-      "Built deep document bookmark functionality for PDF, Word, and spreadsheet files — supporting save, retrieval, and direct in-document navigation to support audit trail workflows",
-      "Implemented real-time conflict detection for concurrent assessment editing via WebSocket, surfacing live notifications when multiple users attempt to edit the same record simultaneously",
-      "Delivered full Progressive Web App (PWA) capabilities including service worker-backed response caching, persistent state across sessions, complete offline support, and automatic action syncing upon reconnection"
-    ]
-  },
-
   {
     "type": "Featured Project",
     "title": "Interactive Travel Planner",
     "summary": "A highly interactive travel planning interface built for one of Europe's leading transportation and mobility solution providers. Features a custom-extended Leaflet map engine for real-time journey planning, route discovery, and geospatial stop management - with a seamless sidebar-driven UI for searching, filtering, and sharing journeys across web and mobile.",
     "img": "travelTools",
-    "link": "/",
+    "link": null,
     "github": null,
     "techStack": [
       "Angular",
@@ -223,40 +172,82 @@
     ],
     "timePeriod": "2022 - 2023",
     "country": "DK",
-    "hasViewMore": true,
     "contributions": [
       "Authored a comprehensive Cypress E2E test suite covering critical map interactions, journey search flows, and route planning scenarios across web and mobile viewports",
       "Engineered a diff-check strategy for map node operations — intelligently reconciling create, update, and delete mutations to minimise DOM thrashing and deliver smooth, performant map rendering",
       "Built RxJS-powered data streams for geospatial queries, enabling efficient request deduplication and client-side caching to reduce redundant API calls"
-    ]
+    ],
+    "order": 5
   },
-
+  {
+    "type": "Featured Project",
+    "title": "Nexum – Account Based Ticketing Platform",
+    "summary": "An enterprise-grade Account Based Ticketing (ABT) platform that modernises public transit by shifting the source of travel eligibility from physical smart cards to secure online accounts — enabling seamless, contactless access across multiple transport networks. Built on a distributed microservices architecture with Kotlin and Spring Boot, Nexum handles real-time GTFS data lookups, event-driven messaging via Kafka, and high-throughput concurrent APIs to serve millions of transit interactions with the reliability and speed that urban mobility demands.",
+    "img": "nexum",
+    "link": "https://www.kubapay.com/en/",
+    "github": null,
+    "techStack": [
+      "Kotlin",
+      "Spring Boot",
+      "MySQL",
+      "Angular",
+      "Cypress",
+      "Kafka"
+    ],
+    "timePeriod": "Jan 2022 - Apr 2024",
+    "country": "DK",
+    "contributions": [
+      "Engineered reactive, concurrent API endpoints using Kotlin coroutines across multiple microservices, eliminating thread-blocking bottlenecks and significantly improving throughput under high transit load",
+      "Co-developed a high-performance GTFS (General Transit Feed Specification) cache layer, dramatically accelerating real-time queries across route, trip, stop, and schedule parameters to serve live transit lookups at scale",
+      "Built a Java-based in-memory loader for cached GTFS data files, enabling sub-millisecond lookup operations for high-frequency transit queries without repeated disk I/O overhead",
+      "Implemented configurable exponential backoff strategies for Kafka consumer failure detection, with automated Slack alerting via Datadog integration for real-time visibility into event-stream health"
+    ],
+    "order": 4
+  },
+  {
+    "type": "Featured Project",
+    "title": "Averq – Unified Transparency Apps",
+    "summary": "An enterprise-grade compliance, risk, and audit management platform that unifies all lines of defence within an organisation into a single, transparent ecosystem. Averq enables teams to deploy anything from lightweight manual workflows to sophisticated automated data analysis pipelines — replacing fragmented departmental tooling with a structured, collaborative workspace. The platform features real-time multi-user assessment editing via WebSockets, a SurveyJS-backed form engine with custom async expression evaluation, and full Progressive Web App support — including offline-first operation and seamless action syncing upon reconnection.",
+    "img": "averq",
+    "link": "https://www.averq.com/",
+    "github": null,
+    "techStack": ["React", "Node.js", "Elasticsearch", "SurveyJS"],
+    "timePeriod": "Apr 2024 - Present",
+    "country": "US",
+    "contributions": [
+      "Developed custom asynchronous expression evaluators for SurveyJS with a caching layer, enabling complex conditional logic in compliance forms to resolve efficiently without redundant recalculation",
+      "Migrated over 50 data grid components from a legacy library to modern React using Syncfusion, improving rendering performance, accessibility, and long-term maintainability across the platform",
+      "Built deep document bookmark functionality for PDF, Word, and spreadsheet files — supporting save, retrieval, and direct in-document navigation to support audit trail workflows",
+      "Implemented real-time conflict detection for concurrent assessment editing via WebSocket, surfacing live notifications when multiple users attempt to edit the same record simultaneously",
+      "Delivered full Progressive Web App (PWA) capabilities including service worker-backed response caching, persistent state across sessions, complete offline support, and automatic action syncing upon reconnection"
+    ],
+    "order": 3
+  },
   {
     "type": "Personal Project",
     "title": "This Portfolio — You're Looking At It 👀",
     "summary": "A self-aware, slightly smug portfolio website that exists solely to tell you how good its own creator is — while being good enough to prove it 😏. Built with Next.js 13, React 18, Tailwind CSS, and Framer Motion, it features dark/light theming 🌗, buttery-smooth page transitions ✨, and enough animated statistics to make any recruiter mildly overwhelmed 📊. Meta fact: this very project card was written by the portfolio to describe itself 🪞. It has no imposter syndrome.",
     "img": "portfolio",
-    "link": "/",
+    "link": null,
     "github": null,
     "techStack": ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
     "timePeriod": "2025 - Present",
     "country": "CA",
-    "hasViewMore": true,
     "contributions": [
       "Architected a flash-free dark/light mode system 🌗 — localStorage persistence wired via an inline script in _document.js, because nobody asked to see a blinding white flash at midnight 🌙",
       "Implemented fluid page transitions and scroll-triggered animations using Framer Motion's AnimatePresence ✨, giving the site a cinematic quality that is frankly disproportionate to its existence as a portfolio",
       "Built a responsive navigation system with a hamburger menu 🍔 and animated mobile overlay — because mobile users deserve smooth animations too, even if it's just your mum checking the site 📱",
       "Configured a custom Tailwind design system 🎨 with bespoke colour tokens, circular gradient backgrounds, and responsive breakpoints covering everything from ultrawide monitors to the narrowest of phones",
       "Designed and rendered this very project card 🪞 — an act of recursion that would make a computer science professor either nod approvingly or quietly weep"
-    ]
+    ],
+    "order": 2
   },
-
   {
-    "type": "Featured Project",
+    "type": "Personal Project",
     "title": "DocuTalk — AI Document Intelligence Chatbot",
     "summary": "A production-ready RAG-powered support chatbot that transforms static PDFs into a living, queryable knowledge base. Built with LangChain.js, Chroma vector search, and the Vercel AI SDK, it streams context-aware answers token-by-token using DeepSeek LLM — at 14× lower cost than GPT-4 — while maintaining session history, tool-calling capabilities, and seamless document ingestion pipelines.",
     "img": "docutalk",
-    "link": "/",
+    "link": null,
     "github": "https://github.com/faiyazbits/docutalk",
     "techStack": [
       "Next.js",
@@ -272,7 +263,6 @@
     ],
     "timePeriod": "Jan 2025 - Feb 2025",
     "country": "IN",
-    "hasViewMore": true,
     "contributions": [
       "Built a full RAG pipeline with LangChain that turns uploaded PDFs into a searchable knowledge base — so the AI answers from your documents, not from hallucination",
       "Wired the Vercel AI SDK to a custom streaming backend so responses appear token-by-token, giving users the feel of a live conversation rather than a loading spinner",
@@ -280,6 +270,7 @@
       "Kept conversations coherent across long sessions by managing history intelligently, trimming old context automatically to control costs without losing the thread of the dialogue",
       "Shipped a document upload flow that keeps users informed at every step — from file received to fully indexed — using real-time progress events streamed back to the UI",
       "Cut inference costs by ~14× versus GPT-4 by benchmarking and integrating DeepSeek, while keeping the model layer swappable so any LangChain-compatible LLM can be dropped in"
-    ]
+    ],
+    "order": 1
   }
 ]
