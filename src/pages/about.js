@@ -10,6 +10,12 @@ import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import AnimatedText from "@/components/AnimatedText";
 import TransitionEffect from "@/components/TransitionEffect";
+import dynamic from "next/dynamic";
+
+const BiographyAnnotated = dynamic(
+  () => import("@/components/BiographyAnnotated"),
+  { ssr: false }
+);
 
 function AnimatedNumberFramerMotion({ value }) {
   const ref = useRef(null);
@@ -55,41 +61,7 @@ export default function About() {
           />
 
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
-            <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 
-            md:col-span-8">
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-                BIOGRAPHY
-              </h2>
-              <p className="font-medium ">
-                Hi, I&apos;m <strong>Fayaz</strong>, a full stack developer with over a decade of experience building scalable applications
-                across technology stacks.
-                My expertise spans JavaScript, Java, Kotlin, and Python, with deep knowledge of modern frameworks
-                including React, Angular, Svelte, and Node.js ecosystems.
-              </p>
-              <p className="my-4 font-medium">
-                As an AWS Certified Solutions Architect, I help clients design and implement robust cloud solutions.
-                Currently, I focus on AI engineering projects, helping organizations integrate AI capabilities into their application workflows.
-              </p>
-              <p className="my-4 font-medium">
-                Beyond development, I&apos;m passionate about mentorship and education.
-                I&apos;ve had the privilege of training hundreds of students—from young learners to career changers—and find genuine
-                joy in those moments when someone experiences the thrill of solving their first problem with code.
-              </p>
-              <p className="my-4  font-medium">
-                Whether I&apos;m working on a website, mobile app, or other
-                digital product, I bring my commitment to technical excellence and
-                user-centered thinking to every project I work on.
-              </p>
-              <p className="my-4  font-medium">
-                I specialize in creating clean, intuitive user interfaces paired with well-architected backend systems.
-                Whether you&apos;re looking to build something new, optimize existing systems, or explore AI integration,
-                I&apos;d welcome the opportunity to collaborate.
-              </p>
-
-              <p className="font-medium">
-                Let&apos;s connect and build something great together.
-              </p>
-            </div>
+            <BiographyAnnotated />
             <div className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark 
             bg-light p-8 dark:border-light dark:bg-dark
             xl:col-span-4 md:col-span-8 md:order-1
