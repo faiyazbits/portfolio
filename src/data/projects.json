@@ -2,7 +2,7 @@
   {
     "type": "Personal Project",
     "title": "Sine Wave Simulation",
-    "summary": "An interactive visualization that demonstrates how sine waves are generated from circular motion 🌀. Originally built with HTML5 Canvas and vanilla JavaScript, later ported to D3.js for richer SVG-based rendering. This was my very first project — the one that sparked my love for coding and creative problem-solving. It holds a special place in my heart as a reminder of where it all began 💛.",
+    "summary": "An interactive visualization showing how sine waves are generated from circular motion. This was my very first project — the one that sparked my love for coding and creative problem-solving. It holds a special place in my heart as a reminder of where it all began 💛.",
     "img": "sineWaveSim",
     "link": "https://faiyazbits.github.io/sine-wave-simulation/",
     "github": "https://github.com/faiyazbits/sine-wave-simulation",
@@ -16,12 +16,12 @@
       "Visualized core trigonometric concepts — rotating radius vector, swept angle arc, and y-coordinate projection — with color-coded elements",
       "Migrated the codebase to TypeScript and Vite for type safety and a modern dev experience"
     ],
-    "order": 13
+    "order": 14
   },
   {
     "type": "Featured Project",
     "title": "WeldTrace – Smart Welding Manager",
-    "summary": "A cloud-based fabrication job management platform for weld-mapping, weld tracking, and full lifecycle traceability. Engineers, inspectors, contractors, and welders collaborate in a shared ecosystem to manage WPS/PQR documents, welder qualifications, and project jobs — replacing fragile spreadsheet workflows with a code-compliant, auditable system.",
+    "summary": "A cloud-based platform for managing fabrication welding jobs from start to finish — replacing fragile spreadsheet workflows with a structured, auditable system. Engineers, inspectors, contractors, and welders share a single workspace to stay aligned throughout the project lifecycle.",
     "img": "weldTrace",
     "link": "https://www.weldtrace.com/",
     "github": null,
@@ -34,12 +34,12 @@
       "Developed a Weld Input Editor — a hybrid data-grid and spreadsheet component for fast, structured entry of weld records at scale",
       "Contributed to multi-role access architecture allowing contractors, project managers, engineers, inspectors, and welders to collaborate within a single project lifecycle"
     ],
-    "order": 12
+    "order": 13
   },
   {
     "type": "Featured Project",
     "title": "WeldQ – Welder Qualification Platform",
-    "summary": "A full-stack certification platform developed for WTIA (Welding Technology Institute of Australia) to digitise the end-to-end welder qualification lifecycle. WeldQ replaces paper-based processes with a standards-compliant system covering online exam delivery, automated result processing, drag-and-drop certificate design, and long-term credential management — enabling WTIA to certify welders at scale with confidence and compliance.",
+    "summary": "A certification platform built for WTIA (Welding Technology Institute of Australia) to digitise the end-to-end welder qualification lifecycle — replacing paper-based processes with a standards-compliant digital system for certifying welders at scale with confidence.",
     "img": "weldq",
     "link": "https://wtia.weldq.com/",
     "github": null,
@@ -53,12 +53,12 @@
       "Implemented a Result Dashboard delivering real-time insights into exam outcomes, pass/fail rates, and per-candidate performance metrics",
       "Designed a document verification and management module to store, validate, and track welder credentials and supporting evidence for regulatory compliance"
     ],
-    "order": 11
+    "order": 12
   },
   {
     "type": "Featured Project",
     "title": "BigZeta – Declarative Data Visualisation Platform",
-    "summary": "A powerful data visualisation platform inspired by Plotly, built with React and Redux to give analysts and data professionals a composable, no-code path from raw data to publication-ready charts. BigZeta lets users declaratively define filter pipelines on uploaded datasets and render fully interactive, SVG-based visualisations — all through an intuitive interface. First-class support for embedding and exporting ChartFrames means insights don't stay locked in a dashboard; they travel wherever the conversation is happening.",
+    "summary": "A no-code data visualisation platform that gives analysts an intuitive path from raw datasets to publication-ready interactive charts — with first-class support for sharing and embedding insights beyond the dashboard.",
     "img": "recharts",
     "link": null,
     "github": null,
@@ -70,12 +70,12 @@
       "Built a drag-and-drop Filter Designer allowing users to visually compose and chain complex filter conditions on uploaded datasets — replacing manual query authoring with an intuitive, node-based workflow",
       "Engineered a ChartFrame embed and export system that packages interactive SVG visualisations into portable, platform-aware embeds for direct sharing to social platforms with configurable metadata"
     ],
-    "order": 10
+    "order": 11
   },
   {
     "type": "Featured Project",
     "title": "Choice Health Brokers – Internal CRM Platform",
-    "summary": "A purpose-built internal CRM and communications platform developed from the ground up for a brokerage firm. The platform centralises client and agent management in a single, streamlined workspace — complete with a fully functional in-browser softphone and outbound dialer powered by the Twilio API. Agents can place and receive calls without ever leaving the dashboard, turning a fragmented workflow into a unified, real-time experience built on React and Redux.",
+    "summary": "A purpose-built internal CRM for a brokerage firm, centralising client and agent management in one workspace. Agents can place and receive calls directly from the browser without any external hardware — turning a fragmented workflow into a unified, real-time experience.",
     "img": "inBrowserDialer",
     "link": null,
     "github": null,
@@ -89,12 +89,12 @@
       "Architected the application from scratch using React and Redux, establishing the component library, state topology, and data flow patterns that the entire platform is built upon",
       "Synchronised real-time call events from the Twilio SDK with UI state to deliver accurate, live status indicators across the dialer, agent list, and activity feed simultaneously"
     ],
-    "order": 9
+    "order": 10
   },
   {
     "type": "Featured Project",
     "title": "Eform – Government E-Application Platform",
-    "summary": "A sophisticated e-governance platform built to eliminate paperwork from high-stakes citizen-facing registration workflows. Eform automates the full lifecycle of government processes — from marriage registration and driving licence applications to birth registration — replacing fragile manual procedures with a structured, rules-driven digital system. At its core is a visual drag-and-drop service designer for data modelling and a dynamic form studio that empowers administrators to compose, map, and publish complex regulatory forms without writing a line of code.",
+    "summary": "A digital platform built to eliminate paperwork from high-stakes government registration workflows. Administrators can model processes and publish regulatory forms without writing a line of code, covering everything from marriage registration and driving licences to birth registration.",
     "img": "eform",
     "link": null,
     "github": null,
@@ -108,12 +108,12 @@
       "Implemented a service designer for modelling government registration workflows as reusable, composable process blueprints, enabling rapid onboarding of new registration services with minimal engineering overhead",
       "Delivered end-to-end process automation for multiple high-volume government registration domains including marriage registration, driving licence applications, and birth registration"
     ],
-    "order": 8
+    "order": 9
   },
   {
     "type": "Featured Project",
     "title": "Tradeworks – Algorithmic Trading Automation Platform",
-    "summary": "A cloud-based, real-time trade automation platform built for retail forex traders looking to get started with algorithmic trading — without writing a single line of code. Tradeworks lets traders compose, backtest, and deploy custom strategies as live automated bots that run 24/7, integrated directly with MetaTrader. The platform blends a rich charting experience powered by ChartIQ with visual multi-indicator tooling, giving traders both the analytical depth of a professional terminal and the simplicity of a no-code strategy builder.",
+    "summary": "A platform for retail forex traders to build, backtest, and deploy automated trading bots without writing code — pairing a professional charting experience with an intuitive no-code strategy builder.",
     "img": "tradeworks",
     "link": "https://tradeworks.io/",
     "github": null,
@@ -127,12 +127,12 @@
       "Developed reactive data pipelines with RxJS to stream and synchronise live market data, bot status, and trade signals across the platform with minimal latency",
       "Contributed to the visual strategy builder interface, allowing non-technical retail traders to compose algorithmic trading strategies through a drag-and-configure workflow without writing code"
     ],
-    "order": 7
+    "order": 8
   },
   {
     "type": "Featured Project",
     "title": "AdeptIQ – Paratransit Dispatch Engine",
-    "summary": "A cloud-based paratransit and demand-responsive transit management platform built for public transit agencies — powering the full dispatch lifecycle from real-time driver tracking to ADA-compliant trip booking. At its core is a high-performance dispatch engine that coordinates drivers, vehicles, and passengers across live maps and interactive data grids, delivering 95%+ on-time performance through optimised routing and real-time operational intelligence. The platform serves dispatchers, drivers, and passengers through a unified, configurable ecosystem backed by a JSON:API-compliant booking service.",
+    "summary": "A cloud-based platform for public transit agencies to manage paratransit and demand-responsive transit operations — coordinating drivers, vehicles, and passengers across a shared dispatch workspace to deliver reliable, ADA-compliant service.",
     "img": "adeptIQ",
     "link": "https://ddswireless.com/adept-iq/",
     "github": null,
@@ -157,8 +157,27 @@
   },
   {
     "type": "Featured Project",
+    "title": "SagaMath – Interactive Math Worksheet Platform",
+    "summary": "An interactive mathematical worksheet platform for students, teachers, and academies to author, share, and engage with executable math content — turning static documents into live, programmable experiences entirely in the browser.",
+    "img": "sagamath",
+    "link": null,
+    "github": null,
+    "techStack": ["Monaco Editor", "JavaScript", "Service Worker", "KaTeX"],
+    "timePeriod": "2021 - 2022",
+    "country": "IN",
+    "contributions": [
+      "Built the Math Worksheet editor using Monaco Editor, loading typed suggestion manifests derived from source code to deliver precise, context-aware IntelliSense for mathematical APIs directly in the browser",
+      "Optimised IntelliSense suggestion performance by offloading suggestion computation to a Service Worker, decoupling it from the main thread and keeping the editor fully responsive during heavy autocompletion workloads",
+      "Engineered a custom JavaScript evaluation and execution engine capable of safely interpreting and running user-authored scripts written in the browser editor — enabling dynamic, programmable worksheet interactions entirely client-side without a server round-trip",
+      "Designed a live worksheet authoring system allowing educators to compose rich mathematical content by combining executable code blocks, rendered math expressions, and interactive inputs in a single shareable document",
+      "Built the math expression rendering pipeline to parse and display KaTeX-formatted equations inline with worksheet content, giving students visually accurate representations of formulas alongside live, runnable code"
+    ],
+    "order": 7
+  },
+  {
+    "type": "Featured Project",
     "title": "Interactive Travel Planner",
-    "summary": "A highly interactive travel planning interface built for one of Europe's leading transportation and mobility solution providers. Features a custom-extended Leaflet map engine for real-time journey planning, route discovery, and geospatial stop management - with a seamless sidebar-driven UI for searching, filtering, and sharing journeys across web and mobile.",
+    "summary": "A highly interactive travel planning interface built for one of Europe's leading transportation providers — enabling users to search journeys, discover routes, and manage stops across web and mobile.",
     "img": "travelTools",
     "link": null,
     "github": null,
@@ -182,7 +201,7 @@
   {
     "type": "Featured Project",
     "title": "Nexum – Account Based Ticketing Platform",
-    "summary": "An enterprise-grade Account Based Ticketing (ABT) platform that modernises public transit by shifting the source of travel eligibility from physical smart cards to secure online accounts — enabling seamless, contactless access across multiple transport networks. Built on a distributed microservices architecture with Kotlin and Spring Boot, Nexum handles real-time GTFS data lookups, event-driven messaging via Kafka, and high-throughput concurrent APIs to serve millions of transit interactions with the reliability and speed that urban mobility demands.",
+    "summary": "An enterprise Account Based Ticketing (ABT) platform that modernises public transit by replacing physical smart cards with secure online accounts — enabling seamless, contactless access across multiple transport networks.",
     "img": "nexum",
     "link": "https://www.kubapay.com/en/",
     "github": null,
@@ -207,7 +226,7 @@
   {
     "type": "Featured Project",
     "title": "Averq – Unified Transparency Apps",
-    "summary": "An enterprise-grade compliance, risk, and audit management platform that unifies all lines of defence within an organisation into a single, transparent ecosystem. Averq enables teams to deploy anything from lightweight manual workflows to sophisticated automated data analysis pipelines — replacing fragmented departmental tooling with a structured, collaborative workspace. The platform features real-time multi-user assessment editing via WebSockets, a SurveyJS-backed form engine with custom async expression evaluation, and full Progressive Web App support — including offline-first operation and seamless action syncing upon reconnection.",
+    "summary": "An enterprise compliance, risk, and audit management platform that unifies all lines of defence within an organisation into a single, transparent workspace — supporting everything from lightweight manual reviews to sophisticated automated analysis pipelines.",
     "img": "averq",
     "link": "https://www.averq.com/",
     "github": null,
@@ -226,7 +245,7 @@
   {
     "type": "Personal Project",
     "title": "This Portfolio — You're Looking At It 👀",
-    "summary": "A self-aware, slightly smug portfolio website that exists solely to tell you how good its own creator is — while being good enough to prove it 😏. Built with Next.js 13, React 18, Tailwind CSS, and Framer Motion, it features dark/light theming 🌗, buttery-smooth page transitions ✨, and enough animated statistics to make any recruiter mildly overwhelmed 📊. Meta fact: this very project card was written by the portfolio to describe itself 🪞. It has no imposter syndrome.",
+    "summary": "A self-aware, slightly smug portfolio website that exists solely to tell you how good its own creator is — while being good enough to prove it 😏. Features dark/light theming 🌗, buttery-smooth page transitions ✨, and enough animated statistics to make any recruiter mildly overwhelmed 📊. Meta fact: this very project card was written by the portfolio to describe itself 🪞. It has no imposter syndrome.",
     "img": "portfolio",
     "link": null,
     "github": null,
@@ -245,7 +264,7 @@
   {
     "type": "Personal Project",
     "title": "DocuTalk — AI Document Intelligence Chatbot",
-    "summary": "A production-ready RAG-powered support chatbot that transforms static PDFs into a living, queryable knowledge base. Built with LangChain.js, Chroma vector search, and the Vercel AI SDK, it streams context-aware answers token-by-token using DeepSeek LLM — at 14× lower cost than GPT-4 — while maintaining session history, tool-calling capabilities, and seamless document ingestion pipelines.",
+    "summary": "A production-ready AI chatbot that turns uploaded PDFs into a queryable knowledge base — giving users a natural conversational interface to get context-aware answers from their own documents, with session history maintained throughout.",
     "img": "docutalk",
     "link": null,
     "github": "https://github.com/faiyazbits/docutalk",

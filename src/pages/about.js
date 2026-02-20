@@ -5,6 +5,7 @@ import profile from "../../public/images/profile/gibli_me.png";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Skills from "@/components/Skills";
+import Certifications from "@/components/Certifications";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import AnimatedText from "@/components/AnimatedText";
@@ -143,6 +144,7 @@ export default function About() {
           </div>
 
           <Skills />
+          <Certifications />
           <Experience />
           <Education />
         </Layout>

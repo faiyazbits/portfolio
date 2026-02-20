@@ -53,8 +53,8 @@ const Skills = () => {
         <Skill name="Mongodb" x="-35vw" y="-5vw" />
         <Skill name="RDBMS" x="32vw" y="-5vw" />
         <Skill name="Langchain" x="0vw" y="-20vw" />
-        <Skill name="Java" x="-25vw" y="18vw" />
-        <Skill name="Kotlin" x="28vw" y="18vw" />
+        <Skill name="AWS" x="-25vw" y="18vw" />
+        <Skill name="System design" x="28vw" y="18vw" />
       </div></>
   );
 };

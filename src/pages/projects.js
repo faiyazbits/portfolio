@@ -21,6 +21,8 @@ import travelTools from "../../public/images/projects/travel-tools.png";
 import averq from "../../public/images/projects/averq.jpeg";
 import portfolio from "../../public/images/projects/portfolio.png";
 import docutalk from "../../public/images/projects/docutalk.png";
+import sagamath from "../../public/images/projects/sagamath.png";
+
 
 const FramerImage = motion(Image);
 
@@ -38,7 +40,8 @@ const imageMap = {
   travelTools,
   averq,
   portfolio,
-  docutalk
+  docutalk,
+  sagamath
 };
 
 // ProjectModal Component
@@ -328,7 +331,7 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
           {contributions && contributions.length > 0 && (
             <div className="mt-6 w-full">
               <h3 className="text-lg font-bold text-dark dark:text-light mb-3">
-                How I Helped
+                What I Did
               </h3>
               <ul className="space-y-3">
                 {contributions.map((contribution, index) => (
@@ -347,15 +350,15 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
 };
 
 const TECH_CATEGORIES = {
-  "Frontend":      ["React", "AngularJS", "Angular 4", "Angular", "Ember.js", "Next.js"],
-  "Languages":     ["JavaScript", "TypeScript", "Kotlin"],
-  "Styling":       ["Tailwind CSS", "SCSS", "jQuery", "jQuery UI"],
-  "Backend":       ["Node.js", "Express.js", "Spring Boot"],
-  "Databases":     ["MongoDB", "MySQL", "PostgreSQL", "Elasticsearch", "ChromaDB", "Sequelize"],
+  "Frontend": ["React", "AngularJS", "Angular 4", "Angular", "Ember.js", "Next.js"],
+  "Languages": ["JavaScript", "TypeScript", "Kotlin"],
+  "Styling": ["Tailwind CSS", "SCSS", "jQuery", "jQuery UI"],
+  "Backend": ["Node.js", "Express.js", "Spring Boot"],
+  "Databases": ["MongoDB", "MySQL", "PostgreSQL", "Elasticsearch", "ChromaDB", "Sequelize"],
   "State & Async": ["Redux", "RxJS", "Kafka", "WebSockets"],
   "Visualization": ["D3.js", "ChartIQ", "Leaflet", "Canvas API", "HTML5 Canvas", "SVG"],
-  "AI / LLM":      ["LangChain.js", "Vercel AI SDK", "OpenAI Embeddings", "DeepSeek LLM"],
-  "Tools":         ["Vite", "Cypress", "Framer Motion", "Twilio", "SurveyJS"],
+  "AI / LLM": ["LangChain.js", "Vercel AI SDK", "OpenAI Embeddings", "DeepSeek LLM"],
+  "Tools": ["Vite", "Cypress", "Framer Motion", "Twilio", "SurveyJS"],
 };
 
 // Tech Filter Component
@@ -363,9 +366,9 @@ const TechFilter = ({ allTechs, selectedTech, onSelectTech }) => {
   const pill = (active) =>
     `px-4 py-1.5 rounded-full text-sm font-medium border transition-all duration-200
      ${active
-       ? "bg-primary dark:bg-primaryDark text-light dark:text-dark border-primary dark:border-primaryDark"
-       : "border-dark/20 dark:border-light/20 text-dark/60 dark:text-light/60 bg-transparent hover:border-dark/60 dark:hover:border-light/60 hover:text-dark dark:hover:text-light"
-     }`;
+      ? "bg-primary dark:bg-primaryDark text-light dark:text-dark border-primary dark:border-primaryDark"
+      : "border-dark/20 dark:border-light/20 text-dark/60 dark:text-light/60 bg-transparent hover:border-dark/60 dark:hover:border-light/60 hover:text-dark dark:hover:text-light"
+    }`;
 
   return (
     <div className="mb-16 w-full">
