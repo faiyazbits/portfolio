@@ -1,12 +1,14 @@
 import AnimatedText from "@/components/AnimatedText";
 import { HireMe } from "@/components/HireMe";
 import Layout from "@/components/Layout";
+import Services from "@/components/Services";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import profilePic from "../../public/images/profile/me_working.png";
 import TransitionEffect from "@/components/TransitionEffect";
+import { motion } from "framer-motion";
 
 
 export default function Home() {
@@ -63,14 +65,33 @@ export default function Home() {
         </Layout>
 
         <HireMe />
-        <div className="absolute right-8 bottom-8 inline-block w-24 md:hidden">
-          <Image
-            className="relative h-auto w-full"
-            src={lightBulb}
-            alt="Faiyazbits"
-          />
-        </div>
+        <motion.div
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 md:hidden"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.75"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="text-dark dark:text-light opacity-60"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </motion.div>
       </article>
+      <Services />
+      <div className="flex justify-end pr-8 pb-8 md:hidden">
+        <div className="inline-block w-24">
+          <Image className="relative h-auto w-full" src={lightBulb} alt="Faiyazbits" />
+        </div>
+      </div>
     </>
   );
 }

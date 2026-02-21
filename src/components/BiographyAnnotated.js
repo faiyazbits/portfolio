@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useInView } from "framer-motion";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import { useThemeSwitch } from "@/components/Hooks/useThemeSwitch";
@@ -9,10 +9,15 @@ export default function BiographyAnnotated() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [mode] = useThemeSwitch();
   const color = mode === "dark" ? "#58E6D9" : "#B63E96";
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => setReady(true), 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   const props = {
     type: "underline",
-    show: isInView,
+    show: isInView && ready,
     color,
     strokeWidth: 2,
     padding: 2,
@@ -30,9 +35,11 @@ export default function BiographyAnnotated() {
       </h2>
       <RoughNotationGroup key={mode}>
         <p className="font-medium">
-          Hi, I&apos;m <strong>Fayaz</strong>, a{" "}
-          full stack developer
-          with over a decade of experience building scalable applications across
+          Hi, I&apos;m <strong>Fayaz</strong>,
+          a{" "} full stack developer
+          with{" "}<RoughNotation {...props} order={6}>over a decade</RoughNotation>{" "}
+          of experience
+          building scalable applications across
           technology stacks. My expertise spans{" "}
           JavaScript, Java, Kotlin, and Python
           , with deep knowledge of modern frameworks including{" "}

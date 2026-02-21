@@ -1,0 +1,37 @@
+[
+  {
+    "id": "rendering-perf-ember-react",
+    "category": "Performance",
+    "client": "Global Fintech Trading Platform",
+    "period": "2021",
+    "headline": "Eliminated UI Bottleneck in a High-Frequency Trading Dashboard",
+    "problem": "A legacy EmberJS trading dashboard suffered from severe render latency during live data updates. As tick frequency increased, the UI fell behind, causing traders to act on stale quotes. Ember's classic component model re-rendered the entire instrument grid on every data change — blocking the main thread for hundreds of milliseconds.",
+    "solution": "Introduced React as a co-existing rendering layer inside the Ember app, using a facade pattern to mount React component trees at strategic DOM boundaries. This isolated the high-churn instrument grid inside React's virtual DOM diffing, leaving the stable Ember shell untouched. The migration required zero Ember refactoring and no deployment risk — React was loaded lazily.",
+    "impact": "UI rendering throughput improved by 120% under peak load. Frame drops during live market hours were eliminated. The approach became the internal standard for all new high-frequency view modules.",
+    "metrics": [
+      { "label": "Render throughput", "value": 120, "suffix": "%", "prefix": "+", "note": "faster" },
+      { "label": "Ember refactoring required", "value": 0, "suffix": " lines", "prefix": "" }
+    ],
+    "techStack": ["React", "Ember.js", "JavaScript"],
+    "tags": ["Performance", "Architecture"],
+    "highlight": true
+  },
+  {
+    "id": "survey-form-deferred-render",
+    "category": "Performance",
+    "client": "Enterprise Healthcare Data Portal",
+    "period": "2022",
+    "headline": "Cut Complex Form Load Time by 71% with Deferred Rendering",
+    "problem": "A clinical data entry portal used SurveyJS to render large conditional forms — some with 80+ questions, branching logic, and embedded validators. On form open, the browser main thread was blocked for 14 seconds while SurveyJS parsed the schema and instantiated all widgets synchronously. Clinical staff reported the wait as a daily friction point.",
+    "solution": "Implemented a deferred rendering strategy: only the first visible page rendered synchronously on mount; subsequent pages rendered using requestIdleCallback during idle frames. A lightweight skeleton UI displayed immediately. The SurveyJS model was constructed in a web worker to move schema parsing off the main thread.",
+    "impact": "Time-to-interactive dropped from 14 seconds to 4 seconds — a 71% reduction. User-perceived load time was near-instant due to the skeleton approach. Clinical staff completion rates improved measurably after the change.",
+    "metrics": [
+      { "label": "Load time before", "value": 14, "suffix": "s", "prefix": "" },
+      { "label": "Load time after", "value": 4, "suffix": "s", "prefix": "" },
+      { "label": "Reduction", "value": 71, "suffix": "%", "prefix": "" }
+    ],
+    "techStack": ["SurveyJS", "React", "Web Workers", "JavaScript"],
+    "tags": ["Performance", "UX"],
+    "highlight": true
+  }
+]
