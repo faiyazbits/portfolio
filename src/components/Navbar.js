@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "./Logo";
 import { useRouter } from "next/router";
 import {
@@ -11,6 +11,7 @@ import {
 } from "./Icons";
 import { motion } from "framer-motion";
 import { useThemeSwitch } from "./Hooks/useThemeSwitch";
+import { RoughNotation } from "react-rough-notation";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
@@ -59,7 +60,13 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
 
 const Navbar = () => {
   const [mode, setMode] = useThemeSwitch();
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const color = mode === "dark" ? "#58E6D9" : "#B63E96";
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    const t = setTimeout(() => setReady(true), 800);
+    return () => clearTimeout(t);
+  }, []);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -91,7 +98,9 @@ const Navbar = () => {
         <CustomLink className="mr-4" href="/" title="Home" />
         <CustomLink className="mx-4" href="/about" title="About" />
         <CustomLink className="mx-4" href="/projects" title="Projects" />
-        <CustomLink className="mx-4" href="/impact" title="Impact" />
+        <RoughNotation type="box" show={ready} color={color} strokeWidth={2} padding={4} iterations={1} animationDuration={600}>
+          <CustomLink className="mx-4" href="/impact" title="Impact" />
+        </RoughNotation>
         {/*<CustomLink className="ml-4" href="/articles" title="Articles" />*/}
       </nav>
       <nav
@@ -158,7 +167,9 @@ const Navbar = () => {
         <CustomMobileLink toggle={handleClick} className="mr-4 lg:m-0 lg:my-2" href="/" title="Home" />
         <CustomMobileLink toggle={handleClick} className="mx-4 lg:m-0 lg:my-2" href="/about" title="About" />
         <CustomMobileLink toggle={handleClick} className="mx-4 lg:m-0 lg:my-2" href="/projects" title="Projects" />
-        <CustomMobileLink toggle={handleClick} className="mx-4 lg:m-0 lg:my-2" href="/impact" title="Impact" />
+        <RoughNotation type="box" show={ready} color={color} strokeWidth={2} padding={4} iterations={1} animationDuration={600}>
+          <CustomMobileLink toggle={handleClick} className="mx-4 lg:m-0 lg:my-2" href="/impact" title="Impact" />
+        </RoughNotation>
         <CustomMobileLink toggle={handleClick} className="ml-4 lg:m-0 lg:my-2" href="/articles" title="Articles" />
       </nav>
       <nav

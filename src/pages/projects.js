@@ -372,6 +372,9 @@ const TechFilter = ({ allTechs, selectedTech, onSelectTech }) => {
 
   return (
     <div className="mb-16 w-full">
+      <p className="mb-4 text-sm text-dark/40 dark:text-light/40">
+        Filter projects by technology used
+      </p>
       {/* All Projects reset */}
       <div className="pb-5 mb-5 border-b border-dark/10 dark:border-light/10">
         <button onClick={() => onSelectTech("All")} className={pill(selectedTech === "All")}>
