@@ -45,10 +45,8 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>Faiyazbits | About Page</title>
-        <meta name="description" content="Learn more about CodeBucks, a Next.js developer with a passion for 
-        creating innovative solutions. Discover tips for building a developer portfolio and insights on 
-        full-stack development, front-end development, and back-end development." />
+        <title>Faiyazbits | About</title>
+        <meta name="description" content="Learn about Fayaz, a full-stack developer and AWS Certified Solutions Architect with over a decade of experience in React, Angular, Node.js, and AI-assisted engineering." />
       </Head>
       <TransitionEffect />
       <main

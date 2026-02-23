@@ -58,7 +58,7 @@ export default function Impact() {
         <title>Faiyazbits | Impact</title>
         <meta
           name="description"
-          content="Real engineering impact: performance wins, architecture decisions, and measurable outcomes from 10+ years of senior frontend engineering."
+          content="Real engineering impact: performance wins, architecture decisions, and measurable outcomes from 10+ years of senior full-stack engineering."
         />
       </Head>
 

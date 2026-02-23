@@ -422,11 +422,10 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Faiyazbits | Projects Page</title>
+        <title>Faiyazbits | Projects</title>
         <meta
           name="description"
-          content="Discover the latest webapp projects created by CodeBucks, a Next.js developer with
-        expertise in React.js and full-stack development. Browse software engineering articles and tutorials for tips on creating your own portfolio."
+          content="Explore Fayaz's portfolio of real-world projects — from AI document chatbots and trading platforms to dispatch systems and government e-applications. Built with React, Node.js, Angular, and more."
         />
       </Head>
 

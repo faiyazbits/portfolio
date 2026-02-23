@@ -18,9 +18,7 @@ export default function Home() {
         <title>Faiyazbits</title>
         <meta
           name="description"
-          content="Explore CodeBucks's Next.js developer portfolio and 
-        discover the latest webapp projects and software engineering articles. 
-        Showcase your skills as a full-stack developer and software engineer."
+          content="Fayaz is a full-stack developer with 10+ years of experience building scalable web applications. Explore projects spanning React, Node.js, AI engineering, and cloud architecture."
         />
       </Head>
 
