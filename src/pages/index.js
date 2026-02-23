@@ -12,8 +12,6 @@ import { motion } from "framer-motion";
 
 
 export default function Home() {
-
-  // Todo: include "and insightful articles" after publishing the articles and showing it in navbar
   return (
     <>
       <Head>
@@ -53,8 +51,10 @@ export default function Home() {
                 With over a decade of expertise as a seasoned full-stack developer, I&apos;m committed to bringing concepts to life through groundbreaking web applications. Dive into my recent ventures, highlighting my mastery of the ever-evolving realm of web development              </p>
               <div className="mt-2 flex items-center self-start lg:self-center">
                 <Link
-                  href="mailto:m.faiyazuddeen@gmail.com"
-                  className="text-lg font-medium capitalize text-dark underline 
+                  href={process.env.NEXT_PUBLIC_WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-lg font-medium capitalize text-dark underline
                   dark:text-light md:text-base"
                 >
                   Contact

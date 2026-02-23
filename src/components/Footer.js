@@ -24,7 +24,7 @@ const Footer = () => {
         </div>
 
         <Link
-          href="https://faiyazbits.com/about"
+          href={process.env.NEXT_PUBLIC_WHATSAPP_URL}
           target="_blank"
           className="underline underline-offset-2"
         >

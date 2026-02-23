@@ -8,7 +8,7 @@ const services = [
     description:
       "I help founders and product teams launch production-ready web applications in weeks — without the chaos of coordinating separate frontend, backend, and DevOps contractors.",
     cta: "Start Your Build",
-    href: "mailto:m.faiyazuddeen@gmail.com?subject=End-to-End Development Enquiry",
+    href: process.env.NEXT_PUBLIC_CALENDLY_URL,
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <polyline points="16 18 22 12 16 6" />
@@ -22,7 +22,7 @@ const services = [
     description:
       "I help engineering teams fix sluggish apps and recover lost conversions fast — without guesswork — by pinpointing the exact bottlenecks killing your Core Web Vitals.",
     cta: "Get a Performance Audit",
-    href: "mailto:m.faiyazuddeen@gmail.com?subject=Performance Audit Enquiry",
+    href: process.env.NEXT_PUBLIC_CALENDLY_URL,
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <circle cx="12" cy="12" r="10" />
@@ -52,7 +52,7 @@ const services = [
     description:
       "I help dev teams ship significantly more in the same sprint — without falling into hallucination traps or accumulating AI-generated technical debt.",
     cta: "Train My Team",
-    href: "mailto:m.faiyazuddeen@gmail.com?subject=AI Engineering Training Enquiry",
+    href: process.env.NEXT_PUBLIC_CALENDLY_URL,
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z" />
@@ -122,6 +122,8 @@ const ServiceCard = ({ title, description, cta, href, icon }) => (
       </p>
       <Link
         href={href}
+        target="_blank"
+        rel="noopener noreferrer"
         className="mt-auto self-start text-sm font-semibold capitalize border-b-2 border-primary dark:border-primaryDark text-primary dark:text-primaryDark hover:tracking-wide transition-all duration-300"
       >
         {cta} →
