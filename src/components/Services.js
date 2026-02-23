@@ -20,7 +20,7 @@ const services = [
   {
     title: "Performance Auditing & Optimization",
     description:
-      "I help engineering teams fix sluggish apps and recover lost conversions fast — without guesswork — by pinpointing the exact bottlenecks killing your Core Web Vitals.",
+      "I help engineering teams fix sluggish apps and recover lost conversions fast — without guesswork — by pinpointing the exact bottlenecks killing your application's performance.",
     cta: "Get a Performance Audit",
     href: process.env.NEXT_PUBLIC_CALENDLY_URL,
     icon: (
@@ -111,7 +111,7 @@ const cardVariants = {
 
 const ServiceCard = ({ title, description, cta, href, icon }) => (
   <motion.div variants={cardVariants} className="relative group">
-    <div className="absolute top-0 -right-3 -z-10 h-[103%] w-[101%] rounded-[1.5rem] bg-dark dark:bg-light" />
+    <div className="absolute top-0 -right-3 -z-10 h-[103%] w-[101%] rounded-[1.5rem] bg-dark dark:bg-light sm:-right-1.5 sm:h-[101.5%]" />
     <div className="relative flex flex-col h-full rounded-2xl border-2 border-solid border-dark bg-light p-6 dark:border-light dark:bg-dark">
       <div className="mb-4 w-10 h-10 text-primary dark:text-primaryDark">
         {icon}

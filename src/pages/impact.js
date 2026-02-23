@@ -69,9 +69,8 @@ export default function Impact() {
             text="Results Over Resumes."
             className="mb-8 !text-8xl !leading-tight lg:!text-7xl sm:!text-6xl xs:!text-4xl"
           />
-          <p className="text-dark/75 dark:text-light/75 text-lg max-w-2xl mb-16 sm:text-base sm:mb-8">
+          <p className="text-dark/75 dark:text-light/75 text-lg max-w-3xl mb-16 sm:text-base sm:mb-8">
             Real engineering impact — documented as Problem → Solution → Outcome.
-            No company names; all metrics are genuine.
           </p>
 
           {/* Hero stat bar */}
@@ -107,7 +106,7 @@ export default function Impact() {
           {/* CTA strip */}
           <div className="mt-24 text-center border-t border-dark/10 dark:border-light/10 pt-16">
             <h2 className="text-4xl font-bold text-dark dark:text-light mb-4 lg:text-3xl sm:text-2xl">
-              Seen enough? Let&apos;s build something together.
+              Let&apos;s build something together.
             </h2>
             <p className="text-dark/75 dark:text-light/75 text-lg mb-8 sm:text-base">
               Available for senior engineering roles and high-impact freelance engagements.

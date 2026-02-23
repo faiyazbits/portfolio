@@ -68,7 +68,7 @@ export default function ImpactCase({ caseStudy }) {
       <div
         className={`absolute top-0 -right-3 -z-10 h-[103%] w-[101%] rounded-[2.5rem] rounded-br-3xl
           ${highlight ? "bg-primary dark:bg-primaryDark" : "bg-dark dark:bg-light"}
-          xs:-right-2 xs:h-[102%] xs:w-[100%] xs:rounded-[1.5rem]
+          sm:-right-2 sm:h-[102%] xs:-right-1.5 xs:h-[101%] xs:w-[100%] xs:rounded-[1.5rem]
         `}
       />
 
