@@ -1,37 +1,124 @@
 [
   {
-    "id": "rendering-perf-ember-react",
+    "id": "survey-expression-engine-averq",
     "category": "Performance",
-    "client": "Global Fintech Trading Platform",
-    "period": "2021",
-    "headline": "Eliminated UI Bottleneck in a High-Frequency Trading Dashboard",
-    "problem": "A legacy EmberJS trading dashboard suffered from severe render latency during live data updates. As tick frequency increased, the UI fell behind, causing traders to act on stale quotes. Ember's classic component model re-rendered the entire instrument grid on every data change — blocking the main thread for hundreds of milliseconds.",
-    "solution": "Introduced React as a co-existing rendering layer inside the Ember app, using a facade pattern to mount React component trees at strategic DOM boundaries. This isolated the high-churn instrument grid inside React's virtual DOM diffing, leaving the stable Ember shell untouched. The migration required zero Ember refactoring and no deployment risk — React was loaded lazily.",
-    "impact": "UI rendering throughput improved by 120% under peak load. Frame drops during live market hours were eliminated. The approach became the internal standard for all new high-frequency view modules.",
+    "client": "US Compliance & Audit Platform",
+    "period": "2024",
+    "headline": "Cut 3,500-Question Form Load from 14s to 4s by Rebuilding the Expression Engine",
+    "problem": "A compliance audit tool used SurveyJS to render forms with up to 3,500 questions and 2,000 conditional expressions. Every call to setAnswer triggered a full recursive expression cascade across the entire form — re-evaluating visibility and validation rules for every question on every keystroke. The result was a 14-second load that blocked auditors from beginning work.",
+    "solution": "Batched all answer mutations into a single atomic pass before triggering expression evaluation. Built an async microtask queue that deferred expression re-evaluation off the critical render path. Added a caching layer keyed on expression inputs so unchanged questions never re-evaluated. DOM updates were coalesced into a single commit at the end of each batch cycle.",
+    "impact": "Form load time dropped from 14 seconds to 4 seconds — a 71% reduction — across all 3,500-question forms. Auditors could begin entering data immediately. The expression evaluation engine was later adopted as the standard pattern for all new form builds on the platform.",
     "metrics": [
-      { "label": "Render throughput", "value": 120, "suffix": "%", "prefix": "+", "note": "faster" },
-      { "label": "Ember refactoring required", "value": 0, "suffix": " lines", "prefix": "" }
+      { "label": "Load time before", "value": 14, "suffix": "s", "prefix": "" },
+      { "label": "Load time after", "value": 4, "suffix": "s", "prefix": "" },
+      { "label": "Reduction", "value": 71, "suffix": "%", "prefix": "" },
+      { "label": "Questions handled", "value": 3500, "suffix": "+", "prefix": "" }
     ],
-    "techStack": ["React", "Ember.js", "JavaScript"],
+    "techStack": ["SurveyJS", "React", "JavaScript"],
     "tags": ["Performance", "Architecture"],
     "highlight": true
   },
   {
-    "id": "survey-form-deferred-render",
-    "category": "Performance",
-    "client": "Enterprise Healthcare Data Portal",
-    "period": "2022",
-    "headline": "Cut Complex Form Load Time by 71% with Deferred Rendering",
-    "problem": "A clinical data entry portal used SurveyJS to render large conditional forms — some with 80+ questions, branching logic, and embedded validators. On form open, the browser main thread was blocked for 14 seconds while SurveyJS parsed the schema and instantiated all widgets synchronously. Clinical staff reported the wait as a daily friction point.",
-    "solution": "Implemented a deferred rendering strategy: only the first visible page rendered synchronously on mount; subsequent pages rendered using requestIdleCallback during idle frames. A lightweight skeleton UI displayed immediately. The SurveyJS model was constructed in a web worker to move schema parsing off the main thread.",
-    "impact": "Time-to-interactive dropped from 14 seconds to 4 seconds — a 71% reduction. User-perceived load time was near-instant due to the skeleton approach. Clinical staff completion rates improved measurably after the change.",
+    "id": "firebase-streaming-pipeline-healthcare",
+    "category": "Reliability",
+    "client": "Indian Healthcare Data Platform",
+    "period": "2021",
+    "headline": "Reduced Patient Data Upload Time by 90% with a Streaming Chunked Pipeline",
+    "problem": "A healthcare data platform needed to upload large patient GDS datasets into Firebase. Single-request payloads routinely hit Firebase's document-size and rate-limiting ceilings, causing uploads to fail silently mid-way. A full restart was the only recovery — meaning a 5-hour upload that failed at hour 4 had to begin again from zero.",
+    "solution": "Replaced the monolithic upload with a Node.js streaming pipeline using chunked writes coordinated by Jsync.IO. Each chunk was committed independently with exponential backoff on transient failures. Failed chunks were routed to a dead-letter queue for targeted retry without restarting the full job.",
+    "impact": "End-to-end upload time fell from 300 minutes to 30 minutes — a 90% reduction. Failed-chunk retries eliminated full-restart recovery entirely. The dead-letter queue provided an audit trail of every failure for compliance review.",
     "metrics": [
-      { "label": "Load time before", "value": 14, "suffix": "s", "prefix": "" },
-      { "label": "Load time after", "value": 4, "suffix": "s", "prefix": "" },
-      { "label": "Reduction", "value": 71, "suffix": "%", "prefix": "" }
+      { "label": "Upload time before", "value": 300, "suffix": " min", "prefix": "" },
+      { "label": "Upload time after", "value": 30, "suffix": " min", "prefix": "" },
+      { "label": "Reduction", "value": 90, "suffix": "%", "prefix": "" }
     ],
-    "techStack": ["SurveyJS", "React", "Web Workers", "JavaScript"],
-    "tags": ["Performance", "UX"],
+    "techStack": ["Node.js", "Firebase", "Streams", "JavaScript"],
+    "tags": ["Reliability", "Performance", "Architecture"],
+    "highlight": true
+  },
+  {
+    "id": "paratransit-ember-react-windowing",
+    "category": "Performance",
+    "client": "Canadian Paratransit Dispatch Platform",
+    "period": "2025",
+    "headline": "Unfroze a Live Dispatch Dashboard for 10,000 Members Without Touching Ember",
+    "problem": "A paratransit dispatch platform built on Ember.js loaded 10,000 member records into a single computed property chain. Each record update cascaded through Ember's observer system, triggering full list re-renders. During mid-shift operations, the dashboard froze for 3–5 seconds per interaction — operators were unable to dispatch rides during critical windows.",
+    "solution": "Embedded React at a single DOM mount point inside the Ember shell using a facade adapter. The member list was rewritten as a windowed virtual list in React, rendering only the ~20 rows visible in the viewport at any time. A WebSocket data stream fed new records directly into React state, bypassing Ember's observer graph entirely. Zero lines of existing Ember code were modified.",
+    "impact": "Rendering throughput improved by 120% under peak load. Dashboard freezes were eliminated. The embedded React approach became the internal migration pattern for all high-churn views on the platform.",
+    "metrics": [
+      { "label": "Render throughput", "value": 120, "suffix": "%", "prefix": "+" },
+      { "label": "Ember code changed", "value": 0, "suffix": " lines", "prefix": "" }
+    ],
+    "techStack": ["React", "Ember.js", "WebSockets", "JavaScript"],
+    "tags": ["Performance", "Architecture"],
+    "highlight": true
+  },
+  {
+    "id": "leaflet-map-diff-rendering-travel",
+    "category": "Performance",
+    "client": "European Public Transit Provider",
+    "period": "2023",
+    "headline": "Sped Up Route Map Rendering 40% with a Keyed Layer Diff",
+    "problem": "A public transit route planning tool rebuilt its entire Leaflet map — tearing down and recreating all layers — every time the user submitted a new route search, regardless of how much of the map had actually changed. On complex multi-stop searches, the teardown/rebuild cycle caused a noticeable visual flicker and added hundreds of milliseconds of render latency per query.",
+    "solution": "Built a keyed diff layer that compared the incoming route data against the live map state node by node. Each marker, polyline, and popup was assigned a stable key; the reconciliation loop issued only the minimal create, update, or delete operations needed. Layers with unchanged data were never touched.",
+    "impact": "Map render speed improved by 40% across typical route search workflows. Visual flicker on route changes was eliminated. The diff layer was extracted as a reusable Angular service adopted across three other map views in the product.",
+    "metrics": [
+      { "label": "Map render speed", "value": 40, "suffix": "%", "prefix": "+" }
+    ],
+    "techStack": ["Leaflet", "Angular", "TypeScript", "RxJS"],
+    "tags": ["Performance"],
+    "highlight": false
+  },
+  {
+    "id": "offline-pwa-interceptor-averq",
+    "category": "Architecture",
+    "client": "US Compliance & Audit Platform",
+    "period": "2024",
+    "headline": "Delivered 100% Offline Coverage for Air-Gapped Auditors with Zero App Rewrites",
+    "problem": "Compliance auditors frequently worked in air-gapped environments — government buildings and secure facilities with no internet access. Any connectivity loss caused active sessions to drop and in-progress audit data to be lost. With hundreds of network call sites scattered across the codebase, retrofitting each with offline-handling logic was not feasible.",
+    "solution": "Implemented a Service Worker HTTP interceptor that transparently captured all outbound requests when offline, persisting them to an IndexedDB write queue. On reconnect, a background sync handler replayed queued requests in order and reconciled responses with local state. No existing request code was modified — the interceptor operated entirely at the network layer.",
+    "impact": "100% of audit sessions remained uninterrupted through connectivity loss. Data loss incidents dropped to zero. Zero lines of existing request or API code were changed, making the rollout risk-free.",
+    "metrics": [
+      { "label": "Offline coverage", "value": 100, "suffix": "%", "prefix": "" },
+      { "label": "Existing request code changed", "value": 0, "suffix": " lines", "prefix": "" }
+    ],
+    "techStack": ["React", "Service Workers", "IndexedDB", "PWA"],
+    "tags": ["Architecture", "Reliability"],
+    "highlight": false
+  },
+  {
+    "id": "backtesting-chunked-fetch-tradeworks",
+    "category": "Performance",
+    "client": "Algorithmic Trading Platform",
+    "period": "2019",
+    "headline": "Eliminated Browser Memory Crashes on 10-Year Backtesting Data Loads",
+    "problem": "A backtesting tool allowed traders to visualise strategy performance across 10+ years of historical data. Fetching the full dataset in a single request routinely exhausted browser memory — particularly on mid-range machines — causing the tab to crash before the chart ever rendered. Users had no feedback during the long fetch and no recovery path on failure.",
+    "solution": "Replaced the single fetch with a debounced 5-chunk sequential pipeline. Each chunk covered a discrete time window and was fetched in order. ChartIQ rendered progressively as each chunk arrived, giving traders immediate visual feedback. A loading progress indicator tracked chunk completion, and any single-chunk failure triggered a targeted retry without restarting the full load.",
+    "impact": "Browser memory crashes were eliminated entirely. Time-to-first-data dropped from a blank wait to seconds. Trader satisfaction with the backtesting tool increased measurably after the rollout.",
+    "metrics": [
+      { "label": "Memory crashes", "value": 0, "suffix": "", "prefix": "" },
+      { "label": "Chunks per load", "value": 5, "suffix": "", "prefix": "" }
+    ],
+    "techStack": ["ChartIQ", "Angular", "RxJS", "TypeScript"],
+    "tags": ["Performance"],
+    "highlight": false
+  },
+  {
+    "id": "linked-list-tree-eform",
+    "category": "Architecture",
+    "client": "Canadian Government E-Governance Platform",
+    "period": "2022",
+    "headline": "Reduced Tree Node Drag-and-Drop Freeze from 6s to Under 1s with a Linked List",
+    "problem": "A government form-builder used a deeply nested tree structure to represent form sections and fields. Drag-and-drop reordering triggered a jQuery recursive traversal of the entire tree to find the affected nodes and rebuild the structure. On forms with hundreds of nodes, every drop caused a 5–6 second UI freeze — making the builder unusable for large government forms.",
+    "solution": "Replaced the nested tree with a flat linked list where each node stored explicit parent, firstChild, and nextSibling pointers. Insert and delete operations became O(1) pointer updates with no traversal required. The visible tree view was derived from the flat list at render time, keeping the underlying data model simple and fast.",
+    "impact": "Node drop response time fell from ~6 seconds to under 1 second — more than an 85% reduction. The builder was immediately usable on the largest government form templates in the system. The linked list data structure was adopted as the standard for all subsequent tree-based features.",
+    "metrics": [
+      { "label": "Drop time before", "value": 6, "suffix": "s", "prefix": "~" },
+      { "label": "Drop time after", "value": 1, "suffix": "s", "prefix": "<" },
+      { "label": "Reduction", "value": 85, "suffix": "%", "prefix": ">" }
+    ],
+    "techStack": ["AngularJS", "jQuery", "JavaScript"],
+    "tags": ["Architecture", "Performance"],
     "highlight": true
   }
 ]

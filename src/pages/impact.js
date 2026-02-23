@@ -41,9 +41,9 @@ const containerVariants = {
 };
 
 const heroStats = [
-  { value: 5, suffix: "", label: "Impact stories" },
+  { value: 7, suffix: "", label: "Impact stories" },
   { value: 120, suffix: "%", label: "Max performance gain" },
-  { value: 71, suffix: "%", label: "Fastest load reduction" },
+  { value: 90, suffix: "%", label: "Fastest load reduction" },
   { value: 10, suffix: "+", label: "Years engineering" },
 ];
 

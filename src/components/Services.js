@@ -8,7 +8,7 @@ const services = [
     description:
       "I help founders and product teams launch production-ready web applications in weeks — without the chaos of coordinating separate frontend, backend, and DevOps contractors.",
     cta: "Start Your Build",
-    href: "mailto:m.faiyaz123@gmail.com?subject=End-to-End Development Enquiry",
+    href: "mailto:m.faiyazuddeen@gmail.com?subject=End-to-End Development Enquiry",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <polyline points="16 18 22 12 16 6" />
@@ -22,7 +22,7 @@ const services = [
     description:
       "I help engineering teams fix sluggish apps and recover lost conversions fast — without guesswork — by pinpointing the exact bottlenecks killing your Core Web Vitals.",
     cta: "Get a Performance Audit",
-    href: "mailto:m.faiyaz123@gmail.com?subject=Performance Audit Enquiry",
+    href: "mailto:m.faiyazuddeen@gmail.com?subject=Performance Audit Enquiry",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <circle cx="12" cy="12" r="10" />
@@ -38,7 +38,7 @@ const services = [
     description:
       "I help businesses reduce manual work and scale operations — by integrating AI into their existing workflows — without disrupting the processes their teams already rely on.",
     cta: "Automate My Workflow",
-    href: "mailto:m.faiyaz123@gmail.com?subject=AI Workflow Automation Enquiry",
+    href: "mailto:m.faiyazuddeen@gmail.com?subject=AI Workflow Automation Enquiry",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <path d="M12 2a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.5V11h2a2 2 0 0 1 2 2v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1v-1a2 2 0 0 1 2-2h2V9.5A4 4 0 0 1 8 6a4 4 0 0 1 4-4z" />
@@ -52,7 +52,7 @@ const services = [
     description:
       "I help dev teams ship significantly more in the same sprint — without falling into hallucination traps or accumulating AI-generated technical debt.",
     cta: "Train My Team",
-    href: "mailto:m.faiyaz123@gmail.com?subject=AI Engineering Training Enquiry",
+    href: "mailto:m.faiyazuddeen@gmail.com?subject=AI Engineering Training Enquiry",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z" />
@@ -64,7 +64,7 @@ const services = [
     description:
       "I help developers and teams go from confused to confident in modern web tech — through hands-on workshops — without sitting through bloated courses that never reach production.",
     cta: "Book a Workshop",
-    href: "mailto:m.faiyaz123@gmail.com?subject=Web Technologies Training Enquiry",
+    href: "mailto:m.faiyazuddeen@gmail.com?subject=Web Technologies Training Enquiry",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
@@ -77,7 +77,7 @@ const services = [
     description:
       "I help startups and scale-ups design cloud infrastructure that stays cost-efficient as they grow — without over-engineering or waking up to a surprise AWS bill.",
     cta: "Review My Architecture",
-    href: "mailto:m.faiyaz123@gmail.com?subject=AWS Architecture Consulting Enquiry",
+    href: "mailto:m.faiyazuddeen@gmail.com?subject=AWS Architecture Consulting Enquiry",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
@@ -89,7 +89,7 @@ const services = [
     description:
       "I help non-technical founders take their Cursor-, Lovable-, or Bolt-built prototype to a stable, maintainable product — without starting from scratch or hiring a full team.",
     cta: "Let's Make It Real",
-    href: "mailto:m.faiyaz123@gmail.com?subject=Vibe to Production Consultation",
+    href: "mailto:m.faiyazuddeen@gmail.com?subject=Vibe to Production Consultation",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <path d="M12 2L8.09 8.26 2 9.27l5 4.87-1.18 6.88L12 17.77l6.18 3.25L17 14.14l5-4.87-6.09-1.01z" />

@@ -94,7 +94,7 @@ export default function BiographyAnnotated() {
         </p>
       </RoughNotationGroup>
       <Link
-        href="mailto:m.faiyaz123@gmail.com"
+        href="mailto:m.faiyazuddeen@gmail.com"
         className="mt-6 inline-block rounded-lg border-2 border-solid border-dark bg-dark px-6 py-3
         text-base font-semibold text-light transition-all duration-300
         hover:bg-transparent hover:text-dark
