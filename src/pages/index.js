@@ -32,8 +32,8 @@ export default function Home() {
       >
         <Layout className="!pt-0 md:!pt-16 sm:!pt-16">
           <div className="flex w-full items-center justify-between gap-8 md:flex-col">
-            <div className="w-1/2 flex justify-center items-center lg:hidden md:inline-block md:w-full">
-              <div className="relative w-96 h-96 rounded-full overflow-hidden border-4 border-dark dark:border-light">
+            <div className="w-1/2 flex justify-center items-center lg:hidden md:flex md:justify-center md:w-full">
+              <div className="relative w-96 h-96 md:w-72 md:h-72 sm:w-64 sm:h-64 xs:w-56 xs:h-56 rounded-full overflow-hidden border-4 border-dark dark:border-light">
                 <Image
                   src={profilePic}
                   alt="Faiyazbits"

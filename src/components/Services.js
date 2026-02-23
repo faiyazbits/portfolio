@@ -33,7 +33,7 @@ const services = [
       </svg>
     ),
   },
-  {
+  /*{
     title: "AI Automation in Business Workflows",
     description:
       "I help businesses reduce manual work and scale operations — by integrating AI into their existing workflows — without disrupting the processes their teams already rely on.",
@@ -46,7 +46,7 @@ const services = [
         <circle cx="15" cy="15" r="1" fill="currentColor" stroke="none" />
       </svg>
     ),
-  },
+  },*/
   {
     title: "AI-Assisted Engineering Training",
     description:
@@ -59,7 +59,7 @@ const services = [
       </svg>
     ),
   },
-  {
+  /*{
     title: "Web Technologies Training",
     description:
       "I help developers and teams go from confused to confident in modern web tech — through hands-on workshops — without sitting through bloated courses that never reach production.",
@@ -96,7 +96,7 @@ const services = [
         <path d="M12 2v4M12 18v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83" />
       </svg>
     ),
-  },
+  },*/
 ];
 
 const containerVariants = {
@@ -132,12 +132,12 @@ const ServiceCard = ({ title, description, cta, href, icon }) => (
 
 const Services = () => (
   <section className="w-full bg-light dark:bg-dark text-dark dark:text-light p-0">
-    <Layout>
+    <Layout className="!pt-0">
       <h2 className="font-bold text-8xl mb-4 w-full text-center md:text-6xl xs:text-4xl">
         What I Do
       </h2>
       <p className="text-center text-dark/75 dark:text-light/75 mb-20 text-lg md:text-base md:mb-12">
-        A decade of experience, seven ways to put it to work for you.
+        A decade of experience, three ways to put it to work for you.
       </p>
       <motion.div
         variants={containerVariants}
