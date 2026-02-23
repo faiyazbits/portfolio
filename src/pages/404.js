@@ -9,7 +9,7 @@ const NotFound = () => {
   return (
     <>
       <Head>
-        <title>Faiyazbits | 404 — Page Not Found</title>
+        <title>Fayaz | 404 — Page Not Found</title>
         <meta
           name="description"
           content="The page you're looking for doesn't exist. Head back to Fayaz's portfolio to explore full-stack projects, impact stories, and more."

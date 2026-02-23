@@ -45,7 +45,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>Faiyazbits | About</title>
+        <title>Fayaz | About</title>
         <meta name="description" content="Learn about Fayaz, a full-stack developer and AWS Certified Solutions Architect with over a decade of experience in React, Angular, Node.js, and AI-assisted engineering." />
       </Head>
       <TransitionEffect />

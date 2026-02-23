@@ -55,7 +55,7 @@ export default function Impact() {
   return (
     <>
       <Head>
-        <title>Faiyazbits | Impact</title>
+        <title>Fayaz | Impact</title>
         <meta
           name="description"
           content="Real engineering impact: performance wins, architecture decisions, and measurable outcomes from 10+ years of senior full-stack engineering."
@@ -112,7 +112,9 @@ export default function Impact() {
               Available for senior engineering roles and high-impact freelance engagements.
             </p>
             <Link
-              href="mailto:m.faiyaz@gmail.com"
+              href={process.env.NEXT_PUBLIC_WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-lg bg-dark px-8 py-4 text-lg font-semibold text-light dark:bg-light dark:text-dark hover:scale-105 transition-transform duration-200 inline-block sm:text-base sm:px-6 sm:py-3"
             >
               Get in touch

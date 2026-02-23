@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Faiyazbits</title>
+        <title>Fayaz</title>
         <meta
           name="description"
           content="Fayaz is a full-stack developer with 10+ years of experience building scalable web applications. Explore projects spanning React, Node.js, AI engineering, and cloud architecture."
@@ -32,7 +32,7 @@ export default function Home() {
               <div className="relative w-96 h-96 md:w-72 md:h-72 sm:w-64 sm:h-64 xs:w-56 xs:h-56 rounded-full overflow-hidden border-4 border-dark dark:border-light">
                 <Image
                   src={profilePic}
-                  alt="Faiyazbits"
+                  alt="Fayaz"
                   className="object-cover"
                   fill
                   sizes="(max-width: 768px) 100vw, 400px"
@@ -64,7 +64,7 @@ export default function Home() {
 
         <HireMe />
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 md:hidden"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
         >
@@ -87,7 +87,7 @@ export default function Home() {
       <Services />
       <div className="flex justify-end pr-8 pb-8 md:hidden">
         <div className="inline-block w-24">
-          <Image className="relative h-auto w-full" src={lightBulb} alt="Faiyazbits" />
+          <Image className="relative h-auto w-full" src={lightBulb} alt="Fayaz" />
         </div>
       </div>
     </>

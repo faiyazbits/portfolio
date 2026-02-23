@@ -422,7 +422,7 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Faiyazbits | Projects</title>
+        <title>Fayaz | Projects</title>
         <meta
           name="description"
           content="Explore Fayaz's portfolio of real-world projects — from AI document chatbots and trading platforms to dispatch systems and government e-applications. Built with React, Node.js, Angular, and more."
