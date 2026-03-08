@@ -1,7 +1,7 @@
 # Muhammed Faiyazuddeen
 
 **Kochi, India** | m.faiyazuddeen@gmail.com | +91 9497284609
-[linkedin.com/in/muhammed-faiyazuddeen-075237105](https://www.linkedin.com/in/muhammed-faiyazuddeen-075237105/) | [github.com/faiyazbits](https://github.com/faiyazbits)
+[mfayaz.live](https://www.mfayaz.live) | [linkedin.com/in/muhammed-faiyazuddeen-075237105](https://www.linkedin.com/in/muhammed-faiyazuddeen-075237105/) | [github.com/faiyazbits](https://github.com/faiyazbits)
 
 ---
 
@@ -75,7 +75,7 @@ Full-stack software engineer and solution architect with 10+ years of experience
 
 ## Selected Projects
 
-### DocuTalk — AI Document Intelligence Chatbot *(Dec 2025 – Feb 2026)*
+### DocuTalk — AI Document Intelligence Chatbot *(Dec 2025 – present)*
 *Next.js, TypeScript, LangChain.js, Vercel AI SDK, ChromaDB, OpenAI Embeddings, DeepSeek LLM, Express.js, RAG, Vector Database, LLM Orchestration*
 
 - Built a full RAG pipeline with vector database (ChromaDB) converting uploaded PDFs into a queryable knowledge base with semantically context-aware answers.
@@ -84,76 +84,76 @@ Full-stack software engineer and solution architect with 10+ years of experience
 - Achieved ~14× cost reduction vs GPT-4 by integrating DeepSeek with a swappable LangChain model abstraction layer.
 - [github.com/faiyazbits/docutalk](https://github.com/faiyazbits/docutalk)
 
-### Averq — Unified Compliance & Audit Platform *(Nov 2023 – Jan 2024)*
+### Averq — Unified Compliance & Audit Platform *(Nov 2024 – Jan 2026)*
 *React, Node.js, Elasticsearch, SurveyJS, PWA, Service Workers, IndexedDB, WebSockets*
 
 - Rebuilt SurveyJS expression evaluation engine for a 3,500-question compliance form using batched answer mutations, async microtask queue deferral, and expression result caching — reducing form load from 14s to 4s (71% reduction).
 - Architected a Service Worker–based offline interceptor persisting all outbound requests to IndexedDB for ordered replay on reconnect, achieving 100% session continuity in air-gapped government environments.
 - Implemented real-time WebSocket conflict detection surfacing live notifications when concurrent users attempt to modify the same audit record simultaneously.
 
-### Nexum — Account Based Ticketing Platform *(Feb 2023 – Apr 2023)*
+### Nexum — Account Based Ticketing Platform *(Feb 2023 – Apr 2024)*
 *Kotlin, Spring Boot, MySQL, Angular, Kafka, Cypress*
 
 - Delivered Kotlin coroutine APIs with a Java in-memory GTFS cache layer enabling sub-millisecond route/schedule lookups and eliminating thread-blocking bottlenecks under high transit network load.
 - Implemented configurable exponential backoff for Kafka consumer failure detection with automated Slack alerting via Datadog for real-time event-stream health visibility.
 - Authored Cypress E2E test suites covering critical transit booking and account management flows across multiple transport networks.
 
-### Interactive Travel Planner *(Apr 2022 – Jun 2022)*
+### Interactive Travel Planner *(Apr 2022 – Jun 2023)*
 *Angular, TypeScript, Leaflet, RxJS, Cypress, SCSS*
 
 - Engineered a keyed diff strategy for Leaflet map layer updates issuing only minimal create/update/delete DOM operations — improving route render speed by 40% and eliminating visual flicker across a high-traffic public transit search interface.
 - Built RxJS reactive data pipelines for geospatial queries with client-side caching, reducing redundant network calls.
 - Authored comprehensive Cypress E2E test suite covering critical map interactions for a European public transit provider.
 
-### AdeptIQ — Paratransit Dispatch Engine *(Jul 2021 – Sep 2021)*
+### AdeptIQ — Paratransit Dispatch Engine *(Jul 2019 – Jan 2021)*
 *Ember.js, Node.js, PostgreSQL, WebSockets, Leaflet, Sequelize, React*
 
 - Embedded a virtualized React data grid within an Ember.js paratransit dispatch platform, eliminating 3–5s UI freezes under 10,000-record load and improving render throughput by 120%.
 - Designed the full relational data model for a paratransit booking service using Sequelize ORM over PostgreSQL with JSON:API-compliant REST endpoints for third-party transit system integration.
 - Implemented real-time WebSocket driver location tracking for live dispatch visibility.
 
-### SagaMath — Interactive Math Worksheet Platform *(Oct 2020 – Dec 2020)*
+### SagaMath — Interactive Math Worksheet Platform *(Jan 2021 – Dec 2021)*
 *Monaco Editor, JavaScript, Service Workers, KaTeX*
 
 - Offloaded Monaco Editor IntelliSense autocompletion to a Service Worker thread, achieving zero main-thread blocking during heavy suggestion workloads.
 - Engineered a sandboxed JavaScript execution engine for safe client-side evaluation of student math programs entirely in the browser.
 - Built a live worksheet authoring system combining executable code blocks, rendered KaTeX math expressions, and interactive inputs.
 
-### Tradeworks — Algorithmic Trading Automation Platform *(Jan 2020 – Mar 2020)*
+### Tradeworks — Algorithmic Trading Automation Platform *(Jan 2019 – Mar 2019)*
 *Angular, RxJS, ChartIQ, Canvas API, TypeScript*
 
 - Eliminated browser memory crashes on 10-year backtesting datasets by replacing bulk data fetches with a debounced 5-chunk progressive rendering pipeline using ChartIQ's professional charting API.
 - Developed reactive RxJS pipelines for live forex market data streaming with back-pressure management.
 - Built trade entry/exit point visualization using the Canvas API overlaid on ChartIQ chart instances.
 
-### Eform — Government E-Application Platform *(Mar 2019 – May 2019)*
+### Eform — Government E-Application Platform *(Mar 2018 – Nov 2018)*
 *AngularJS, jQuery UI*
 
 - Replaced a deeply-nested jQuery recursive tree with a flat linked-list structure (explicit parent/sibling pointers), cutting drag-and-drop node response from ~6s to under 1s — an 85%+ reduction in a Canadian government e-form builder.
 - Built a no-code service designer enabling non-engineer government administrators to model and publish registration workflows (marriage, driving licences, birth registration) as reusable process blueprints.
 
-### Choice Health Brokers — Internal CRM Platform *(May 2018 – Jul 2018)*
+### Choice Health Brokers — Internal CRM Platform *(May 2017 – Jan 2018)*
 *React, Redux, Twilio Programmable Voice API*
 
 - Integrated Twilio Programmable Voice API to deliver a fully in-browser softphone, enabling agents to place and receive calls without hardware and eliminating the need for external telephony clients.
 - Architected Redux-driven real-time call state synchronization, keeping UI and live call events in lockstep across all agent sessions.
 - Designed an interactive inline-editable data grid for broker/agent record management with real-time validation.
 
-### BigZeta — Declarative Data Visualization Platform *(Aug 2017 – Oct 2017)*
+### BigZeta — Declarative Data Visualization Platform *(Jan 2017 – Apr 2017)*
 *React, Redux, SVG*
 
 - Built a no-code drag-and-drop filter designer for composing complex multi-condition dataset queries, enabling analysts to explore data without SQL.
 - Engineered an SVG chart embed and export system for platform-agnostic sharing of interactive visualizations.
 - Developed a reusable library of React components wrapping SVG primitives for consistent, declarative chart authoring.
 
-### WeldQ — Welder Qualification Certification Platform *(Nov 2016 – Jan 2017)*
+### WeldQ — Welder Qualification Certification Platform *(Jan 2016 – Jan 2017)*
 *MongoDB, Express.js, AngularJS, Node.js (MEAN Stack)*
 
 - Engineered a full online exam engine from scratch for WTIA supporting timed certification exams with question bank randomization, auto-grading, and a drag-and-drop Certificate Designer.
 - Built an Exam Schedule Editor and Result Dashboard with real-time performance metrics for managing certification sessions at scale.
 - Designed a document verification and management module for regulatory standards compliance.
 
-### WeldTrace — Smart Welding Job Management Platform *(Feb 2016 – Apr 2016)*
+### WeldTrace — Smart Welding Job Management Platform *(Feb 2015 – Apr 2016)*
 *AngularJS, jQuery, MongoDB, Node.js*
 
 - Built the Weld Annotation Editor enabling engineers to mark up P&ID drawings with precise weld symbols and positional metadata in the browser.

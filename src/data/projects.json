@@ -7,7 +7,7 @@
     "link": "https://faiyazbits.github.io/sine-wave-simulation/",
     "github": "https://github.com/faiyazbits/sine-wave-simulation",
     "techStack": ["D3.js", "TypeScript", "Vite", "HTML5 Canvas", "JavaScript"],
-    "timePeriod": "Apr 2015 - Jun 2015",
+    "timePeriod": "Apr 2015 - May 2015",
     "country": "IN",
     "contributions": [
       "Built the initial prototype using HTML5 Canvas and raw JavaScript to animate circular motion and sine wave generation",
@@ -26,7 +26,7 @@
     "link": "https://www.weldtrace.com/",
     "github": null,
     "techStack": ["AngularJS", "jQuery", "MongoDB", "Node.js"],
-    "timePeriod": "Feb 2016 - Apr 2016",
+    "timePeriod": "Feb 2015 - Apr 2016",
     "country": "AU",
     "contributions": [
       "Built a Weld Annotation Editor enabling engineers to mark up P&ID drawings with precise weld symbols and positional metadata",
@@ -44,7 +44,7 @@
     "link": "https://wtia.weldq.com/",
     "github": null,
     "techStack": ["MongoDB", "Express.js", "AngularJS", "Node.js"],
-    "timePeriod": "Nov 2016 - Jan 2017",
+    "timePeriod": "Jan 2016 - Jan 2017",
     "country": "AU",
     "contributions": [
       "Engineered a custom test engine from scratch, supporting timed online exams with question banks, randomisation, and auto-grading for welder qualification assessments",
@@ -63,7 +63,7 @@
     "link": null,
     "github": null,
     "techStack": ["React", "Redux", "SVG"],
-    "timePeriod": "Aug 2017 - Oct 2017",
+    "timePeriod": "Jan 2017 - Apr 2017",
     "country": "US",
     "contributions": [
       "Developed a library of reusable React component wrappers around SVG primitives, enabling declarative, data-driven chart composition with clean separation between rendering logic and application state",
@@ -80,7 +80,7 @@
     "link": null,
     "github": null,
     "techStack": ["React", "Redux", "Twilio"],
-    "timePeriod": "May 2018 - Jul 2018",
+    "timePeriod": "May 2017 - Jan 2018",
     "country": "US",
     "contributions": [
       "Designed and built a fully interactive editable data grid for managing broker and agent records, supporting inline cell editing, column sorting, and real-time validation without leaving the table view",
@@ -99,7 +99,7 @@
     "link": null,
     "github": null,
     "techStack": ["AngularJS", "jQuery UI"],
-    "timePeriod": "Mar 2019 - May 2019",
+    "timePeriod": "Mar 2018 - Nov 2018",
     "country": "CA",
     "contributions": [
       "Built custom AngularJS directives powered by the jQuery Drag and Drop API to enable visual data model diagramming inside the service designer — allowing administrators to define entity relationships through drag-and-drop interactions rather than manual configuration",
@@ -116,7 +116,7 @@
     "link": "https://tradeworks.io/",
     "github": null,
     "techStack": ["Angular", "RxJS", "ChartIQ", "Canvas API"],
-    "timePeriod": "Jan 2020 - Mar 2020",
+    "timePeriod": "Jan 2019 - Mar 2019",
     "country": "DK",
     "contributions": [
       "Integrated the ChartIQ professional forex charting library into the Angular platform, configuring real-time data feeds, custom chart types, and toolbar extensions for live market visualisation",
@@ -141,7 +141,7 @@
       "Leaflet",
       "Sequelize"
     ],
-    "timePeriod": "Jul 2021 - Sep 2021",
+    "timePeriod": "Jul 2019 - Jan 2021",
     "country": "CA",
     "contributions": [
       "Achieved a 120% improvement in data grid rendering performance by replacing the legacy grid with a virtualized React data grid embedded within the Ember.js application — eliminating lag on large dispatcher datasets",
@@ -160,7 +160,7 @@
     "link": null,
     "github": null,
     "techStack": ["Monaco Editor", "JavaScript", "Service Worker", "KaTeX"],
-    "timePeriod": "Oct 2020 - Dec 2020",
+    "timePeriod": "Jan 2021 - Dec 2021",
     "country": "IN",
     "contributions": [
       "Built the Math Worksheet editor using Monaco Editor, loading typed suggestion manifests derived from source code to deliver precise, context-aware IntelliSense for mathematical APIs directly in the browser",
@@ -186,7 +186,7 @@
       "Cypress",
       "SCSS"
     ],
-    "timePeriod": "Apr 2022 - Jun 2022",
+    "timePeriod": "Apr 2022 - Jun 2023",
     "country": "DK",
     "contributions": [
       "Authored a comprehensive Cypress E2E test suite covering critical map interactions, journey search flows, and route planning scenarios across web and mobile viewports",
@@ -210,7 +210,7 @@
       "Cypress",
       "Kafka"
     ],
-    "timePeriod": "Feb 2023 - Apr 2023",
+    "timePeriod": "Feb 2023 - Apr 2024",
     "country": "DK",
     "contributions": [
       "Engineered reactive, concurrent API endpoints using Kotlin coroutines across multiple microservices, eliminating thread-blocking bottlenecks and significantly improving throughput under high transit load",
@@ -228,7 +228,7 @@
     "link": "https://www.averq.com/",
     "github": null,
     "techStack": ["React", "Node.js", "Elasticsearch", "SurveyJS"],
-    "timePeriod": "Nov 2023 - Jan 2024",
+    "timePeriod": "Nov 2024 - Jan 2026",
     "country": "US",
     "contributions": [
       "Developed custom asynchronous expression evaluators for SurveyJS with a caching layer, enabling complex conditional logic in compliance forms to resolve efficiently without redundant recalculation",
@@ -247,7 +247,7 @@
     "link": null,
     "github": null,
     "techStack": ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
-    "timePeriod": "Sep 2024 - Nov 2024",
+    "timePeriod": "Sep 2022 - present",
     "country": "CA",
     "contributions": [
       "Architected a flash-free dark/light mode system 🌗 — localStorage persistence wired via an inline script in _document.js, because nobody asked to see a blinding white flash at midnight 🌙",
@@ -277,7 +277,7 @@
       "DeepSeek LLM",
       "Express.js"
     ],
-    "timePeriod": "Dec 2025 - Feb 2026",
+    "timePeriod": "Dec 2025 - present",
     "country": "IN",
     "contributions": [
       "Built a full RAG pipeline with LangChain that turns uploaded PDFs into a searchable knowledge base — so the AI answers from your documents, not from hallucination",
