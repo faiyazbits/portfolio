@@ -18,11 +18,11 @@ const services = [
     ),
   },
   {
-    title: "Performance Auditing & Optimization",
+    title: "Performance Optimization Sprint",
     description:
-      "I help engineering teams fix sluggish apps and recover lost conversions fast — without guesswork — by pinpointing the exact bottlenecks killing your application's performance.",
-    cta: "Get a Performance Audit",
-    href: process.env.NEXT_PUBLIC_CALENDLY_URL,
+      "I help SaaS teams with slow APIs and rising infra costs identify and fix the top performance bottlenecks in 30 days — without rewriting their system. You get a root cause analysis, a prioritized fix roadmap, and guided implementation sessions.",
+    cta: "Book the Sprint",
+    href: "/performance-optimization-sprint",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <circle cx="12" cy="12" r="10" />

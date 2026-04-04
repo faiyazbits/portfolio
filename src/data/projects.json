@@ -257,36 +257,5 @@
       "Designed and rendered this very project card 🪞 — an act of recursion that would make a computer science professor either nod approvingly or quietly weep"
     ],
     "order": 2
-  },
-  {
-    "type": "Personal Project",
-    "title": "DocuTalk — AI Document Intelligence Chatbot",
-    "summary": "A production-ready AI chatbot that turns uploaded PDFs into a queryable knowledge base — giving users a natural conversational interface to get context-aware answers from their own documents, with session history maintained throughout.",
-    "img": "docutalk",
-    "link": null,
-    "github": "https://github.com/faiyazbits/docutalk",
-    "techStack": [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "LangChain.js",
-      "Vercel AI SDK",
-      "ChromaDB",
-      "OpenAI Embeddings",
-      "DeepSeek LLM",
-      "Express.js"
-    ],
-    "timePeriod": "Dec 2025 - present",
-    "country": "IN",
-    "contributions": [
-      "Built a full RAG pipeline with LangChain that turns uploaded PDFs into a searchable knowledge base — so the AI answers from your documents, not from hallucination",
-      "Wired the Vercel AI SDK to a custom streaming backend so responses appear token-by-token, giving users the feel of a live conversation rather than a loading spinner",
-      "Extended the AI beyond passive Q&A by building a tool-calling layer that lets it actively inspect the knowledge base — surfacing available documents on demand and generating on-the-fly topic summaries in the user's preferred format",
-      "Kept conversations coherent across long sessions by managing history intelligently, trimming old context automatically to control costs without losing the thread of the dialogue",
-      "Shipped a document upload flow that keeps users informed at every step — from file received to fully indexed — using real-time progress events streamed back to the UI",
-      "Cut inference costs by ~14× versus GPT-4 by benchmarking and integrating DeepSeek, while keeping the model layer swappable so any LangChain-compatible LLM can be dropped in"
-    ],
-    "order": 1
   }
 ]

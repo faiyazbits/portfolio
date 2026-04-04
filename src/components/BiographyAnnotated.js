@@ -35,62 +35,43 @@ export default function BiographyAnnotated() {
       </h2>
       <RoughNotationGroup key={mode}>
         <p className="font-medium">
-          Hi, I&apos;m <strong>Fayaz</strong>,
-          a{" "} full stack developer
-          with{" "}<RoughNotation {...props} order={6}>over a decade</RoughNotation>{" "}
-          of experience
-          building scalable applications across
-          technology stacks. My expertise spans{" "}
-          JavaScript, Java, Kotlin, and Python
-          , with deep knowledge of modern frameworks including{" "}
-          React, Angular, Svelte, and Node.js
-          ecosystems.
+          Hi, I&apos;m <strong>Fayaz</strong>. I believe most performance
+          problems aren&apos;t engineering problems — they&apos;re{" "}
+          <RoughNotation {...props} order={1}>
+            visibility problems
+          </RoughNotation>
+          . Teams scale infrastructure when what they actually need is a clear
+          diagnosis.
         </p>
         <p className="my-4 font-medium">
-          As an{" "}
-          <RoughNotation {...props} order={1}>
+          I spent{" "}
+          <RoughNotation {...props} order={2}>
+            over a decade
+          </RoughNotation>{" "}
+          as a Technical Lead and systems engineer across international SaaS,
+          government, and fintech engagements. That experience taught me how to
+          see across layers — API, database, infrastructure — and find the root
+          cause, not just the symptom. I&apos;m also an{" "}
+          <RoughNotation {...props} order={3}>
             AWS Certified Solutions Architect
           </RoughNotation>
-          , I help clients design and implement robust cloud solutions.
-          Currently, I focus on{" "}
-          <RoughNotation {...props} order={2}>
-            AI engineering
-          </RoughNotation>{" "}
-          projects, helping organizations integrate AI capabilities into their
-          application workflows.
-        </p>
-        <p className="my-4 font-medium">
-          Beyond development, I&apos;m passionate about{" "}
-          <RoughNotation {...props} order={3}>
-            mentorship and education
-          </RoughNotation>
-          . I&apos;ve had the privilege of training hundreds of students—from
-          young learners to career changers—and find genuine joy in those
-          moments when someone experiences the thrill of solving their first
-          problem with code.
-        </p>
-        <p className="my-4 font-medium">
-          Whether I&apos;m working on a website, mobile app, or other digital
-          product, I bring my commitment to{" "}
-          technical excellence
-          and{" "}
-          user-centered thinking
-          to every project I work on.
-        </p>
-        <p className="my-4 font-medium">
-          I specialize in creating clean, intuitive user interfaces paired with
-          well-architected backend systems. Whether you&apos;re looking to build
-          something new, optimize existing systems, or explore AI integration,
-          I&apos;d welcome the opportunity to collaborate.
-        </p>
-        <p className="font-medium">
-          <RoughNotation {...props} order={4}>
-            Let&apos;s connect and {" "}
-          </RoughNotation>
-          <RoughNotation {...props} order={5} multiline>
-            build something great together
-          </RoughNotation>
           .
+        </p>
+        <p className="my-4 font-medium">
+          I founded{" "}
+          <RoughNotation {...props} order={4}>
+            Upskillabs
+          </RoughNotation>{" "}
+          to pass this systems-level thinking to the next generation of
+          developers building in an AI-first world.
+        </p>
+        <p className="my-4 font-medium">
+          If your APIs are slowing down or your infra costs are climbing, my{" "}
+          <RoughNotation {...props} order={5} multiline>
+            Performance Optimization Sprint
+          </RoughNotation>{" "}
+          gives your team the diagnosis, the roadmap, and the guided fixes — in
+          30 days, without touching your core architecture.
         </p>
       </RoughNotationGroup>
       <Link

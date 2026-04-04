@@ -414,27 +414,25 @@ export default function Consulting() {
 
   const baseCalendly =
     process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/placeholder/30min";
-  const calendlyUrl = `${baseCalendly}?utm_source=${
-    utmParams.utmSource || "direct"
-  }&utm_medium=${utmParams.utmMedium || "organic"}&utm_campaign=${
-    utmParams.utmCampaign || "consulting_page"
-  }`;
+  const calendlyUrl = `${baseCalendly}?utm_source=${utmParams.utmSource || "direct"
+    }&utm_medium=${utmParams.utmMedium || "organic"}&utm_campaign=${utmParams.utmCampaign || "consulting_page"
+    }`;
 
   const annotationColor = mode === "dark" ? "#58E6D9" : "#B63E96";
 
   return (
     <>
       <Head>
-        <title>Performance Optimization Sprint | Fix Slow APIs in 15 Days — Muhammed Faiyaz</title>
+        <title>Performance Optimization Sprint | Fix Slow APIs in 30 Days — Muhammed Faiyaz</title>
         <meta
           name="description"
-          content="I help SaaS teams with 5–30 engineers fix slow APIs and rising infrastructure costs in 15 days — without rewriting their system. Fixed price. No surprises."
+          content="I help SaaS teams with 5–30 engineers fix slow APIs and rising infrastructure costs in 30 days — without rewriting their system. Fixed price. No surprises."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.mfayaz.live/consulting" />
         <meta
           property="og:title"
-          content="Fix Your Slow APIs in 15 Days — Performance Optimization Sprint"
+          content="Fix Your Slow APIs in 30 Days — Performance Optimization Sprint"
         />
         <meta
           property="og:description"
@@ -451,11 +449,11 @@ export default function Consulting() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Fix Your Slow APIs in 15 Days — Performance Optimization Sprint"
+          content="Fix Your Slow APIs in 30 Days — Performance Optimization Sprint"
         />
         <meta
           name="twitter:description"
-          content="SaaS teams: identify and fix your biggest API bottleneck without a rewrite. Fixed price, 15 days."
+          content="SaaS teams: identify and fix your biggest API bottleneck without a rewrite. Fixed price, 30 days."
         />
         <meta
           name="twitter:image"
@@ -518,10 +516,10 @@ export default function Consulting() {
                   dark:bg-light dark:text-dark hover:scale-105 active:scale-95
                   transition-transform duration-200 sm:px-6 sm:py-3 sm:text-sm"
               >
-                Book a Free 15-min Call
+                Book a Free 30-min Call
               </Link>
               <Link
-                href="https://linkedin.com/in/muhammed-faiyaz"
+                href="https://www.linkedin.com/in/faiyazbits/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-lg border-2 border-dark px-8 py-4 text-base font-semibold text-dark
@@ -682,10 +680,10 @@ export default function Consulting() {
                   Performance Optimization Sprint
                 </h2>
                 <p className="text-dark/50 dark:text-light/50 mb-6 text-sm uppercase tracking-widest font-medium">
-                  15 business days · Remote · Fixed scope
+                  30 business days · Remote · Fixed scope
                 </p>
                 <p className="text-dark/70 dark:text-light/70 text-lg lg:text-base mb-8 leading-relaxed">
-                  A structured 15-day engagement where I work directly with your
+                  A structured 30-day engagement where I work directly with your
                   team to identify, diagnose, and plan the fix for the bottlenecks
                   slowing your system down — and costing you money every day they
                   go unresolved.
@@ -724,17 +722,10 @@ export default function Consulting() {
               >
                 <div className="absolute top-0 -right-3 -z-10 h-[103%] w-[101%] rounded-[1.5rem] bg-dark dark:bg-light sm:-right-1.5 sm:h-[101.5%]" />
                 <div className="relative rounded-2xl border-2 border-solid border-dark dark:border-light bg-light dark:bg-dark p-10 lg:p-8 sm:p-6">
-                  <p className="text-xs font-bold uppercase tracking-widest text-dark/40 dark:text-light/40 mb-2">
-                    Starting at
-                  </p>
-                  <p className="font-bold text-primary dark:text-primaryDark mb-6 leading-none"
-                    style={{ fontSize: "clamp(3rem, 8vw, 5rem)" }}>
-                    $1,200
-                  </p>
                   <div className="space-y-3 mb-8">
                     {[
                       "Fixed price. No hourly billing surprises.",
-                      "15-day sprint. Not an open-ended retainer.",
+                      "30-day sprint. Not an open-ended retainer.",
                       "Full IP transfer. You own everything.",
                     ].map((item) => (
                       <div key={item} className="flex items-start gap-3">
@@ -1026,7 +1017,7 @@ export default function Consulting() {
               transition={{ delay: 0.1 }}
               className="text-lg text-dark/65 dark:text-light/65 mb-10 max-w-xl mx-auto"
             >
-              Book a free 15-minute call. No pitch. Just clarity on whether
+              Book a free 30-minute call. No pitch. Just clarity on whether
               this sprint is the right fit for your team right now.
             </motion.p>
 
@@ -1045,7 +1036,7 @@ export default function Consulting() {
                 className="rounded-lg bg-dark px-10 py-5 text-lg font-semibold text-light dark:bg-light dark:text-dark
                   hover:scale-105 active:scale-95 transition-transform duration-200 sm:px-8 sm:py-4 sm:text-base"
               >
-                Book a Free 15-min Call
+                Book a Free 30-min Call
               </Link>
               <p className="text-dark/35 dark:text-light/35 text-sm">or</p>
               <Link
