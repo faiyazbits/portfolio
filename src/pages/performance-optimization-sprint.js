@@ -436,7 +436,7 @@ export default function Consulting() {
         />
         <meta
           property="og:description"
-          content="SaaS teams with 5–30 engineers: identify and fix your biggest performance bottleneck without a rewrite. Starting at $1,200. Technical Lead with 11+ years of experience."
+          content="SaaS teams with 5–30 engineers: identify and fix your biggest performance bottleneck without a rewrite. Technical Lead with 11+ years of experience."
         />
         <meta
           property="og:image"
