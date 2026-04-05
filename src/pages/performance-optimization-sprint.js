@@ -478,7 +478,7 @@ export default function Consulting() {
             </motion.span>
 
             <AnimatedText
-              text="I help SaaS teams fix slow APIs and rising infra costs in 15 days."
+              text="I help SaaS teams fix slow APIs and rising infra costs in 30 days."
               className="!text-6xl xl:!text-5xl lg:!text-4xl md:!text-3xl sm:!text-2xl !text-left mb-4"
             />
 
