@@ -1,5 +1,4 @@
 import AnimatedText from "@/components/AnimatedText";
-import { HireMe } from "@/components/HireMe";
 import Layout from "@/components/Layout";
 import Services from "@/components/Services";
 import Head from "next/head";
@@ -63,7 +62,6 @@ export default function Home() {
           </div>
         </Layout>
 
-        <HireMe />
         <motion.div
           className="absolute bottom-8 left-1/2 -translate-x-1/2"
           animate={{ y: [0, 10, 0] }}
