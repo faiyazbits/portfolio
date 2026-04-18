@@ -62,15 +62,6 @@ const Experience = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
-            position="Founder"
-            company="Upskillabs"
-            companyLink="/"
-            time="2025-Present"
-            address="Kochi, India"
-            work="Founded Upskillabs with a mission to build the next generation of AI-native developers, leading product vision, curriculum design, and organizational growth from inception."
-          />
-
-          <Details
             position="Solution architect"
             company="Provility"
             companyLink="https://provility.com/"

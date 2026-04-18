@@ -35,43 +35,42 @@ export default function BiographyAnnotated() {
       </h2>
       <RoughNotationGroup key={mode}>
         <p className="font-medium">
-          Hi, I&apos;m <strong>Fayaz</strong>. I believe most performance
-          problems aren&apos;t engineering problems — they&apos;re{" "}
+          Hi, I&apos;m <strong>Fayaz</strong> — a full-stack engineer who
+          recently crossed into AI engineering. My most recent work involved
+          building{" "}
           <RoughNotation {...props} order={1}>
-            visibility problems
+            RAG pipelines
           </RoughNotation>
-          . Teams scale infrastructure when what they actually need is a clear
-          diagnosis.
+          , real-time LLM streaming via SSE, agentic tool calling, and a
+          7-stage KaTeX rendering pipeline — all in production.
         </p>
         <p className="my-4 font-medium">
-          I spent{" "}
+          Before that, I spent{" "}
           <RoughNotation {...props} order={2}>
-            over a decade
+            11+ years
           </RoughNotation>{" "}
-          as a Technical Lead and systems engineer across international SaaS,
-          government, and fintech engagements. That experience taught me how to
-          see across layers — API, database, infrastructure — and find the root
-          cause, not just the symptom. I&apos;m also an{" "}
+          as a solution architect and technical lead building systems where
+          performance and reliability aren&apos;t optional — WebSockets,
+          Service Workers, RxJS pipelines, distributed architectures. I&apos;m
+          also an{" "}
           <RoughNotation {...props} order={3}>
             AWS Certified Solutions Architect
           </RoughNotation>
           .
         </p>
         <p className="my-4 font-medium">
-          I founded{" "}
+          I&apos;ve led teams of 5–10 engineers and owned end-to-end delivery
+          across{" "}
           <RoughNotation {...props} order={4}>
-            Upskillabs
+            8+ international client engagements
           </RoughNotation>{" "}
-          to pass this systems-level thinking to the next generation of
-          developers building in an AI-first world.
+          — government, healthcare, fintech, and public transit — working
+          remotely across the US, Canada, Denmark, and Australia.
         </p>
         <p className="my-4 font-medium">
-          If your APIs are slowing down or your infra costs are climbing, my{" "}
-          <RoughNotation {...props} order={5} multiline>
-            Performance Optimization Sprint
-          </RoughNotation>{" "}
-          gives your team the diagnosis, the roadmap, and the guided fixes — in
-          30 days, without touching your core architecture.
+          Currently open to interesting engineering problems — whether
+          that&apos;s building something new, improving something that&apos;s
+          slow, or bringing AI into a product that needs it.
         </p>
       </RoughNotationGroup>
       <Link

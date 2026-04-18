@@ -42,19 +42,26 @@ export default function Home() {
             </div>
             <div className="flex w-1/2 flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
-                text="Transforming Vision into Digital Masterpieces with Code and Creativity!"
+                text="Full-Stack Engineer. Now Building with LLMs."
                 className="!text-left !text-5xl xl:!text-4xl lg:!text-center lg:!text-5xl md:!text-4xl sm:!text-2xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
-                I&apos;m a Performance Bottleneck Specialist helping SaaS teams fix slow APIs and reduce infrastructure costs — fast, without rewrites. With a decade of full-stack and systems engineering across 8+ international client engagements, I&apos;ve driven 40–90% speed improvements through diagnosis, not guesswork. I run a 30-day Performance Optimization Sprint that gives teams the clarity to fix what actually matters.
+                I&apos;m a full-stack software engineer and solution architect with 11+ years building production systems for international clients — across government, healthcare, fintech, and public transit. I care about performance, reliability, and shipping things that hold up. Lately I&apos;ve been building AI into the stack.
               </p>
-              <div className="mt-2 flex items-center self-start lg:self-center">
+              <div className="mt-2 flex items-center gap-6 self-start lg:self-center">
+                <Link
+                  href="/work"
+                  className="text-lg font-semibold capitalize text-dark underline
+                  dark:text-light md:text-base"
+                >
+                  See my work
+                </Link>
                 <Link
                   href={process.env.NEXT_PUBLIC_WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-lg font-medium capitalize text-dark underline
-                  dark:text-light md:text-base"
+                  className="text-lg font-medium capitalize text-dark/60 underline
+                  dark:text-light/60 md:text-base"
                 >
                   Contact
                 </Link>
@@ -63,7 +70,7 @@ export default function Home() {
           </div>
         </Layout>
 
-        <HireMe />
+        {/* <HireMe /> */}
         <motion.div
           className="absolute bottom-8 left-1/2 -translate-x-1/2"
           animate={{ y: [0, 10, 0] }}
