@@ -1,8 +1,10 @@
 import { getPostBySlug, getAllPosts, serializeMDX } from '@/lib/mdx';
 import { MDXRemote } from 'next-mdx-remote';
 import { BlogLayout, BlogPostHeader, BlogPostFooter } from '@/components/BlogLayout';
+import MDXComponents from '@/components/blog/MDXComponents';
 
 const components = {
+  ...MDXComponents,
   h1: props => <h1 className="text-3xl font-bold mb-4" {...props} />,
   h2: props => <h2 className="text-2xl font-semibold mb-3" {...props} />,
   h3: props => <h3 className="text-xl font-medium mb-2" {...props} />,
