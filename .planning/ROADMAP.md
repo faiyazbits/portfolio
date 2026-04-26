@@ -47,9 +47,10 @@ Plans:
 3. Individual blog posts render with consistent header, footer, and content styling
 4. Navigation from blog listing to individual post works correctly
 
-**Plans:** TBD
+**Plans:** 1 plan
 
----
+Plans:
+- [ ] 02-blog-infrastructure-PLAN.md — Create blog layout component and blog listing page
 
 ### Phase 3: Blog Capabilities
 
