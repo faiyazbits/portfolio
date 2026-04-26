@@ -1,6 +1,6 @@
 import { getPostBySlug, getAllPosts, serializeMDX } from '@/lib/mdx';
 import { MDXRemote } from 'next-mdx-remote';
-import Link from 'next/link';
+import { BlogLayout, BlogPostHeader, BlogPostFooter } from '@/components/BlogLayout';
 
 const components = {
   h1: props => <h1 className="text-3xl font-bold mb-4" {...props} />,
@@ -18,22 +18,13 @@ const components = {
 
 export default function BlogPost({ source, meta }) {
   return (
-    <div className="max-w-3xl mx-auto px-4 py-8">
-      <Link href="/blog" className="text-primary hover:underline mb-4 inline-block">
-        ← Back to Blog
-      </Link>
-      <article>
-        <header className="mb-8">
-          <h1 className="text-4xl font-bold mb-2">{meta.title}</h1>
-          <p className="text-gray-600 dark:text-gray-400">
-            {meta.date} • {meta.description}
-          </p>
-        </header>
-        <div className="prose dark:prose-invert max-w-none">
-          <MDXRemote {...source} components={components} />
-        </div>
-      </article>
-    </div>
+    <BlogLayout>
+      <BlogPostHeader meta={meta} />
+      <div className="prose dark:prose-invert max-w-none">
+        <MDXRemote {...source} components={components} />
+      </div>
+      <BlogPostFooter />
+    </BlogLayout>
   );
 }
 
