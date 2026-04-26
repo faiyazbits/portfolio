@@ -66,7 +66,10 @@ Plans:
 3. Sample blog post demonstrates text, images, and embedded interactive components
 4. Sample blog post is accessible via the blog listing page
 
-**Plans:** TBD
+**Plans:** 1 plan
+
+Plans:
+- [ ] 03-blog-capabilities-PLAN.md — Enable interactive React components in MDX and create demo post
 
 ---
 
