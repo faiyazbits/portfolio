@@ -7,7 +7,7 @@ Portfolio Blog - MDX-based interactive blogging
 
 - [x] **Phase 1: MDX Pipeline Setup** - Install dependencies and configure next-mdx-remote for SSG/SSR
 - [x] **Phase 2: Blog Infrastructure** - Create blog post layout component and blog listing page (completed 2026-04-26)
-- [ ] **Phase 3: Blog Capabilities** - Support interactive React components in MDX and create sample post
+- [x] **Phase 3: Blog Capabilities** - Support interactive React components in MDX and create sample post (completed 2026-04-26)
 
 ---
 
@@ -69,16 +69,15 @@ Plans:
 **Plans:** 1 plan
 
 Plans:
-- [ ] 03-blog-capabilities-PLAN.md — Enable interactive React components in MDX and create demo post
-
----
+- [x] 03-blog-capabilities-PLAN.md — Enable interactive React components in MDX and create demo post (completed 2026-04-26)
 
 ## Traceability
 
 | Phase | Requirements | Status |
 |-------|--------------|--------|
 | 1. MDX Pipeline Setup | REQ-01 | Complete |
-| 2. Blog Infrastructure | 1/1 | Complete   | 2026-04-26 | 3. Blog Capabilities | REQ-03, REQ-04 | Pending |
+| 2. Blog Infrastructure | REQ-02, REQ-05 | Complete |
+| 3. Blog Capabilities | REQ-03, REQ-04 | Complete |
 
 **Coverage:** 5/5 requirements mapped ✓
 
