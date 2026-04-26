@@ -61,10 +61,10 @@ Create `/blog` listing page that displays all available posts with title, date, 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | REQ-01 | Phase 1 | Pending |
-| REQ-02 | Phase 2 | Pending |
+| REQ-02 | Phase 2 | Complete |
 | REQ-03 | Phase 3 | Pending |
 | REQ-04 | Phase 3 | Pending |
-| REQ-05 | Phase 2 | Pending |
+| REQ-05 | Phase 2 | Complete |
 
 ---
 
