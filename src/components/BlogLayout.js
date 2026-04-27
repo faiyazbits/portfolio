@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const BlogLayout = ({ children }) => (
-  <div className="max-w-3xl mx-auto px-4 py-8 dark:bg-dark">
+  <div className="max-w-3xl mx-auto px-4 py-8 bg-light dark:bg-dark min-h-screen">
     {children}
   </div>
 );
