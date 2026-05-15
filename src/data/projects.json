@@ -1,5 +1,26 @@
 [
   {
+    "type": "Featured Project",
+    "title": "Robogebra – AI Math Tutoring Platform",
+    "summary": "An AI-powered math tutoring platform delivering grounded, real-time LLM responses to students. Built with a RAG pipeline for hallucination reduction, real-time token streaming via SSE, agentic tool calling, and a 7-stage KaTeX rendering pipeline — supporting six language modes including bilingual math.",
+    "img": "robogebra",
+    "link": "https://robogebra.ai",
+    "github": null,
+    "techStack": ["LangChain", "ChromaDB", "OpenAI", "MongoDB Atlas", "Python", "SSE", "KaTeX", "Zod"],
+    "timePeriod": "Apr 2025 - Feb 2026",
+    "country": "IN",
+    "contributions": [
+      "Built a Retrieval Augmented Generation (RAG) pipeline using LangChain, ChromaDB, and OpenAI embeddings to reduce LLM hallucination and ground responses in proprietary knowledge bases",
+      "Engineered real-time LLM streaming with Server-Sent Events (SSE), delivering token-by-token responses and enabling live tool execution visibility",
+      "Implemented agentic tool calling with LangChain and Zod schema validation, bridging natural language intent to structured API actions",
+      "Designed a PDF ingestion pipeline using LangChain for semantic search across uploaded knowledge bases",
+      "Built a hybrid semantic search pipeline combining MongoDB Atlas $vectorSearch with fuzzy keyword parsing to resolve structured student queries",
+      "Developed a multi-language LLM prompt orchestration system supporting six response modes (English, Tamil, Hindi, Tanglish, Hinglish, bilingual script+English math)",
+      "Built a 7-stage LLM response post-processing pipeline to safely render KaTeX/LaTeX in the browser, reducing malformed rendering errors in production"
+    ],
+    "order": 1
+  },
+  {
     "type": "Personal Project",
     "title": "Sine Wave Simulation",
     "summary": "An interactive visualization showing how sine waves are generated from circular motion. This was my very first project — the one that sparked my love for coding and creative problem-solving. It holds a special place in my heart as a reminder of where it all began 💛.",

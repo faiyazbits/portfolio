@@ -1,0 +1,61 @@
+---
+title: "Interactive Components Demo"
+date: "2026-04-26"
+description: "A demonstration of interactive React components embedded in MDX blog posts"
+---
+
+# Interactive Components in MDX
+
+Welcome to this interactive demo! This blog post showcases React components that can be embedded directly within MDX content. These components use React hooks for state management and Tailwind CSS for styling.
+
+## Counter Component
+
+The Counter component uses React's `useState` hook to track a number. Try clicking the buttons to see it in action:
+
+<Counter initialCount={5} />
+
+The counter started at 5 and you can increment or decrement using the buttons above. Each click updates the state, demonstrating how React components embedded in MDX can be fully interactive.
+
+## Color Picker
+
+Select from the color palette below. The ColorPicker demonstrates handling user input and conditional rendering based on state:
+
+<ColorPicker label="Choose your favorite color" />
+
+The color buttons are interactive - click one to see it highlighted and the selection displayed below.
+
+## Interactive Demo
+
+This compound component combines multiple interactive elements in a styled container:
+
+<InteractiveDemo title="Full Interactive Demo" />
+
+Notice how the Counter and ColorPicker are composed together inside the InteractiveDemo wrapper, which provides its own styling and layout context.
+
+## Callout Boxes
+
+Callouts are great for highlighting important information. Here are the available types:
+
+<Callout type="info">
+This is an **info** callout - great for providing helpful context and additional details that readers might find useful.
+</Callout>
+
+<Callout type="warning">
+This is a **warning** callout - use for important notices that readers should pay attention to.
+</Callout>
+
+<Callout type="tip">
+This is a **tip** callout - useful for sharing helpful suggestions, best practices, or shortcuts.
+</Callout>
+
+Each callout type has its own color scheme and icon, making it easy to communicate different kinds of information to your readers.
+
+## How It Works
+
+All these components are defined in `src/components/blog/MDXComponents.js` and passed to the MDXRemote component in the blog post page. This means any MDX file can use these components without explicit imports - they're automatically available.
+
+The components support dark mode through Tailwind's `dark:` variant, ensuring they look good in both light and dark themes.
+
+---
+
+That's it! Interactive React components work seamlessly in MDX. You can embed as many interactive elements as you need directly in your blog posts.

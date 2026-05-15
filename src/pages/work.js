@@ -21,6 +21,7 @@ import travelTools from "../../public/images/projects/travel-tools.png";
 import averq from "../../public/images/projects/averq.jpeg";
 import portfolio from "../../public/images/projects/portfolio.png";
 import docutalk from "../../public/images/projects/docutalk.png";
+import robogebra from "../../public/images/projects/robogebra.svg";
 import sagamath from "../../public/images/projects/sagamath.png";
 
 
@@ -41,7 +42,8 @@ const imageMap = {
   averq,
   portfolio,
   docutalk,
-  sagamath
+  sagamath,
+  robogebra
 };
 
 // ProjectModal Component
