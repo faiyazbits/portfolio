@@ -2,155 +2,143 @@
   {
     "type": "Featured Project",
     "title": "Robogebra – AI Math Tutoring Platform",
-    "summary": "An AI-powered math tutoring platform delivering grounded, real-time LLM responses to students. Built with a RAG pipeline for hallucination reduction, real-time token streaming via SSE, agentic tool calling, and a 7-stage KaTeX rendering pipeline — supporting six language modes including bilingual math.",
+    "summary": "An AI-powered math learning platform designed to give students fast, reliable help with problem-solving. Instead of generic chatbot responses, the system uses trusted learning material to generate grounded explanations, supports multiple languages, and renders mathematical expressions clearly for a smoother learning experience.",
     "img": "robogebra",
     "link": "https://robogebra.ai",
     "github": null,
     "techStack": ["LangChain", "ChromaDB", "OpenAI", "MongoDB Atlas", "Python", "SSE", "KaTeX", "Zod"],
     "timePeriod": "Apr 2025 - Feb 2026",
     "country": "IN",
+    "domain": "AI / ML",
     "contributions": [
-      "Built a Retrieval Augmented Generation (RAG) pipeline using LangChain, ChromaDB, and OpenAI embeddings to reduce LLM hallucination and ground responses in proprietary knowledge bases",
-      "Engineered real-time LLM streaming with Server-Sent Events (SSE), delivering token-by-token responses and enabling live tool execution visibility",
-      "Implemented agentic tool calling with LangChain and Zod schema validation, bridging natural language intent to structured API actions",
-      "Designed a PDF ingestion pipeline using LangChain for semantic search across uploaded knowledge bases",
-      "Built a hybrid semantic search pipeline combining MongoDB Atlas $vectorSearch with fuzzy keyword parsing to resolve structured student queries",
-      "Developed a multi-language LLM prompt orchestration system supporting six response modes (English, Tamil, Hindi, Tanglish, Hinglish, bilingual script+English math)",
-      "Built a 7-stage LLM response post-processing pipeline to safely render KaTeX/LaTeX in the browser, reducing malformed rendering errors in production"
+      "Built a Retrieval Augmented Generation (RAG) system using LangChain and ChromaDB so student responses were grounded in trusted study material instead of relying only on generic AI knowledge, reducing inaccurate answers",
+      "Created a real-time response experience using Server-Sent Events (SSE), allowing students to see answers appear instantly and making the platform feel conversational and responsive",
+      "Connected natural language questions to structured tools and APIs through LangChain, enabling the platform to handle more complex learning interactions beyond simple Q&A",
+      "Developed a document ingestion workflow for PDFs, allowing educational content to be uploaded and searched semantically instead of being manually referenced",
+      "Built a hybrid search system combining vector search and keyword matching in MongoDB Atlas, helping students find relevant explanations even when questions were vague or partially phrased",
+      "Designed multilingual response flows supporting six language modes, making math explanations more accessible for students who learn better in mixed or regional languages",
+      "Created a post-processing pipeline for rendering KaTeX and mathematical notation safely in the browser, improving readability and reducing broken formula displays in production"
     ],
     "order": 1
   },
   {
-    "type": "Personal Project",
-    "title": "Sine Wave Simulation",
-    "summary": "An interactive visualization showing how sine waves are generated from circular motion. This was my very first project — the one that sparked my love for coding and creative problem-solving. It holds a special place in my heart as a reminder of where it all began 💛.",
-    "img": "sineWaveSim",
-    "link": "https://faiyazbits.github.io/sine-wave-simulation/",
-    "github": "https://github.com/faiyazbits/sine-wave-simulation",
-    "techStack": ["D3.js", "TypeScript", "Vite", "HTML5 Canvas", "JavaScript"],
-    "timePeriod": "Apr 2015 - May 2015",
-    "country": "IN",
-    "contributions": [
-      "Built the initial prototype using HTML5 Canvas and raw JavaScript to animate circular motion and sine wave generation",
-      "Ported the entire visualization to D3.js v7 with SVG rendering for smoother animations and cleaner code architecture",
-      "Implemented real-time animated mapping between a rotating point on a circle and the resulting sine wave curve",
-      "Visualized core trigonometric concepts — rotating radius vector, swept angle arc, and y-coordinate projection — with color-coded elements",
-      "Migrated the codebase to TypeScript and Vite for type safety and a modern dev experience"
-    ],
-    "order": 14
-  },
-  {
     "type": "Featured Project",
     "title": "WeldTrace – Smart Welding Manager",
-    "summary": "A cloud-based platform for managing fabrication welding jobs from start to finish — replacing fragile spreadsheet workflows with a structured, auditable system. Engineers, inspectors, contractors, and welders share a single workspace to stay aligned throughout the project lifecycle.",
+    "summary": "A cloud platform built to help fabrication teams manage welding jobs in a more organised and traceable way. By replacing spreadsheet-heavy workflows with a shared system, engineers, inspectors, contractors, and welders could collaborate with better visibility and accountability throughout the project lifecycle.",
     "img": "weldTrace",
     "link": "https://www.weldtrace.com/",
     "github": null,
     "techStack": ["AngularJS", "jQuery", "MongoDB", "Node.js"],
     "timePeriod": "Feb 2015 - Apr 2016",
     "country": "AU",
+    "domain": "Engineering",
     "contributions": [
-      "Built a Weld Annotation Editor enabling engineers to mark up P&ID drawings with precise weld symbols and positional metadata",
-      "Designed and implemented the core data model for weld joints, WPS/PQR documents, welder qualifications, and job traceability",
-      "Developed a Weld Input Editor — a hybrid data-grid and spreadsheet component for fast, structured entry of weld records at scale",
-      "Contributed to multi-role access architecture allowing contractors, project managers, engineers, inspectors, and welders to collaborate within a single project lifecycle"
+      "Built a weld annotation editor that allowed engineers to mark up technical drawings digitally, reducing ambiguity and improving communication across fabrication teams",
+      "Designed the core data model for weld tracking, certifications, and compliance records, helping teams maintain complete traceability across projects",
+      "Developed a spreadsheet-like weld entry interface so engineers could record large volumes of welding data quickly without disrupting existing workflows",
+      "Contributed to a multi-role collaboration system that allowed engineers, inspectors, contractors, and welders to work from the same source of truth throughout project delivery"
     ],
     "order": 13
   },
   {
     "type": "Featured Project",
     "title": "WeldQ – Welder Qualification Platform",
-    "summary": "A certification platform built for WTIA (Welding Technology Institute of Australia) to digitise the end-to-end welder qualification lifecycle — replacing paper-based processes with a standards-compliant digital system for certifying welders at scale with confidence.",
+    "summary": "A digital certification platform built for the Welding Technology Institute of Australia (WTIA) to modernise how welders are assessed and certified. The system replaced paper-driven processes with a structured platform for exams, qualification tracking, and standards-compliant certification.",
     "img": "weldq",
     "link": "https://wtia.weldq.com/",
     "github": null,
     "techStack": ["MongoDB", "Express.js", "AngularJS", "Node.js"],
     "timePeriod": "Jan 2016 - Jan 2017",
     "country": "AU",
+    "domain": "Engineering",
     "contributions": [
-      "Engineered a custom test engine from scratch, supporting timed online exams with question banks, randomisation, and auto-grading for welder qualification assessments",
-      "Built an Exam Schedule Editor allowing administrators to plan, configure, and manage certification exam sessions across multiple locations and candidate cohorts",
-      "Developed a drag-and-drop Certificate Designer enabling staff to compose branded, standards-compliant qualification certificates populated with live welder data",
-      "Implemented a Result Dashboard delivering real-time insights into exam outcomes, pass/fail rates, and per-candidate performance metrics",
-      "Designed a document verification and management module to store, validate, and track welder credentials and supporting evidence for regulatory compliance"
+      "Built an online testing engine supporting timed exams, question randomisation, and automated grading, helping scale welder qualification assessments efficiently",
+      "Created an exam scheduling system that allowed administrators to organise certification sessions across locations and candidate groups with less manual coordination",
+      "Developed a drag-and-drop certificate builder so staff could generate standards-compliant certificates dynamically using live candidate information",
+      "Built a results dashboard providing real-time visibility into exam outcomes, helping administrators quickly identify pass rates and candidate performance",
+      "Implemented a document verification system for storing and validating welder credentials, improving audit readiness and regulatory compliance"
     ],
     "order": 12
   },
   {
     "type": "Featured Project",
     "title": "BigZeta – Declarative Data Visualisation Platform",
-    "summary": "A no-code data visualisation platform that gives analysts an intuitive path from raw datasets to publication-ready interactive charts — with first-class support for sharing and embedding insights beyond the dashboard.",
+    "summary": "A no-code data visualisation platform designed to help analysts turn raw datasets into interactive charts without heavy technical effort. The platform made it easier to explore, share, and embed insights, helping teams communicate data more effectively.",
     "img": "recharts",
     "link": null,
     "github": null,
     "techStack": ["React", "Redux", "SVG"],
     "timePeriod": "Jan 2017 - Apr 2017",
     "country": "US",
+    "domain": "Data Visualization",
     "contributions": [
-      "Developed a library of reusable React component wrappers around SVG primitives, enabling declarative, data-driven chart composition with clean separation between rendering logic and application state",
-      "Built a drag-and-drop Filter Designer allowing users to visually compose and chain complex filter conditions on uploaded datasets — replacing manual query authoring with an intuitive, node-based workflow",
-      "Engineered a ChartFrame embed and export system that packages interactive SVG visualisations into portable, platform-aware embeds for direct sharing to social platforms with configurable metadata"
+      "Built reusable React components around SVG visualisation primitives, making it easier to create consistent and interactive charts across the platform",
+      "Developed a visual filter builder that allowed users to create complex dataset filters without writing queries, making advanced analysis more accessible to non-technical users",
+      "Created an export and embedding system for interactive charts, enabling teams to share insights outside the platform across websites and social channels"
     ],
     "order": 11
   },
   {
     "type": "Featured Project",
     "title": "Choice Health Brokers – Internal CRM Platform",
-    "summary": "A purpose-built internal CRM for a brokerage firm, centralising client and agent management in one workspace. Agents can place and receive calls directly from the browser without any external hardware — turning a fragmented workflow into a unified, real-time experience.",
+    "summary": "A custom CRM platform built for a brokerage firm to bring client management, agent workflows, and calling into one place. Instead of switching between disconnected systems and desk phones, agents could manage relationships and handle calls directly from the browser in a faster, more unified workflow.",
     "img": "inBrowserDialer",
     "link": null,
     "github": null,
     "techStack": ["React", "Redux", "Twilio"],
     "timePeriod": "May 2017 - Jan 2018",
     "country": "US",
+    "domain": "Healthcare",
     "contributions": [
-      "Designed and built a fully interactive editable data grid for managing broker and agent records, supporting inline cell editing, column sorting, and real-time validation without leaving the table view",
-      "Integrated the Twilio Programmable Voice API to implement an in-browser dialer, enabling agents to place outbound calls directly from the CRM with call state management driven by Redux",
-      "Built a softphone interface for handling inbound call routing in the browser — ring detection, call accept/reject, and live call controls — eliminating the need for external hardware or third-party desk phones",
-      "Architected the application from scratch using React and Redux, establishing the component library, state topology, and data flow patterns that the entire platform is built upon",
-      "Synchronised real-time call events from the Twilio SDK with UI state to deliver accurate, live status indicators across the dialer, agent list, and activity feed simultaneously"
+      "Built an interactive data management interface for brokers and agents, allowing teams to update records quickly through inline editing and real-time validation",
+      "Integrated Twilio Programmable Voice to enable browser-based outbound calling, removing dependence on external hardware and simplifying agent workflows",
+      "Developed an in-browser softphone experience for handling incoming calls, including ring detection, call controls, and live status management",
+      "Established the React and Redux architecture for the platform, creating reusable UI patterns and predictable data flows that supported long-term scalability",
+      "Connected live Twilio call events with the user interface so agents could see accurate call status updates in real time across the CRM"
     ],
     "order": 10
   },
   {
     "type": "Featured Project",
     "title": "Eform – Government E-Application Platform",
-    "summary": "A digital platform built to eliminate paperwork from high-stakes government registration workflows. Administrators can model processes and publish regulatory forms without writing a line of code, covering everything from marriage registration and driving licences to birth registration.",
+    "summary": "A digital platform designed to reduce paperwork in government registration services such as marriage registration, driving licences, and birth certificates. Administrators could visually configure forms and workflows without depending heavily on engineering teams, helping new services go live faster.",
     "img": "eform",
     "link": null,
     "github": null,
     "techStack": ["AngularJS", "jQuery UI"],
     "timePeriod": "Mar 2018 - Nov 2018",
     "country": "CA",
+    "domain": "Government",
     "contributions": [
-      "Built custom AngularJS directives powered by the jQuery Drag and Drop API to enable visual data model diagramming inside the service designer — allowing administrators to define entity relationships through drag-and-drop interactions rather than manual configuration",
-      "Developed a highly interactive form mapping studio for visually binding data model entities to form fields, with real-time layout preview and support for complex nested field relationships",
-      "Implemented a service designer for modelling government registration workflows as reusable, composable process blueprints, enabling rapid onboarding of new registration services with minimal engineering overhead"
+      "Built drag-and-drop modelling tools that allowed administrators to visually define relationships between data entities instead of relying on manual configuration",
+      "Developed a form mapping studio where teams could connect form fields to underlying data models with real-time previews, reducing setup complexity",
+      "Created a reusable workflow designer for government registration services, making it easier to launch and manage new citizen-facing processes with minimal engineering effort"
     ],
     "order": 9
   },
   {
     "type": "Featured Project",
     "title": "Tradeworks – Algorithmic Trading Automation Platform",
-    "summary": "A platform for retail forex traders to build, backtest, and deploy automated trading bots without writing code — pairing a professional charting experience with an intuitive no-code strategy builder.",
+    "summary": "A no-code trading automation platform that helped forex traders create, test, and run trading strategies without programming knowledge. The goal was to make advanced trading tools more accessible while giving users transparency into how automated decisions were being made.",
     "img": "tradeworks",
     "link": "https://tradeworks.io/",
     "github": null,
     "techStack": ["Angular", "RxJS", "ChartIQ", "Canvas API"],
     "timePeriod": "Jan 2019 - Mar 2019",
     "country": "DK",
+    "domain": "Finance",
     "contributions": [
-      "Integrated the ChartIQ professional forex charting library into the Angular platform, configuring real-time data feeds, custom chart types, and toolbar extensions for live market visualisation",
-      "Built custom Angular components for multi-selection of technical indicators, enabling traders to layer and configure complex indicator combinations from a single, intuitive interface",
-      "Implemented trade entry and exit point visualisation using the Canvas API, rendering precise overlays on live charts to give traders a transparent, real-time view of their bot's decision logic",
-      "Developed reactive data pipelines with RxJS to stream and synchronise live market data, bot status, and trade signals across the platform with minimal latency"
+      "Integrated the ChartIQ charting engine to provide traders with professional-grade live market visualisations and custom chart interactions",
+      "Built intuitive interfaces for selecting and combining technical indicators, helping traders configure complex strategies without technical expertise",
+      "Implemented visual overlays for trade entry and exit points on live charts, giving users greater visibility into how automated strategies behaved in real time",
+      "Developed reactive data pipelines using RxJS to synchronise market feeds, bot activity, and trade signals with low latency across the platform"
     ],
     "order": 8
   },
   {
     "type": "Featured Project",
     "title": "AdeptIQ – Paratransit Dispatch Engine",
-    "summary": "A cloud-based platform for public transit agencies to manage paratransit and demand-responsive transit operations — coordinating drivers, vehicles, and passengers across a shared dispatch workspace to deliver reliable, ADA-compliant service.",
+    "summary": "A cloud platform built for public transit agencies to coordinate paratransit services more efficiently. Dispatchers could manage drivers, vehicles, and passengers from a shared real-time system, improving visibility and helping agencies deliver more reliable transport services.",
     "img": "adeptIQ",
     "link": "https://ddswireless.com/adept-iq/",
     "github": null,
@@ -164,38 +152,40 @@
     ],
     "timePeriod": "Jul 2019 - Jan 2021",
     "country": "CA",
+    "domain": "Transit",
     "contributions": [
-      "Achieved a 120% improvement in data grid rendering performance by replacing the legacy grid with a virtualized React data grid embedded within the Ember.js application — eliminating lag on large dispatcher datasets",
-      "Implemented real-time driver status updates in Ember.js using WebSockets, enabling dispatchers to monitor vehicle positions and availability with zero manual refresh across active trips",
-      "Integrated Leaflet map rendering into the Ember.js dispatch interface, providing dispatchers with a live geographic view of active vehicles, trip routes, and dynamic route overlays",
-      "Designed and implemented the full data model for the booking service, translating complex paratransit scheduling rules into a normalised PostgreSQL schema via Sequelize ORM",
-      "Built a suite of REST APIs strictly conforming to the JSON:API specification for the booking service, enabling clean, predictable integration with frontend clients and third-party transit systems"
+      "Improved dispatcher performance by replacing a legacy data grid with a virtualised solution, significantly reducing lag when handling large operational datasets",
+      "Implemented real-time driver updates using WebSockets, allowing dispatchers to monitor vehicle availability and trip status without refreshing screens",
+      "Integrated live map visualisation with Leaflet, giving operations teams a clearer geographic view of vehicles, routes, and active trips",
+      "Designed the booking system data model to support complex scheduling and paratransit rules in a structured and scalable way",
+      "Built standards-compliant REST APIs using JSON:API, enabling cleaner integration between frontend systems and third-party transit platforms"
     ],
     "order": 6
   },
   {
     "type": "Featured Project",
     "title": "SagaMath – Interactive Math Worksheet Platform",
-    "summary": "An interactive mathematical worksheet platform for students, teachers, and academies to author, share, and engage with executable math content — turning static documents into live, programmable experiences entirely in the browser.",
+    "summary": "An interactive math learning platform that helped teachers and academies create engaging worksheets with live, executable content instead of static PDFs. Students could explore formulas, run mathematical logic in the browser, and interact with lessons in a more hands-on way.",
     "img": "sagamath",
     "link": null,
     "github": null,
     "techStack": ["Monaco Editor", "JavaScript", "Service Worker", "KaTeX"],
     "timePeriod": "Jan 2021 - Dec 2021",
     "country": "IN",
+    "domain": "Education",
     "contributions": [
-      "Built the Math Worksheet editor using Monaco Editor, loading typed suggestion manifests derived from source code to deliver precise, context-aware IntelliSense for mathematical APIs directly in the browser",
-      "Optimised IntelliSense suggestion performance by offloading suggestion computation to a Service Worker, decoupling it from the main thread and keeping the editor fully responsive during heavy autocompletion workloads",
-      "Engineered a custom JavaScript evaluation and execution engine capable of safely interpreting and running user-authored scripts written in the browser editor — enabling dynamic, programmable worksheet interactions entirely client-side without a server round-trip",
-      "Designed a live worksheet authoring system allowing educators to compose rich mathematical content by combining executable code blocks, rendered math expressions, and interactive inputs in a single shareable document",
-      "Built the math expression rendering pipeline to parse and display KaTeX-formatted equations inline with worksheet content, giving students visually accurate representations of formulas alongside live, runnable code"
+      "Built a browser-based math editor using Monaco Editor with intelligent autocomplete, helping educators create interactive worksheets more efficiently",
+      "Improved editor responsiveness by moving heavy suggestion logic into a Service Worker, keeping the experience smooth even during complex interactions",
+      "Developed a secure JavaScript execution engine that allowed mathematical logic to run directly in the browser, enabling live and programmable worksheet experiences without server dependency",
+      "Created an authoring experience where educators could combine code, mathematical expressions, and interactive inputs into a single shareable learning document",
+      "Built a rendering pipeline for KaTeX expressions so students could view mathematical formulas clearly alongside interactive content"
     ],
     "order": 7
   },
   {
     "type": "Featured Project",
     "title": "Interactive Travel Planner",
-    "summary": "A highly interactive travel planning interface built for one of Europe's leading transportation providers — enabling users to search journeys, discover routes, and manage stops across web and mobile.",
+    "summary": "A travel planning experience built for a major European transportation provider, helping users search journeys, explore routes, and manage stops more intuitively across web and mobile. The focus was on making route planning feel fast, reliable, and interactive even with map-heavy experiences.",
     "img": "travelTools",
     "link": null,
     "github": null,
@@ -209,17 +199,18 @@
     ],
     "timePeriod": "Apr 2022 - Jun 2023",
     "country": "DK",
+    "domain": "Transit",
     "contributions": [
-      "Authored a comprehensive Cypress E2E test suite covering critical map interactions, journey search flows, and route planning scenarios across web and mobile viewports",
-      "Engineered a diff-check strategy for map node operations — intelligently reconciling create, update, and delete mutations to minimise DOM thrashing and deliver smooth, performant map rendering",
-      "Built RxJS-powered data streams for geospatial queries, enabling efficient request deduplication and client-side caching to reduce redundant API calls"
+      "Built a comprehensive Cypress end-to-end test suite covering route planning, journey search, and map interactions to improve product reliability across devices",
+      "Optimised map rendering performance by implementing a diff-based update strategy, reducing unnecessary redraws and making navigation interactions feel smoother",
+      "Developed RxJS-powered data pipelines for geospatial queries, reducing redundant API requests and improving responsiveness for route searches"
     ],
     "order": 5
   },
   {
     "type": "Featured Project",
     "title": "Nexum – Account Based Ticketing Platform",
-    "summary": "An enterprise Account Based Ticketing (ABT) platform that modernises public transit by replacing physical smart cards with secure online accounts — enabling seamless, contactless access across multiple transport networks.",
+    "summary": "An enterprise transit platform designed to replace physical smart cards with secure digital accounts, making public transport more seamless and contactless. The system supported high-volume transport networks and helped operators deliver faster, more reliable passenger experiences.",
     "img": "nexum",
     "link": "https://www.kubapay.com/en/",
     "github": null,
@@ -233,49 +224,72 @@
     ],
     "timePeriod": "Feb 2023 - Apr 2024",
     "country": "DK",
+    "domain": "Transit",
     "contributions": [
-      "Engineered reactive, concurrent API endpoints using Kotlin coroutines across multiple microservices, eliminating thread-blocking bottlenecks and significantly improving throughput under high transit load",
-      "Co-developed a high-performance GTFS (General Transit Feed Specification) cache layer, dramatically accelerating real-time queries across route, trip, stop, and schedule parameters to serve live transit lookups at scale",
-      "Built a Java-based in-memory loader for cached GTFS data files, enabling sub-millisecond lookup operations for high-frequency transit queries without repeated disk I/O overhead",
-      "Implemented configurable exponential backoff strategies for Kafka consumer failure detection, with automated Slack alerting via Datadog integration for real-time visibility into event-stream health"
+      "Built reactive API services using Kotlin coroutines to improve responsiveness and handle high transit traffic more efficiently without blocking system resources",
+      "Co-developed a high-performance GTFS cache layer, dramatically improving the speed of route, stop, and schedule lookups for real-time transit operations",
+      "Created an in-memory data loading system for transit schedules, enabling extremely fast lookup times and reducing repeated disk access",
+      "Implemented Kafka retry and failure-handling strategies with automated monitoring alerts, improving reliability and visibility across critical event pipelines"
     ],
     "order": 4
   },
   {
     "type": "Featured Project",
     "title": "Averq – Unified Transparency Apps",
-    "summary": "An enterprise compliance, risk, and audit management platform that unifies all lines of defence within an organisation into a single, transparent workspace — supporting everything from lightweight manual reviews to sophisticated automated analysis pipelines.",
+    "summary": "An enterprise compliance, audit, and risk management platform designed to bring fragmented governance processes into one workspace. Teams could manage assessments, evidence, and reviews more transparently while improving collaboration and reducing operational friction.",
     "img": "averq",
     "link": "https://www.averq.com/",
     "github": null,
     "techStack": ["React", "Node.js", "Elasticsearch", "SurveyJS"],
     "timePeriod": "Nov 2024 - Jan 2026",
     "country": "US",
+    "domain": "Compliance",
     "contributions": [
-      "Developed custom asynchronous expression evaluators for SurveyJS with a caching layer, enabling complex conditional logic in compliance forms to resolve efficiently without redundant recalculation",
-      "Migrated over 50 data grid components from a legacy library to modern React using Syncfusion, improving rendering performance, accessibility, and long-term maintainability across the platform",
-      "Built deep document bookmark functionality for PDF, Word, and spreadsheet files — supporting save, retrieval, and direct in-document navigation to support audit trail workflows",
-      "Implemented real-time conflict detection for concurrent assessment editing via WebSocket, surfacing live notifications when multiple users attempt to edit the same record simultaneously",
-      "Delivered full Progressive Web App (PWA) capabilities including service worker-backed response caching, persistent state across sessions, complete offline support, and automatic action syncing upon reconnection"
+      "Built advanced asynchronous logic for SurveyJS forms, enabling complex compliance workflows to run smoothly while reducing unnecessary recalculation overhead",
+      "Migrated more than 50 legacy data grids to modern React components, improving usability, rendering performance, and long-term maintainability across the platform",
+      "Developed deep bookmarking for PDF, Word, and spreadsheet documents, helping audit teams quickly return to exact evidence locations during reviews",
+      "Implemented real-time edit conflict detection using WebSockets, preventing teams from accidentally overwriting each other's assessment work",
+      "Delivered Progressive Web App (PWA) capabilities with offline support and automatic syncing, allowing teams to continue working reliably even with unstable connectivity"
     ],
     "order": 3
   },
   {
     "type": "Personal Project",
+    "title": "Sine Wave Simulation",
+    "summary": "An interactive visualisation that demonstrates how sine waves emerge from circular motion, turning an abstract math concept into something intuitive and visual. This was my very first coding project and the one that sparked my interest in building interactive experiences through software.",
+    "img": "sineWaveSim",
+    "link": "https://faiyazbits.github.io/sine-wave-simulation/",
+    "github": "https://github.com/faiyazbits/sine-wave-simulation",
+    "techStack": ["D3.js", "TypeScript", "Vite", "HTML5 Canvas", "JavaScript"],
+    "timePeriod": "Apr 2015 - May 2015",
+    "country": "IN",
+    "domain": "Education",
+    "contributions": [
+      "Built the first version using HTML5 Canvas and JavaScript to visually demonstrate the relationship between circular motion and sine wave generation",
+      "Later rebuilt the experience using D3.js and SVG rendering to improve animation quality, maintainability, and overall interaction smoothness",
+      "Created a real-time visual connection between a rotating point on a circle and the resulting sine curve, making trigonometric concepts easier to understand",
+      "Added visual cues such as rotating vectors, angle arcs, and coordinate projections to make abstract mathematical ideas more approachable",
+      "Migrated the project to TypeScript and Vite to modernise the development workflow and improve long-term maintainability"
+    ],
+    "order": 14
+  },
+  {
+    "type": "Personal Project",
     "title": "This Portfolio — You're Looking At It 👀",
-    "summary": "A self-aware, slightly smug portfolio website that exists solely to tell you how good its own creator is — while being good enough to prove it 😏. Features dark/light theming 🌗, buttery-smooth page transitions ✨, and enough animated statistics to make any recruiter mildly overwhelmed 📊. Meta fact: this very project card was written by the portfolio to describe itself 🪞. It has no imposter syndrome.",
+    "summary": "A personal portfolio built to showcase not just what I’ve worked on, but how I think, build, and solve problems. Designed to feel fast, interactive, and polished, the site balances storytelling, technical credibility, and personality without feeling like a traditional résumé.",
     "img": "portfolio",
     "link": null,
     "github": null,
     "techStack": ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
     "timePeriod": "Sep 2022 - present",
     "country": "CA",
+    "domain": "Web",
     "contributions": [
-      "Architected a flash-free dark/light mode system 🌗 — localStorage persistence wired via an inline script in _document.js, because nobody asked to see a blinding white flash at midnight 🌙",
-      "Implemented fluid page transitions and scroll-triggered animations using Framer Motion's AnimatePresence ✨, giving the site a cinematic quality that is frankly disproportionate to its existence as a portfolio",
-      "Built a responsive navigation system with a hamburger menu 🍔 and animated mobile overlay — because mobile users deserve smooth animations too, even if it's just your mum checking the site 📱",
-      "Configured a custom Tailwind design system 🎨 with bespoke colour tokens, circular gradient backgrounds, and responsive breakpoints covering everything from ultrawide monitors to the narrowest of phones",
-      "Designed and rendered this very project card 🪞 — an act of recursion that would make a computer science professor either nod approvingly or quietly weep"
+      "Built a seamless dark and light mode experience with persistent preferences, eliminating layout flashes and making the site feel polished across sessions",
+      "Used Framer Motion to create smooth page transitions and subtle animations, improving the overall browsing experience without overwhelming the content",
+      "Designed a responsive navigation system optimised for both desktop and mobile users, ensuring a smooth experience across screen sizes",
+      "Created a custom Tailwind-based design system with reusable styling patterns, responsive layouts, and visual consistency across the site",
+      "Designed the project storytelling approach to balance technical depth with business readability, making the portfolio useful for both technical and non-technical audiences"
     ],
     "order": 2
   }

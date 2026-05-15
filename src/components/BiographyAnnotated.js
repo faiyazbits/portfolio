@@ -35,23 +35,22 @@ export default function BiographyAnnotated() {
       </h2>
       <RoughNotationGroup key={mode}>
         <p className="font-medium">
-          Hi, I&apos;m <strong>Fayaz</strong> — a full-stack engineer who
-          recently crossed into AI engineering. My most recent work involved
-          building{" "}
+          Hi, I&apos;m <strong>Fayaz</strong> — an AI Product Engineer with a
+          decade of production engineering behind me. I currently build AI
+          systems at Provility, shipping{" "}
           <RoughNotation {...props} order={1}>
             RAG pipelines
           </RoughNotation>
-          , real-time LLM streaming via SSE, agentic tool calling, and a
-          7-stage KaTeX rendering pipeline — all in production.
+          , real-time LLM systems, agentic tool calling and
+          multi stage AI workflows — all in production.
         </p>
         <p className="my-4 font-medium">
-          Before that, I spent{" "}
+          Before specialising in AI product engineering, I spent{" "}
           <RoughNotation {...props} order={2}>
-            11+ years
+            10+ years
           </RoughNotation>{" "}
           as a solution architect and technical lead building systems where
-          performance and reliability aren&apos;t optional — WebSockets,
-          Service Workers, RxJS pipelines, distributed architectures. I&apos;m
+          performance and reliability aren&apos;t optional. I&apos;m
           also an{" "}
           <RoughNotation {...props} order={3}>
             AWS Certified Solutions Architect
@@ -68,9 +67,9 @@ export default function BiographyAnnotated() {
           remotely across the US, Canada, Denmark, and Australia.
         </p>
         <p className="my-4 font-medium">
-          Currently open to interesting engineering problems — whether
-          that&apos;s building something new, improving something that&apos;s
-          slow, or bringing AI into a product that needs it.
+          Currently focused on hard engineering problems at the intersection of
+          AI and product — where reliability, latency, and user experience all
+          matter at once.
         </p>
       </RoughNotationGroup>
       <Link

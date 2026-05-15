@@ -1,6 +1,7 @@
 import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
-import Services from "@/components/Services";
+// import Services from "@/components/Services";
+import CoreExpertise from "@/components/CoreExpertise";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,10 +15,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Fayaz</title>
+        <title>Fayaz | AI Product Engineer</title>
         <meta
           name="description"
-          content="Fayaz is a full-stack developer with 10+ years of experience building scalable web applications. Explore projects spanning React, Node.js, AI engineering, and cloud architecture."
+          content="Fayaz is an AI Product Engineer with 10+ years building production systems. RAG pipelines, real-time LLM streaming, agentic workflows, and the backend architecture to make AI products work at scale."
         />
       </Head>
 
@@ -41,11 +42,11 @@ export default function Home() {
             </div>
             <div className="flex w-1/2 flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
-                text="Full-Stack Engineer. Now Building with LLMs."
+                text="AI Product Engineer. Built for Production."
                 className="!text-left !text-5xl xl:!text-4xl lg:!text-center lg:!text-5xl md:!text-4xl sm:!text-2xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
-                I&apos;m a full-stack software engineer and solution architect with 11+ years building production systems for international clients — across government, healthcare, fintech, and public transit. I care about performance, reliability, and shipping things that hold up. Lately I&apos;ve been building AI into the stack.
+                I build AI products that work in production — not just in demos. Currently engineering AI systems at Provility. 10+ years across government, healthcare, fintech, and public transit means I know what it takes to ship systems that hold up under real conditions.
               </p>
               <div className="mt-2 flex items-center gap-6 self-start lg:self-center">
                 <Link
@@ -91,7 +92,8 @@ export default function Home() {
           </svg>
         </motion.div>
       </article>
-      <Services />
+      {/* <Services /> */}
+      <CoreExpertise />
       <div className="flex justify-end pr-8 pb-8 md:hidden">
         <div className="inline-block w-24">
           <Image className="relative h-auto w-full" src={lightBulb} alt="Fayaz" />

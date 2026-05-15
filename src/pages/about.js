@@ -45,8 +45,8 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>Fayaz | About</title>
-        <meta name="description" content="Learn about Fayaz, a full-stack developer and AWS Certified Solutions Architect with over a decade of experience in React, Angular, Node.js, and AI-assisted engineering." />
+        <title>Fayaz | AI Product Engineer — About</title>
+        <meta name="description" content="Fayaz is an AI Product Engineer and AWS Certified Solutions Architect with 10+ years of production engineering experience. Specializing in RAG pipelines, real-time LLM systems, and agentic workflows." />
       </Head>
       <TransitionEffect />
       <main
@@ -54,7 +54,7 @@ export default function About() {
       >
         <Layout className="pt-16">
           <AnimatedText
-            text="Systems Thinking Meets AI Engineering."
+            text="AI Product Engineer. Production-Proven."
             className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
 
@@ -103,7 +103,7 @@ export default function About() {
 
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumberFramerMotion value={11} />+
+                  <AnimatedNumberFramerMotion value={10} />+
                 </span>
                 <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75
                 xl:text-center md:text-lg sm:text-base xs:text-sm">

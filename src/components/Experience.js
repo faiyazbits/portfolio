@@ -62,12 +62,12 @@ const Experience = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
-            position="Solution architect"
+            position="AI Product Engineer"
             company="Provility"
             companyLink="https://provility.com/"
             time="January 2024"
             address="Chennai, India"
-            work="Designed end-to-end technical solutions by translating business requirements into scalable system architectures, collaborated with stakeholders to evaluate technology options, and ensured alignment between product goals and engineering delivery."
+            work="Leading AI product engineering at Provility — designing and shipping production-grade AI systems including RAG pipelines, real-time LLM streaming via SSE, agentic tool-calling workflows, and multi-stage knowledge rendering pipelines. Bridging AI systems architecture with end-to-end product delivery across international client engagements."
           />
 
           <Details

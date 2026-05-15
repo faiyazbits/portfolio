@@ -351,20 +351,11 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
   );
 };
 
-const TECH_CATEGORIES = {
-  "Frontend": ["React", "AngularJS", "Angular 4", "Angular", "Ember.js", "Next.js"],
-  "Languages": ["JavaScript", "TypeScript", "Kotlin"],
-  "Styling": ["Tailwind CSS", "SCSS", "jQuery", "jQuery UI"],
-  "Backend": ["Node.js", "Express.js", "Spring Boot"],
-  "Databases": ["MongoDB", "MySQL", "PostgreSQL", "Elasticsearch", "ChromaDB", "Sequelize"],
-  "State & Async": ["Redux", "RxJS", "Kafka", "WebSockets"],
-  "Visualization": ["D3.js", "ChartIQ", "Leaflet", "Canvas API", "HTML5 Canvas", "SVG"],
-  "AI / LLM": ["LangChain.js", "Vercel AI SDK", "OpenAI Embeddings", "DeepSeek LLM"],
-  "Tools": ["Vite", "Cypress", "Framer Motion", "Twilio", "SurveyJS"],
-};
+const AI_TECH = ["LangChain.js", "Vercel AI SDK", "OpenAI Embeddings", "DeepSeek LLM"];
 
-// Tech Filter Component
-const TechFilter = ({ allTechs, selectedTech, onSelectTech }) => {
+const DOMAINS = ["AI / ML", "Engineering", "Data Visualization", "Healthcare", "Government", "Finance", "Transit", "Education", "Compliance", "Web"];
+
+const ProjectFilter = ({ selectedFilter, onFilterChange }) => {
   const pill = (active) =>
     `px-4 py-1.5 rounded-full text-sm font-medium border transition-all duration-200
      ${active
@@ -375,50 +366,59 @@ const TechFilter = ({ allTechs, selectedTech, onSelectTech }) => {
   return (
     <div className="mb-16 w-full">
       <p className="mb-4 text-sm text-dark/40 dark:text-light/40">
-        Filter projects by technology used
+        Filter projects by AI technology or domain
       </p>
-      {/* All Projects reset */}
       <div className="pb-5 mb-5 border-b border-dark/10 dark:border-light/10">
-        <button onClick={() => onSelectTech("All")} className={pill(selectedTech === "All")}>
+        <button onClick={() => onFilterChange({ aiTech: "All", domain: "All" })} className={pill(selectedFilter.aiTech === "All" && selectedFilter.domain === "All")}>
           All Projects
         </button>
       </div>
 
-      {/* Category rows */}
       <div className="flex flex-col gap-4">
-        {Object.entries(TECH_CATEGORIES).map(([category, techs]) => {
-          const present = techs.filter((t) => allTechs.includes(t));
-          if (present.length === 0) return null;
-          return (
-            <div key={category} className="flex items-start gap-4 sm:flex-col sm:gap-1.5">
-              <span className="min-w-[8rem] pt-1.5 text-xs font-bold uppercase tracking-widest text-dark/35 dark:text-light/35 sm:pt-0">
-                {category}
-              </span>
-              <div className="flex flex-wrap gap-2">
-                {present.map((tech) => (
-                  <button key={tech} onClick={() => onSelectTech(tech)} className={pill(selectedTech === tech)}>
-                    {tech}
-                  </button>
-                ))}
-              </div>
-            </div>
-          );
-        })}
+        <div className="flex items-start gap-4 sm:flex-col sm:gap-1.5">
+          <span className="min-w-[8rem] pt-1.5 text-xs font-bold uppercase tracking-widest text-dark/35 dark:text-light/35 sm:pt-0">
+            AI / LLM
+          </span>
+          <div className="flex flex-wrap gap-2">
+            {AI_TECH.map((tech) => (
+              <button key={tech} onClick={() => onFilterChange({ aiTech: tech, domain: "All" })} className={pill(selectedFilter.aiTech === tech)}>
+                {tech}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex items-start gap-4 sm:flex-col sm:gap-1.5">
+          <span className="min-w-[8rem] pt-1.5 text-xs font-bold uppercase tracking-widest text-dark/35 dark:text-light/35 sm:pt-0">
+            Domain
+          </span>
+          <div className="flex flex-wrap gap-2">
+            {DOMAINS.map((domain) => (
+              <button key={domain} onClick={() => onFilterChange({ aiTech: "All", domain })} className={pill(selectedFilter.domain === domain)}>
+                {domain}
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
 export default function Projects() {
-  const [selectedTech, setSelectedTech] = useState("All");
+  const [selectedFilter, setSelectedFilter] = useState({ aiTech: "All", domain: "All" });
 
-
-  const allTechs = [...new Set(projectsData.flatMap((project) => project.techStack))];
-
-
-  const filteredProjects = (selectedTech === "All"
+  const filteredProjects = (selectedFilter.aiTech === "All" && selectedFilter.domain === "All"
     ? projectsData
-    : projectsData.filter((project) => project.techStack.includes(selectedTech))
+    : projectsData.filter((project) => {
+        if (selectedFilter.aiTech !== "All" && project.techStack.some(t => t.toLowerCase().includes(selectedFilter.aiTech.toLowerCase().split(' ')[0]))) {
+          return true;
+        }
+        if (selectedFilter.domain !== "All" && project.domain === selectedFilter.domain) {
+          return true;
+        }
+        return false;
+      })
   ).sort((a, b) => a.order - b.order);
 
   return (
@@ -442,10 +442,9 @@ export default function Projects() {
           />
 
 
-          <TechFilter
-            allTechs={allTechs}
-            selectedTech={selectedTech}
-            onSelectTech={setSelectedTech}
+          <ProjectFilter
+            selectedFilter={selectedFilter}
+            onFilterChange={setSelectedFilter}
           />
 
 

@@ -17,22 +17,7 @@ const services = [
       </svg>
     ),
   },
-  {
-    title: "Performance Optimization Sprint",
-    description:
-      "I help SaaS teams with slow APIs and rising infra costs identify and fix the top performance bottlenecks in 30 days — without rewriting their system. You get a root cause analysis, a prioritized fix roadmap, and guided implementation sessions.",
-    cta: "Book the Sprint",
-    href: "/performance-optimization-sprint",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-        <circle cx="12" cy="12" r="10" />
-        <polyline points="12 6 12 12 16 14" />
-        <line x1="2" y1="12" x2="4" y2="12" />
-        <line x1="20" y1="12" x2="22" y2="12" />
-        <line x1="12" y1="2" x2="12" y2="4" />
-      </svg>
-    ),
-  },
+  
   /*{
     title: "AI Automation in Business Workflows",
     description:

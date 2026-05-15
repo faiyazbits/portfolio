@@ -40,22 +40,21 @@ const Skills = () => {
         <motion.div whileHover={{ scale: 1.05 }} className="cursor-pointer flex rounded-full font-semibold bg-dark text-light p-8 shadow-dark
         dark:bg-light dark:text-dark lg:p-6 md:p-4 xs:text-xs xs:p-2
         ">
-          Web
+          AI
         </motion.div>
 
-        <Skill name="React" x="-20vw" y="2vw" />
-
-        <Skill name="Angular" x="-5vw" y="-10vw" />
-        <Skill name="JavaScript" x="20vw" y="6vw" />
-        <Skill name="Nodejs" x="0vw" y="12vw" />
-        <Skill name="NextJS" x="-20vw" y="-15vw" />
-        <Skill name="API design" x="15vw" y="-12vw" />
-        <Skill name="Performance audit" x="10vw" y="-5vw" />
-        <Skill name="Mongodb" x="-35vw" y="-5vw" />
-        <Skill name="RDBMS" x="32vw" y="-5vw" />
-        <Skill name="Langchain" x="0vw" y="-20vw" />
+        <Skill name="RAG" x="-20vw" y="2vw" />
+        <Skill name="Graph RAG" x="-5vw" y="-10vw" />
+        <Skill name="AI Agents" x="20vw" y="6vw" />
+        <Skill name="Knowledge Base Architecture" x="0vw" y="12vw" />
+        <Skill name="KPMBI Design" x="-20vw" y="-15vw" />
+        <Skill name="API Design" x="15vw" y="-12vw" />
+        <Skill name="Performance Audit" x="10vw" y="-5vw" />
+        <Skill name="Vector Databases" x="-35vw" y="-5vw" />
+        <Skill name="LangChain" x="32vw" y="-5vw" />
+        <Skill name="LLM Orchestration" x="0vw" y="-20vw" />
         <Skill name="AWS" x="-25vw" y="18vw" />
-        <Skill name="System design" x="28vw" y="18vw" />
+        <Skill name="System Design" x="28vw" y="18vw" />
       </div></>
   );
 };
