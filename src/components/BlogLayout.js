@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import NewsletterSignup from '@/components/NewsletterSignup';
 
 export const BlogLayout = ({ children }) => (
   <div className="max-w-3xl mx-auto px-4 py-8 bg-light dark:bg-dark min-h-screen">
@@ -21,5 +22,6 @@ export const BlogPostHeader = ({ meta }) => (
 export const BlogPostFooter = () => (
   <footer className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
     <p className="text-center text-gray-500 dark:text-gray-400">Thanks for reading</p>
+    <NewsletterSignup />
   </footer>
 );
